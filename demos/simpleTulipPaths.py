@@ -4,7 +4,7 @@ from tulipgui import *
 import TulipPaths as tp
 
 # Load the graph.
-graph = tlp.loadGraph("tests/test_one.tlp")
+graph = tlp.loadGraph("../tests/test_one.tlp")
 
 # Initialize array of node properties.
 nodeIds = graph.getProperty("ID")
