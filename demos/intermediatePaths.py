@@ -6,11 +6,10 @@ import TulipPaths as tp
 
 # Load the graph.
 graph = tlp.loadGraph("../tests/test_one.tlp")
-nodeIds = graph.getProperty("ID")
 
 # Find start and end nodes
-startNode = tp.getNodeByID(176, nodeIds, graph)
-endNode = tp.getNodeByID(606, nodeIds, graph)
+startNode = tp.getNodeById(176, graph)
+endNode = tp.getNodeById(606, graph)
 
 # Find paths
 results = tp.findPaths(startNode, endNode, 3, graph)
