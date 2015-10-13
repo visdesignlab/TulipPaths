@@ -1,4 +1,4 @@
-""" Object representing a specific path between a graph - nodes and edges """
+""" Object representing a specific path in a graph - nodes and edges """
 
 
 class Path:
@@ -24,6 +24,14 @@ class Path:
     def getLastNode(self):
         return self.nodes[len(self.nodes) - 1]
 
+    # Returns true if nodes and edges are correctly connected in self.graph.
+    def isSane(self):
+        sane = True
+        for i in range(0, len(self.edges)):
+            sane = sane and (self.graph.source(self.edges[i]) == self.nodes[i])
+            sane = sane and (self.graph.target(self.edges[i]) == self.nodes[i + 1])
+        return sane
+
     def size(self):
         return len(self.nodes)
 
@@ -33,11 +41,3 @@ class Path:
             string = string + str(self.nodes[i]) + ', ' + str(self.edges[i]) + ', '
         string = string + str(self.nodes[len(self.nodes) - 1])
         return string
-
-    # Returns true if nodes and edges are correctly connected in self.graph.
-    def isSane(self):
-        sane = True
-        for i in range(0, len(self.edges)):
-            sane = sane and (self.graph.source(self.edges[i]) == self.nodes[i])
-            sane = sane and (self.graph.target(self.edges[i]) == self.nodes[i + 1])
-        return sane

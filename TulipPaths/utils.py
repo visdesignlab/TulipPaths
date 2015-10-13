@@ -19,3 +19,23 @@ def getNodeId(node, graph):
 def getNodeType(node, graph):
     viewLabels = graph.getProperty("viewLabel")
     return viewLabels[node].split('\n')[0].strip()
+
+def setNodeColor(color, graph):
+    viewColor = graph.getColorProperty("viewColor")
+    for node in graph.getNodes():
+        viewColor[node] = color
+
+def setEdgeColor(color, graph):
+    viewColor = graph.getColorProperty("viewColor")
+    for edge in graph.getEdges():
+        viewColor[edge] = color
+
+def setColor(item, color, graph):
+    viewColor = graph.getColorProperty("viewColor")
+    viewColor[item] = color
+
+def setPathColor(path, color, graph):
+    for node in path.nodes:
+        setColor(node, color, graph)
+    for edge in path.edges:
+        setColor(edge, color, graph)
