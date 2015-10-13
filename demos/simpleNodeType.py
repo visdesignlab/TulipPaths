@@ -1,4 +1,4 @@
-""" Example of accessing nodes using the tulip paths utils """
+""" Example of accessing node and edge types using the tulip paths utils """
 from tulip import *
 from tulipgui import *
 import TulipPaths as tp
