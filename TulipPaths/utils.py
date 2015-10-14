@@ -12,6 +12,13 @@ def getNodeById(id, graph):
             return node
     assert False, "Failed to find node by id"
 
+def getNodesByType(type, graph):
+    nodes = []
+    for node in graph.getNodes():
+        if getNodeType(node, graph) == type:
+            nodes.append(node)
+    return nodes
+
 def getNodeId(node, graph):
     nodeIds = graph.getProperty("ID")
     return nodeIds[node]
