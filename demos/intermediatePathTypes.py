@@ -23,5 +23,9 @@ print 'The valid paths are:'
 for path in results['validPaths']:
     print '  ' + path.toString()
 
+print 'The valid paths types are:'
+for path in results['validPaths']:
+    print '  ' + path.toStringOfTypes()
+
 # Render the graph in a node-link diagram.
 nodeLinkView = tlpgui.createNodeLinkDiagramView(graph)

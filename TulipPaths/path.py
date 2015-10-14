@@ -1,5 +1,6 @@
 """ Object representing a specific path in a graph - nodes and edges """
 
+import utils as utils
 
 class Path:
     # TODO: Smarter default constructor.
@@ -38,6 +39,14 @@ class Path:
     def toString(self):
         string = ''
         for i in range(0, len(self.edges)):
-            string = string + str(self.nodes[i]) + ', ' + str(self.edges[i]) + ', '
-        string = string + str(self.nodes[len(self.nodes) - 1])
+            string += str(self.nodes[i]) + ', ' + str(self.edges[i]) + ', '
+        string += str(self.nodes[len(self.nodes) - 1])
+        return string
+
+    def toStringOfTypes(self):
+        string = ''
+        for i in range(0, len(self.edges)):
+            string += utils.getNodeType(self.nodes[i], self.graph) + ', '
+            string += utils.getEdgeType(self.edges[i], self.graph) + ', '
+        string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
