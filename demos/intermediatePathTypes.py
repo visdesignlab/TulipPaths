@@ -1,4 +1,4 @@
-""" Example of finding paths """
+""" Example of finding paths and printing type details. """
 
 from tulip import *
 from tulipgui import *

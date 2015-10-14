@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b79e4aee-67cd-4c00-b7bb-dbdc7f8e64c3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TulipPaths.iml" afterPath="$PROJECT_DIR$/.idea/TulipPaths.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/intermediatePathTypes.py" afterPath="$PROJECT_DIR$/demos/intermediatePathTypes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TulipPaths/path.py" afterPath="$PROJECT_DIR$/TulipPaths/path.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/simpleNodeType.py" afterPath="$PROJECT_DIR$/demos/simpleNodeType.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TulipPaths.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +21,7 @@
     <SUITE FILE_PATH="coverage/TulipPaths$simpleTulipPaths.coverage" NAME="simpleTulipPaths Coverage Results" MODIFIED="1444578832136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
     <SUITE FILE_PATH="coverage/TulipPaths$intermediatePaths.coverage" NAME="intermediatePaths Coverage Results" MODIFIED="1444854359482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
     <SUITE FILE_PATH="coverage/TulipPaths$simpleNodeType.coverage" NAME="simpleNodeType Coverage Results" MODIFIED="1444856111889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
-    <SUITE FILE_PATH="coverage/TulipPaths$intermediatePathTypes.coverage" NAME="intermediatePathTypes Coverage Results" MODIFIED="1444855919877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
+    <SUITE FILE_PATH="coverage/TulipPaths$intermediatePathTypes.coverage" NAME="intermediatePathTypes Coverage Results" MODIFIED="1444856230681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demos" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -82,13 +76,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intermediatePathTypes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="intermediatePathTypes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/intermediatePathTypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="42" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.65806454">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="e#34#53#0" expanded="true" />
+                <element signature="e#61#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intermediateNodeType.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="intermediateNodeType.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/intermediateNodeType.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -182,8 +176,8 @@
         <option value="$PROJECT_DIR$/demos/intermediatePaths.py" />
         <option value="$PROJECT_DIR$/TulipPaths/utils.py" />
         <option value="$PROJECT_DIR$/TulipPaths/path.py" />
-        <option value="$PROJECT_DIR$/demos/intermediatePathTypes.py" />
         <option value="$PROJECT_DIR$/demos/simpleNodeType.py" />
+        <option value="$PROJECT_DIR$/demos/intermediatePathTypes.py" />
       </list>
     </option>
   </component>
@@ -333,7 +327,7 @@
       <recent name="C:\Users\kerzner\Projects\TulipPaths\examples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.simpleNodeType">
+  <component name="RunManager" selected="Python.intermediatePathTypes">
     <configuration default="false" name="simple (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -615,8 +609,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.simpleNodeType" />
-        <item index="1" class="java.lang.String" itemvalue="Python.intermediatePathTypes" />
+        <item index="0" class="java.lang.String" itemvalue="Python.intermediatePathTypes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.simpleNodeType" />
         <item index="2" class="java.lang.String" itemvalue="Python.simple (1)" />
         <item index="3" class="java.lang.String" itemvalue="Python.intermediatePaths" />
         <item index="4" class="java.lang.String" itemvalue="Python.simpleNodeColor" />
@@ -638,9 +632,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1688" height="1058" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14404762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14404762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -775,7 +769,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="45" />
           <folding>
-            <element signature="e#34#53#0" expanded="true" />
+            <element signature="e#61#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1119,24 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demos/simpleNodeType.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demos/intermediatePathTypes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="42" />
-          <folding>
-            <element signature="e#34#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demos/intermediatePaths.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1152,6 +1128,24 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/simpleNodeType.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demos/intermediatePathTypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65806454">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#80#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
