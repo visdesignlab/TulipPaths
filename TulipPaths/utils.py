@@ -25,7 +25,11 @@ def getNodeId(node, graph):
 
 def getNodeType(node, graph):
     viewLabels = graph.getProperty("viewLabel")
-    return viewLabels[node].split('\n')[0].strip()
+    viewLabel = viewLabels[node].split('\n')
+    if len(viewLabel) == 2:
+        return viewLabel[0].strip()
+    else:
+        return 'null'
 
 def setNodeColor(color, graph):
     viewColor = graph.getColorProperty("viewColor")

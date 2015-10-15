@@ -5,9 +5,9 @@ from tulipgui import *
 import TulipPaths as tp
 
 # Path parameters
-graphFile = '../tests/514_4hops.tlp'
-sourceNodeId = 593
-targetNodeId = 514
+graphFile = '../tests/514_10hops.tlp'
+sourceNodeId = 514
+targetNodeId = 593
 maxNumHops = 5
 
 # We will visualize our second valid path for debugging. This assumes that we'll find at least two paths in the graph.
@@ -23,6 +23,8 @@ endNode = tp.getNodeById(targetNodeId, graph)
 # Find paths
 print 'num hops, num valid paths, total paths, num paths with loops back to start, num remaining paths'
 visualizePaths = []
+uniqueTypes = []
+uniqueTypesCount = []
 for i in range(1, 5):
     results = tp.findPaths(startNode, endNode, i, graph)
     validPaths = results['validPaths']
@@ -35,19 +37,33 @@ for i in range(1, 5):
         else:
             visualizePaths.append(path)
 
-    print str(i) + ', ' + str(len(validPaths)) + ', ' + str(len(validPaths) + len(failedPaths)) + ', ' + str(numPathsWithLoop)
+        found = False
+        for j in range(0, len(uniqueTypes)):
+            other = uniqueTypes[j]
+            if path.isSameType(other):
+                uniqueTypesCount[j] += 1
+                found = True
+                break
+
+        if not found:
+            uniqueTypes.append(path)
+            uniqueTypesCount.append(1)
+
+    print str(i) + ', ' + str(len(validPaths) + len(failedPaths)) + ', ' + str(len(validPaths)) + ', ' + \
+          str(len(validPaths) - numPathsWithLoop) + ', ' + str(len(uniqueTypes))
 
 # Print paths
 #print 'The failed paths are:'
 #for path in failedPaths:
 #    print '  ' + path.toString()
 
-print 'The ' + str(len(validPaths)) + ' valid paths are:'
-for path in validPaths:
+print 'The ' + str(len(uniqueTypes)) + ' valid paths are:'
+for path in uniqueTypes:
     print '  ' + path.toString()
 
-for path in validPaths:
-    print '  ' + path.toStringOfTypes()
+for i in range(0, len(uniqueTypes)):
+    path = uniqueTypes[i]
+    print '  ' + path.toStringOfTypes() + ', ' + str(uniqueTypesCount[i])
 
 # Make all edges and nodes transparent
 transparentGrey = tlp.Color(50, 50, 50, 25)

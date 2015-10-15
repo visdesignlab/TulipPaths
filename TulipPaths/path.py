@@ -33,6 +33,20 @@ class Path:
             sane = sane and (self.graph.target(self.edges[i]) == self.nodes[i + 1])
         return sane
 
+    def isSameType(self, other):
+        if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
+            return False
+
+        for i in range(0, len(self.edges)):
+            if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
+                return False
+
+        for i in range(0, len(self.nodes)):
+            if not utils.getNodeType(self.nodes[i], self.graph) == utils.getNodeType(other.nodes[i], self.graph):
+                return False
+
+        return True
+
     def size(self):
         return len(self.nodes)
 
