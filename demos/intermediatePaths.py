@@ -5,7 +5,7 @@ from tulipgui import *
 import TulipPaths as tp
 
 # Path parameters
-graphFile = '../tests/test_one.tlp'
+graphFile = '../data/test_one.tlp'
 sourceNodeId = 176
 targetNodeId = 606
 maxNumHops = 4

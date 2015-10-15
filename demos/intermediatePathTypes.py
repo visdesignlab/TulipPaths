@@ -5,7 +5,7 @@ from tulipgui import *
 import TulipPaths as tp
 
 # Load the graph.
-graph = tlp.loadGraph("../tests/test_one.tlp")
+graph = tlp.loadGraph("../data/test_one.tlp")
 
 # Find start and end nodes
 startNode = tp.getNodeById(176, graph)

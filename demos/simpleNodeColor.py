@@ -5,7 +5,7 @@ from tulip import *
 from tulipgui import *
 import TulipPaths as tp
 
-graph = tlp.loadGraph("../tests/test_one.tlp")
+graph = tlp.loadGraph("../data/test_one.tlp")
 
 viewColor = graph.getColorProperty("viewColor")
 
