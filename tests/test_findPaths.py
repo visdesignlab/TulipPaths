@@ -38,5 +38,3 @@ class TestFindPaths(TestCase):
         self.assertTrue(len(valid) == 4)
         self.assertTrue(len(failed) == 1)
 
-        print results
-
