@@ -14,11 +14,12 @@ class TestFindPaths(TestCase):
         sourceNode = tp.getNodeById(sourceId, graph)
         targetNode = tp.getNodeById(targetId, graph)
 
-        results = tp.findPaths(sourceNode, targetNode, maxNumHops, graph)
+        finder = tp.PathFinder(graph)
+        finder.findPaths(sourceNode, targetNode, maxNumHops)
 
-        self.assertTrue(len(results[tp.VALID_PATHS]) == 1)
-        self.assertTrue(results[tp.VALID_PATHS][0].isSane())
-        self.assertTrue(len(results[tp.FAILED_PATHS]) == 0)
+        self.assertTrue(len(finder.valid) == 1)
+        self.assertTrue(finder.valid[0].isSane())
+        self.assertTrue(len(finder.failed) == 0)
 
     def test_findPathOne(self):
         tp.VERBOSE = True
@@ -31,11 +32,10 @@ class TestFindPaths(TestCase):
         sourceNode = tp.getNodeById(sourceId, graph)
         targetNode = tp.getNodeById(targetId, graph)
 
-        results = tp.findPaths(sourceNode, targetNode, maxNumHops, graph)
-        valid = results[tp.VALID_PATHS]
-        failed = results[tp.FAILED_PATHS]
+        finder = tp.PathFinder(graph)
+        finder.findPaths(sourceNode, targetNode, maxNumHops)
 
-        self.assertTrue(len(valid) == 4)
-        self.assertTrue(len(failed) == 1)
-        for path in valid:
+        self.assertTrue(len(finder.valid) == 4)
+        self.assertTrue(len(finder.failed) == 1)
+        for path in finder.valid:
             self.assertTrue(path.isSane())

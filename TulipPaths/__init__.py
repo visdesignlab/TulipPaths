@@ -2,6 +2,6 @@
 
 # Internal files.
 from .utils import *
-from .findPaths import *
+from .pathFinder import *
 from .config import *
 from .path import *

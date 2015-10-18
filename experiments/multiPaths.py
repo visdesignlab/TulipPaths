@@ -18,7 +18,7 @@ targetNodes = tp.utils.getNodesByType(targetNodeType, graph)
 validPaths = []
 failedPaths = []
 for target in targetNodes:
-    results = tp.findPaths(sourceNode, target, maxNumHops, graph)
+    results = tp.pathFinder(sourceNode, target, maxNumHops, graph)
     results = results['validPaths']
     for path in results:
         validPaths.append(path)

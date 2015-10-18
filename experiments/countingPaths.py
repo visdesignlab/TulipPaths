@@ -17,8 +17,8 @@ visualizePathIndex = 2
 graph = tlp.loadGraph(graphFile)
 
 # Find start and end nodes
-startNode = tp.getNodeById(sourceNodeId, graph)
-endNode = tp.getNodeById(targetNodeId, graph)
+source = tp.getNodeById(sourceNodeId, graph)
+target = tp.getNodeById(targetNodeId, graph)
 
 # Find paths
 print 'num hops, num valid paths, total paths, num paths with loops back to start, num remaining paths'
@@ -26,15 +26,15 @@ visualizePaths = []
 uniqueTypes = 0
 uniqueTypesCount = 0
 
+finder = tp.PathFinder(graph)
 for i in range(1, 5):
-    results = tp.findPaths(startNode, endNode, i, graph)
-    validPaths = results['validPaths']
-    failedPaths = results['failedPaths']
+    finder.reset()
+    finder.findPaths(source, target, i)
     visualizePaths = []
     numPathsWithLoop = 0
     uniqueTypesCount = []
     uniqueTypes = []
-    for path in validPaths:
+    for path in finder.valid:
         if path.nodes[0] in path.nodes[1:]:
             numPathsWithLoop += 1
         else:
@@ -55,18 +55,11 @@ for i in range(1, 5):
     check = 0
     for j in range(0, len(uniqueTypesCount)):
         check = check + uniqueTypesCount[j]
-    assert check==len(validPaths)
+    assert check==len(finder.valid)
 
-    print str(i) + ', ' + str(len(validPaths) + len(failedPaths)) + ', ' + str(len(validPaths)) + ', ' + \
-          str(len(validPaths) - numPathsWithLoop) + ', ' + str(len(uniqueTypes))
+    print str(i) + ', ' + str(len(finder.valid) + len(finder.failed)) + ', ' + str(len(finder.valid)) + ', ' + \
+          str(len(finder.valid) - numPathsWithLoop) + ', ' + str(len(uniqueTypes))
 
-
-
-
-# Print paths
-#print 'The failed paths are:'
-#for path in failedPaths:
-#    print '  ' + path.toString()
 
 print 'The ' + str(len(uniqueTypes)) + ' valid paths are:'
 for path in uniqueTypes:
@@ -82,7 +75,7 @@ tp.setEdgeColor(transparentGrey, graph)
 tp.setNodeColor(transparentGrey, graph)
 
 # Set the desired path to red
-assert len(validPaths) > visualizePathIndex, 'Error - visualize path index > num valid paths'
+assert len(finder.valid) > visualizePathIndex, 'Error - visualize path index > num valid paths'
 for path in visualizePaths:
     tp.setPathColor(path, tlp.Color.Red, graph)
 
