@@ -1,67 +1,43 @@
 from unittest import TestCase
 from tulip import *
-import TulipPaths as tp
+import tulippaths as tp
 
 
 class TestPath(TestCase):
 
+    # Build a very simple path.
     def setUp(self):
-        graphFile = '../data/test_one.tlp'
-        self.graph = tlp.loadGraph(graphFile)
+        self.graph = tlp.loadGraph('../data/test_one.tlp')
         self.startNodeId = 606
 
-    def test_addNode(self):
-
-        path = tp.Path(self.graph)
+        self.path = tp.Path(self.graph)
         node = tp.getNodeById(self.startNodeId, self.graph)
-        path.addNode(node)
-
-        self.assertTrue(len(path.nodes) == 1)
-        self.assertTrue(path.nodes[0] == node)
-        self.assertTrue(path.isSane())
-
-    def test_addEdge(self):
-
-        path = tp.Path(self.graph)
-        node = tp.getNodeById(self.startNodeId, self.graph)
-        path.addNode(node)
+        self.path.addNode(node)
 
         edges = self.graph.getOutEdges(node)
 
         for edge in edges:
-            path.addEdge(edge)
-            path.addNode(self.graph.target(edge))
+            self.path.addEdge(edge)
+            self.lastNode = self.graph.target(edge)
+            self.path.addNode(self.lastNode)
             break
 
+    # Do some sanity checking on the path
+    def test_basicFunctions(self):
+        path = self.path
         self.assertTrue(len(path.edges) == 1)
         self.assertTrue(len(path.nodes) == 2)
         self.assertTrue(path.isSane())
-
-    def test_getLastNode(self):
-
-        path = tp.Path(self.graph)
-        node = tp.getNodeById(self.startNodeId, self.graph)
-        path.addNode(node)
-
-        edges = self.graph.getOutEdges(node)
-        lastNode = 0
-        for edge in edges:
-            path.addEdge(edge)
-            lastNode = self.graph.target(edge)
-            path.addNode(lastNode)
-            break
-
-        self.assertTrue(path.getLastNode() == lastNode)
-        self.assertTrue(path.isSane())
+        self.assertTrue(path.getLastNode() == self.lastNode)
+        self.assertTrue(path.size() == 2)
 
     def test_isSameType(self):
-        self.fail()
-
-    def test_size(self):
-        self.fail()
+        otherPath = tp.Path(self.graph)
+        self.assertFalse(otherPath.isSameType(self.path))
+        self.assertTrue(self.path.isSameType(self.path))
 
     def test_toString(self):
-        self.fail()
+        self.assertTrue(self.path.toString() == '<node 1>, <edge 3>, <node 2>')
 
     def test_toStringOfTypes(self):
-        self.fail()
+        self.assertTrue(self.path.toStringOfTypes() == 'GC ON, Adherens, CBb4w')

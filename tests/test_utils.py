@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from tulip import *
-import TulipPaths as tp
+import tulippaths as tp
 
 class TestUtils(TestCase):
 

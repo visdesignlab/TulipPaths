@@ -3,7 +3,7 @@
 """
 from tulip import *
 from tulipgui import *
-import TulipPaths as tp
+import tulippaths as tp
 
 graph = tlp.loadGraph("../data/test_one.tlp")
 

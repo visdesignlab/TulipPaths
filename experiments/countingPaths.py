@@ -2,12 +2,12 @@
 
 from tulip import *
 from tulipgui import *
-import TulipPaths as tp
+import tulippaths as tp
 
 # Path parameters
-graphFile = '../data/514_10hops.tlp'
-sourceNodeId = 514
-targetNodeId = 593
+graphFile = '../data/514_4hops.tlp'
+sourceNodeId = 593
+targetNodeId = 514
 maxNumHops = 5
 
 # We will visualize our second valid path for debugging. This assumes that we'll find at least two paths in the graph.
@@ -23,14 +23,17 @@ endNode = tp.getNodeById(targetNodeId, graph)
 # Find paths
 print 'num hops, num valid paths, total paths, num paths with loops back to start, num remaining paths'
 visualizePaths = []
-uniqueTypes = []
-uniqueTypesCount = []
+uniqueTypes = 0
+uniqueTypesCount = 0
+
 for i in range(1, 5):
     results = tp.findPaths(startNode, endNode, i, graph)
     validPaths = results['validPaths']
     failedPaths = results['failedPaths']
     visualizePaths = []
     numPathsWithLoop = 0
+    uniqueTypesCount = []
+    uniqueTypes = []
     for path in validPaths:
         if path.nodes[0] in path.nodes[1:]:
             numPathsWithLoop += 1
@@ -49,8 +52,16 @@ for i in range(1, 5):
             uniqueTypes.append(path)
             uniqueTypesCount.append(1)
 
+    check = 0
+    for j in range(0, len(uniqueTypesCount)):
+        check = check + uniqueTypesCount[j]
+    assert check==len(validPaths)
+
     print str(i) + ', ' + str(len(validPaths) + len(failedPaths)) + ', ' + str(len(validPaths)) + ', ' + \
           str(len(validPaths) - numPathsWithLoop) + ', ' + str(len(uniqueTypes))
+
+
+
 
 # Print paths
 #print 'The failed paths are:'

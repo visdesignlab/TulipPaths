@@ -2,7 +2,7 @@
 
 from tulip import *
 from tulipgui import *
-import TulipPaths as tp
+import tulippaths as tp
 
 # Path parameters
 graphFile = '../data/test_three.tlp'

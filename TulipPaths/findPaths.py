@@ -4,7 +4,6 @@ from Queue import *
 from config import VERBOSE
 from path import *
 
-
 def findPaths(startNode, endNode, maxNumHops, graph):
     failedPaths = []
     validPaths = []
