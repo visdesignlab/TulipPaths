@@ -4,7 +4,7 @@ from tulip import *
 from tulipgui import *
 
 # Load the graph.
-graph = tlp.loadGraph("../data/test_zero.tlp")
+graph = tlp.loadGraph("../data/test_two.tlp")
 
 # Render the graph in a node-link diagram.
 nodeLinkView = tlpgui.createNodeLinkDiagramView(graph)
