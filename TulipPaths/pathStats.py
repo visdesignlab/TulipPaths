@@ -13,7 +13,7 @@ class PathStats:
             path = self.paths[i]
 
             # Does path contain a loop?
-            if path.nodes[0] in path.nodes[1:]:
+            if path.hasLoop():
                 self._loopIndexes.append(i)
 
             # Is the path a unique type?

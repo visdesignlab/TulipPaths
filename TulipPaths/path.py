@@ -25,6 +25,9 @@ class Path:
     def getLastNode(self):
         return self.nodes[len(self.nodes) - 1]
 
+    def hasLoop(self):
+        return self.nodes[0] in self.nodes[1:]
+
     # Returns true if nodes and edges are correctly connected in self.graph.
     def isSane(self):
         sane = True
