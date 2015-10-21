@@ -67,3 +67,9 @@ class TestUtils(TestCase):
         for i in range(0, len(nodeIds)):
             node = tp.utils.getNodeById(nodeIds[i], self.graph)
             self.assertTrue(completeness[node] == expectedCompleteness[i])
+
+    def test_getAllEdgeTypes(self):
+        self.file = '../data/test_one.tlp'
+        self.graph = tlp.loadGraph(self.file)
+        edgeTypes = tp.utils.getAllEdgeTypes(self.graph)
+        self.assertTrue(edgeTypes == ['Touch', 'Ribbon Synapse', 'Unknown', 'Adherens', 'Gap Junction'])

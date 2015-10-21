@@ -1,6 +1,14 @@
 """ Misc utilities for accessing and manipulating tulip graphs """
 
 
+def getAllEdgeTypes(graph):
+    edgeTypes = []
+    for edge in graph.getEdges():
+        edgeType = getEdgeType(edge, graph)
+        if edgeType not in edgeTypes:
+            edgeTypes.append(edgeType)
+    return edgeTypes
+
 # Returns a dictionary of nodes: percent completeness
 def getApproximateAnnotationCompleteness(graph):
     completeness = {}
