@@ -6,7 +6,7 @@ import tulippaths as tp
 
 # Path parameters
 graphFile = '../data/test_one.tlp'
-sourceNodeId = 176
+sourceNodeId = 593
 targetNodeId = 606
 maxNumHops = 4
 
