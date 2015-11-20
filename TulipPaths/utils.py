@@ -10,6 +10,7 @@ def getAllEdgeTypes(graph):
     return edgeTypes
 
 # Returns a dictionary of nodes: percent completeness
+# Max completeness = max number of synapses going into and out of a node
 def getApproximateAnnotationCompleteness(graph):
     completeness = {}
     touched = {}
@@ -57,6 +58,7 @@ def getEdgeType(edge, graph):
     return edgeTypes[edge]
 
 # Returns number of linked children structures that an edge represents.
+# AkA number of synapses between 2 nodes
 def getEdgeWeight(edge, graph):
     linkedStructures = graph.getProperty("LinkedStructures")
     structures = linkedStructures[edge].strip()
