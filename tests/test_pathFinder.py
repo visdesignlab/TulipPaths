@@ -39,3 +39,18 @@ class TestFindPaths(TestCase):
         self.assertTrue(len(finder.failed) == 1)
         for path in finder.valid:
             self.assertTrue(path.isSane())
+
+    def test_findAllPaths(self):
+        tp.VERBOSE = True
+        graphFile = '../data/test_one.tlp'
+        maxNumHops = 2
+        sourceId = 176
+
+        graph = tlp.loadGraph(graphFile)
+
+        sourceNode = tp.getNodeById(sourceId, graph)
+
+        finder = tp.PathFinder(graph)
+        finder.findAllPaths(sourceNode, maxNumHops)
+
+        self.assertTrue(len(finder.valid) == 3)

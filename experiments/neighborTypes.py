@@ -24,7 +24,7 @@ if showCompleteness:
 
 output = open('test1.csv', 'w')
 
-labels = ['CBb5w']
+labels = ['CBb5w', 'CBb4w']
 connections = ['Gap Junction', 'Conventional', 'Ribbon Synapse', 'Adherens', 'BC Conventional Synapse', 'Touch', 'Unknown']
 items = ['label', 'id', '%complete', 'labels (G)','labels (CS)','labels (R)','labels (A)','labels (BCS)', 'labels (T)', 'labels (U)', 'ngbrs (G)','ngbrs (CS)','ngbrs (R)','ngbrs (A)','ngbrs (BCS)', 'ngbrs (T)', 'ngbrs (U)']
 header = ''
@@ -64,6 +64,8 @@ for label in labels:
         numLabelsByEdgeType = []
         for child in connections:
             numNeighborsByEdgeType.append(len(neighbors[child]))
+            removed = list(set(neighbors[child]))
+            print str(len(removed)) + ', ' + str(len(neighbors[child]))
             numLabelsByEdgeType.append(len(getUniqueLabels(neighbors[child], graph)))
 
         attributes = [label, tp.getNodeId(node, graph), '{0:0.3f}'.format(completeness[node])] + numLabelsByEdgeType + numNeighborsByEdgeType
