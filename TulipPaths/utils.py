@@ -44,6 +44,19 @@ def getApproximateNumAnnotations(node, graph):
 
     return approximateNumAnnotations
 
+def getDictionaryOfNodeTypes(graph):
+
+    dictionary = {}
+
+    for node in graph.getNodes():
+        nodeType = getNodeType(node, graph)
+        if dictionary.has_key(nodeType):
+            dictionary[nodeType].append(node)
+        else:
+            dictionary[nodeType] = [node]
+
+    return dictionary
+
 def getEdgeType(edge, graph):
     edgeTypes = graph.getProperty("edgeType")
     return edgeTypes[edge]

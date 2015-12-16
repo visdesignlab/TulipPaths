@@ -67,3 +67,14 @@ class TestUtils(TestCase):
         for i in range(0, len(nodeIds)):
             node = tp.utils.getNodeById(nodeIds[i], self.graph)
             self.assertTrue(completeness[node] == expectedCompleteness[i])
+
+    def test_getDictionaryOfNodeTypes(self):
+        self.file = '../data/test_two.tlp'
+        self.graph = tlp.loadGraph(self.file)
+
+        dictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)
+
+        for key in dictionary.keys():
+            values = dictionary[key]
+            for node in values:
+                self.assertTrue(tp.utils.getNodeType(node, self.graph) == key)
