@@ -68,6 +68,16 @@ class TestUtils(TestCase):
             node = tp.utils.getNodeById(nodeIds[i], self.graph)
             self.assertTrue(completeness[node] == expectedCompleteness[i])
 
+    def test_getDictionaryOfEdgeTypes(self):
+        self.file = '../data/test_two.tlp'
+        self.graph = tlp.loadGraph(self.file)
+        dictionary = tp.utils.getDictionaryOfEdgeTypes(self.graph)
+
+        for key in dictionary.keys():
+            values = dictionary[key]
+            for edge in values:
+                self.assertTrue(tp.utils.getEdgeType(edge, self.graph) == key)
+
     def test_getDictionaryOfNodeTypes(self):
         self.file = '../data/test_two.tlp'
         self.graph = tlp.loadGraph(self.file)
@@ -78,3 +88,10 @@ class TestUtils(TestCase):
             values = dictionary[key]
             for node in values:
                 self.assertTrue(tp.utils.getNodeType(node, self.graph) == key)
+
+    def test_isEdgeTypeInGraph(self):
+        self.file = '../data/test_two.tlp'
+        self.graph = tlp.loadGraph(self.file)
+
+        self.assertTrue(tp.utils.isEdgeTypeInGraph('Gap Junction', self.graph))
+        self.assertFalse(tp.utils.isEdgeTypeInGraph('Gap Junctionf', self.graph))

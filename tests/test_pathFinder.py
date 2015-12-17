@@ -54,3 +54,20 @@ class TestFindPaths(TestCase):
         finder.findAllPaths(sourceNode, maxNumHops)
 
         self.assertTrue(len(finder.valid) == 3)
+
+    def test_findConstrainedPaths(self):
+        graphFile = '../data/test_one.tlp'
+        graph = tlp.loadGraph(graphFile)
+        tp.VERBOSE = True
+        source = tp.utils.getNodeById(176, graph)
+        target = tp.utils.getNodeById(5530, graph)
+
+        constrainedToEdgeTypes = ["Ribbon Synapse", "Adherens"]
+        constrainedToNodeTypes = ["CBb3-4i", "GC ON", "CBb4w"]
+
+        pathFinder = tp.PathFinder(graph)
+
+        pathFinder.findConstrainedPaths(source, constrainedToEdgeTypes, constrainedToNodeTypes)
+        print len(pathFinder.valid)
+        for path in pathFinder.valid:
+            print path.toStringOfTypes()

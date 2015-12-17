@@ -1,6 +1,5 @@
 """ Misc utilities for accessing and manipulating tulip graphs """
 
-
 # Returns a dictionary of nodes: percent completeness
 def getApproximateAnnotationCompleteness(graph):
     completeness = {}
@@ -44,6 +43,20 @@ def getApproximateNumAnnotations(node, graph):
 
     return approximateNumAnnotations
 
+def getDictionaryOfEdgeTypes(graph):
+    dictionary = {}
+
+    for edge in graph.getEdges():
+
+        edgeType = getEdgeType(edge, graph)
+
+        if dictionary.has_key(edgeType):
+            dictionary[edgeType].append(edge)
+        else:
+            dictionary[edgeType] = [edge]
+
+    return dictionary
+
 def getDictionaryOfNodeTypes(graph):
 
     dictionary = {}
@@ -66,6 +79,11 @@ def getEdgeWeight(edge, graph):
     linkedStructures = graph.getProperty("LinkedStructures")
     structures = linkedStructures[edge].strip()
     return len(structures.split('    '))
+
+def getEdgeLinkedStructures(edge, graph):
+    linkedStructures = graph.getProperty("LinkedStructures")
+    structures = linkedStructures[edge].strip()
+    return structures.lstrip(' ')
 
 def getNodeById(id, graph):
     nodeIds = graph.getProperty("ID")
@@ -92,6 +110,14 @@ def getNodeType(node, graph):
         return viewLabel[0].strip()
     else:
         return 'null'
+
+def isEdgeTypeInGraph(edgeType, graph):
+    for edge in graph.getEdges():
+        otherType = getEdgeType(edge, graph)
+        if otherType == edgeType:
+            return True
+
+    return False
 
 def setNodeColor(color, graph):
     viewColor = graph.getColorProperty("viewColor")

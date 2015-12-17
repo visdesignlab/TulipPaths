@@ -11,7 +11,6 @@ class PathFinder:
         self.valid = []
         self.failed = []
 
-
     def findAllPaths(self, source, maxNumHops):
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
@@ -75,7 +74,6 @@ class PathFinder:
 
         for path in self.failed:
             assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
-
 
     def findPaths(self, source, target, maxNumHops):
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
@@ -155,6 +153,21 @@ class PathFinder:
 
         for path in self.failed:
             assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
+
+    def findConstrainedPaths(self, source, nodeConstraints, edgeConstraints):
+
+        assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
+
+        self.findAllPaths(source, len(edgeConstraints))
+
+        matches = []
+
+        for path in self.valid:
+            if path.isInTypeConstraints(edgeConstraints, nodeConstraints):
+                matches.append(path)
+
+        self.valid = matches
+
 
     def reset(self):
         self.valid = []
