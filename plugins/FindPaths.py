@@ -7,7 +7,7 @@ class FindPaths(tlp.Algorithm):
     def __init__(self, context):
         tlp.Algorithm.__init__(self, context)
 
-        self.nodeLabel0 = "node #0 type"
+        self.nodeLabel0 = "node #0 label"
         self.nodeLabel1 = "node #1 label"
         self.nodeLabel2 = "node #2 label"
 
