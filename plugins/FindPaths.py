@@ -13,12 +13,15 @@ class FindPaths(tlp.Algorithm):
 
         self.edgeType0 = "edge #0 type"
         self.edgeType1 = "edge #1 type"
+        
+        self.outputFileLabel = 'Output file'
 
         self.addStringParameter(self.nodeLabel0, "", "CBb3m")
         self.addStringParameter(self.edgeType0, "", "Ribbon Synapse")
         self.addStringParameter(self.nodeLabel1, "", "AC")
         self.addStringParameter(self.edgeType1, "", "Conventional")
         self.addStringParameter(self.nodeLabel2, "", "Rod BC")
+        self.addStringParameter(self.outputFileLabel, "", "C:\PathStats.txt")
 
     def check(self):
         print "====== Checking inputs"
@@ -31,7 +34,7 @@ class FindPaths(tlp.Algorithm):
                 print "\n====== Could not find nodes of type: " + nodeType + "\n"
                 return (False, "Could not find nodes of type: " + nodeType)
             else:
-                print "    Num nodes with type " + nodeType + ": " + str(len(nodes))
+                print "Num nodes with type " + nodeType + ": " + str(len(nodes))
 
         print    "\n== Checking edge types"
         edgeTypes = self.getEdgeTypeConstraints()
@@ -41,7 +44,7 @@ class FindPaths(tlp.Algorithm):
                 print "\n====== Could not find edges of type: " + edgeType + "!\n"
                 return (False, "Could not find edges of type: " + edgeType)
             else:
-                print "    Num edges with type " + edgeType + ": " + str(len(allEdgesByType[edgeType]))
+                print "Num edges with type " + edgeType + ": " + str(len(allEdgesByType[edgeType]))
 
         print "\n====== Inputs passed!\n"
 
@@ -65,22 +68,24 @@ class FindPaths(tlp.Algorithm):
         edgeTypes = self.getEdgeTypeConstraints()
         sourceType = nodeTypes[0]
         viewSelection = self.graph.getBooleanProperty("viewSelection")
+        outputFile = open(self.dataSet[self.outputFileLabel], 'w')
 
         pathTypeString = nodeTypes[0] + ", " + edgeTypes[0] + ", " + nodeTypes[1] + ", " + edgeTypes[1] + ", " + \
                          nodeTypes[2]
 
         print "====== Searching for paths\n"
-        print "   Type of path: " + pathTypeString
-
+        print "Type of path: " + pathTypeString
+	
         wrapper = tp.PathFinderWrapper(self.graph)
         paths = wrapper.findConstrainedPathsFromType(sourceType, nodeTypes, edgeTypes)
 
-        print "    Total num paths found: " + str(len(paths))
+        print "Total num paths found: " + str(len(paths))
         print "\n====== Done searching for paths\n"
 
         print "===== Printing path ids\n"
 
-        print "    " + pathTypeString
+        print pathTypeString
+        outputFile.write (pathTypeString + '\n')
         for path in paths:
 
             if not path.toStringOfTypes() == pathTypeString:
@@ -88,12 +93,14 @@ class FindPaths(tlp.Algorithm):
                 print path.toStringOfTypes()
                 return False
 
-            print "    " + path.toStringOfIds()
+            print path.toStringOfIds()
+            outputFile.write(path.toStringOfIds() + '\n')
 
         print "\n===== Done printing path ids\n"
         # Print those paths
 
         print "===== Printing path statistics\n"
+        outputFile.write("\nStatistics\n")
 
         sourceNodesWithPath = []
         targetNodesWithPath = []
@@ -112,12 +119,19 @@ class FindPaths(tlp.Algorithm):
             for edge in path.edges:
                 viewSelection[edge] = True
 
-        nodeTypeDictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)
-
-        print "    Percent of " + nodeTypes[0] + " nodes part of a path: " + "{0:.3f}".format(
+        nodeTypeDictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)       
+        nodesInPath =  "Percent of " + nodeTypes[0] + " nodes part of a path: " + "{0:.3f}".format(
             float(len(sourceNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[0]])))
-        print "    Percent of " + nodeTypes[2] + " nodes part of a path: " + "{0:.3f}".format(
+        print nodesInPath
+
+
+        outputFile.write(nodesInPath + '\n')
+        nodesInPath = "Percent of " + nodeTypes[2] + " nodes part of a path: " + "{0:.3f}".format(
             float(len(targetNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[2]])))
+
+        print nodesInPath
+        outputFile.write(nodesInPath + '\n')
+
 
         print "\n===== Done printing path statistics\n"
 
@@ -126,4 +140,4 @@ class FindPaths(tlp.Algorithm):
 
 # The line below does the magic to register the plugin to the plugin database
 # and updates the GUI to make it accessible through the menus.
-tulipplugins.registerPlugin("FindPaths", "FindPaths", "", "14/12/2015", "", "1.0")
+tulipplugins.registerPlugin("FindPaths", "Find 2-Hop Paths", "", "14/12/2015", "", "1.0")
