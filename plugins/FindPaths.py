@@ -68,6 +68,13 @@ class FindPaths(tlp.Algorithm):
         edgeTypes = self.getEdgeTypeConstraints()
         sourceType = nodeTypes[0]
         viewSelection = self.graph.getBooleanProperty("viewSelection")
+         
+        for node in self.graph.getNodes():
+         	viewSelection[node] = False
+        	
+        for edge in self.graph.getEdges():
+        		viewSelection[edge] = False
+        	        
         outputFile = open(self.dataSet[self.outputFileLabel], 'w')
 
         pathTypeString = nodeTypes[0] + ", " + edgeTypes[0] + ", " + nodeTypes[1] + ", " + edgeTypes[1] + ", " + \
