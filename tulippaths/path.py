@@ -50,6 +50,22 @@ class Path:
 
         return True
 
+    def isInTypeConstraints(self, constrainedEdges, constrainedNodes):
+
+        for i in range(0, len(self.edges)):
+            edge = self.edges[i]
+            edgeType = utils.getEdgeType(edge, self.graph)
+            if constrainedEdges[i] != edgeType:
+                return False
+
+        for i in range(0, len(self.nodes)):
+            node = self.nodes[i]
+            nodeType = utils.getNodeType(node, self.graph)
+            if constrainedNodes[i] != nodeType:
+                return False
+
+        return True
+
     def size(self):
         return len(self.nodes)
 
@@ -58,6 +74,14 @@ class Path:
         for i in range(0, len(self.edges)):
             string += str(self.nodes[i]) + ', ' + str(self.edges[i]) + ', '
         string += str(self.nodes[len(self.nodes) - 1])
+        return string
+
+    def toStringOfIds(self):
+        string = ''
+        for i in range(0, len(self.edges)):
+            string += utils.getNodeId(self.nodes[i], self.graph) + ', '
+            string += '(' + utils.getEdgeLinkedStructures(self.edges[i], self.graph) + '), '
+        string += utils.getNodeId(self.nodes[len(self.nodes) - 1], self.graph)
         return string
 
     def toStringOfTypes(self):

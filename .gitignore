@@ -1,2 +1,6 @@
 *.pyc
 *workspace.xml
+*.pyo
+.idea/TulipPaths.iml
+.idea/misc.xml
+.idea/workspace.xml

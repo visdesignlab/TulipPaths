@@ -4,7 +4,6 @@ import tulippaths as tp
 
 
 class TestPath(TestCase):
-
     # Build a very simple path.
     def setUp(self):
         self.graph = tlp.loadGraph('../data/test_one.tlp')
@@ -41,3 +40,22 @@ class TestPath(TestCase):
 
     def test_toStringOfTypes(self):
         self.assertTrue(self.path.toStringOfTypes() == 'GC ON, Adherens, CBb4w')
+
+    def test_findConstrainedPaths(self):
+        graphFile = '../data/test_one.tlp'
+        graph = tlp.loadGraph(graphFile)
+
+        source = tp.utils.getNodeById(176, graph)
+        target = tp.utils.getNodeById(5530, graph)
+
+        pathFinder = tp.PathFinder(graph)
+
+        pathFinder.findPaths(source, target, 2)
+
+        for path in pathFinder.valid:
+            if path.size() < 3:
+                continue
+            else:
+                constrainedEdges = ["Ribbon Synapse", "Adherens"]
+                constrainedNodes = ["CBb3-4i", "GC ON", "CBb4w"]
+                self.assertTrue(path.isInTypeConstraints(constrainedEdges, constrainedNodes))
