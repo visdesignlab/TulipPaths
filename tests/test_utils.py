@@ -73,6 +73,7 @@ class TestUtils(TestCase):
         self.graph = tlp.loadGraph(self.file)
         edgeTypes = tp.utils.getAllEdgeTypes(self.graph)
         self.assertTrue(edgeTypes == ['Touch', 'Ribbon Synapse', 'Unknown', 'Adherens', 'Gap Junction'])
+
     def test_getDictionaryOfEdgeTypes(self):
         self.file = '../data/test_two.tlp'
         self.graph = tlp.loadGraph(self.file)
@@ -100,3 +101,41 @@ class TestUtils(TestCase):
 
         self.assertTrue(tp.utils.isEdgeTypeInGraph('Gap Junction', self.graph))
         self.assertFalse(tp.utils.isEdgeTypeInGraph('Gap Junctionf', self.graph))
+
+    def test_canBeReachedFrom(self):
+        self.file = '../data/test_two.tlp'
+        graph = tlp.loadGraph(self.file)
+
+        # Node of cell id 1 should be reachable from GAC Aii label
+        source = tp.utils.getNodeById(1, graph)
+        self.assertTrue(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph))
+
+        # Node of cell id 5860 should be able to reach CBb3-4i (cell id #1)
+        source = tp.utils.getNodeById(5860, graph)
+        self.assertTrue(tp.utils.canReachTypes(source, ['CBb3-4i'], graph))
+
+        source = tp.utils.getNodeById(606, graph)
+        self.assertFalse(tp.utils.canReachTypes(source, ['CBb3-4i'], graph))
+        self.assertFalse(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph))
+
+    def test_getNodesByType(self):
+        self.file = '../data/test_two.tlp'
+
+        graph = tlp.loadGraph(self.file)
+        nodes = tp.utils.getNodesByType('GAC Aii', graph)
+
+        self.assertTrue(len(nodes) == 1)
+        self.assertTrue(tp.utils.getNodeType(nodes[0], graph) == 'GAC Aii')
+
+    def test_getNodesByTypes(self):
+        self.file = '../data/test_two.tlp'
+
+        graph = tlp.loadGraph(self.file)
+
+        nodeTypes = ['GAC Aii', 'CBb3-4i']
+        nodes = tp.utils.getNodesByTypes(nodeTypes, graph)
+
+        self.assertTrue(len(nodes) == 3)
+
+        for node in nodes:
+            self.assertTrue(tp.utils.getNodeType(node, graph) in nodeTypes)

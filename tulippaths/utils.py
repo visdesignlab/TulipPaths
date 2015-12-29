@@ -1,5 +1,23 @@
 """ Misc utilities for accessing and manipulating tulip graphs """
 
+# Returns true if node can be reached from sourceTypes.
+# sourceTypes is a list of node types (strings).
+def canBeReachedFromTypes(node, sourceTypes, graph):
+    for edge in graph.getInEdges(node):
+        edgeSourceType = getNodeType(graph.source(edge), graph)
+        if edgeSourceType in sourceTypes:
+            return True
+    return False
+
+# Returns true only if node can reach target types.
+# targetTypes is a list of node types (strings).
+def canReachTypes(node, targetTypes, graph):
+    for edge in graph.getOutEdges(node):
+        edgeTargetType = getNodeType(graph.target(edge), graph)
+        if edgeTargetType in targetTypes:
+            return True
+    return False
+
 def getAllEdgeTypes(graph):
     edgeTypes = []
     for edge in graph.getEdges():
@@ -53,6 +71,7 @@ def getApproximateNumAnnotations(node, graph):
     return approximateNumAnnotations
 
 def getDictionaryOfEdgeTypes(graph):
+
     dictionary = {}
 
     for edge in graph.getEdges():
@@ -107,6 +126,12 @@ def getNodesByType(type, graph):
     for node in graph.getNodes():
         if getNodeType(node, graph) == type:
             nodes.append(node)
+    return nodes
+
+def getNodesByTypes(types, graph):
+    nodes = []
+    for nodeType in types:
+        nodes += getNodesByType(nodeType, graph)
     return nodes
 
 def getNodeId(node, graph):

@@ -59,3 +59,23 @@ class TestPath(TestCase):
                 constrainedEdges = ["Ribbon Synapse", "Adherens"]
                 constrainedNodes = ["CBb3-4i", "GC ON", "CBb4w"]
                 self.assertTrue(path.isInTypeConstraints(constrainedEdges, constrainedNodes))
+
+    def test_isSynapticPath(self):
+
+        graphFile = '../data/test_one.tlp'
+        graph = tlp.loadGraph(graphFile)
+
+        source = tp.utils.getNodeById(176, graph)
+        target = tp.utils.getNodeById(5530, graph)
+
+        pathFinder = tp.PathFinder(graph)
+
+        pathFinder.findPaths(source, target, 2)
+
+        for path in pathFinder.valid:
+            if path.toStringOfTypes() == 'CBb3-4i, Unknown, CBb4w':
+                self.assertTrue(path.isSynapticPath())
+            elif path.toStringOfTypes() == 'CBb3-4i, Ribbon Synapse, GC ON, Adherens, CBb4w':
+                self.assertFalse(path.isSynapticPath())
+            else:
+                self.assertTrue(False) # Should never get here.

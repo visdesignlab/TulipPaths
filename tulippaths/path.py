@@ -28,6 +28,22 @@ class Path:
     def hasLoop(self):
         return self.nodes[0] in self.nodes[1:]
 
+    def isInTypeConstraints(self, constrainedEdges, constrainedNodes):
+
+        for i in range(0, len(self.edges)):
+            edge = self.edges[i]
+            edgeType = utils.getEdgeType(edge, self.graph)
+            if constrainedEdges[i] != edgeType:
+                return False
+
+        for i in range(0, len(self.nodes)):
+            node = self.nodes[i]
+            nodeType = utils.getNodeType(node, self.graph)
+            if constrainedNodes[i] != nodeType:
+                return False
+
+        return True
+
     # Returns true if nodes and edges are correctly connected in self.graph.
     def isSane(self):
         sane = True
@@ -50,20 +66,12 @@ class Path:
 
         return True
 
-    def isInTypeConstraints(self, constrainedEdges, constrainedNodes):
-
-        for i in range(0, len(self.edges)):
-            edge = self.edges[i]
+    # Returns false only if the path contains an edge of type 'adherens' or 'touch'.
+    def isSynapticPath(self):
+        for edge in self.edges:
             edgeType = utils.getEdgeType(edge, self.graph)
-            if constrainedEdges[i] != edgeType:
+            if edgeType in ['Adherens', 'Touch']:
                 return False
-
-        for i in range(0, len(self.nodes)):
-            node = self.nodes[i]
-            nodeType = utils.getNodeType(node, self.graph)
-            if constrainedNodes[i] != nodeType:
-                return False
-
         return True
 
     def size(self):
