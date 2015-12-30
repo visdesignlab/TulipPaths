@@ -27,24 +27,24 @@ print 'Num nodes complete enough for analysis: ' + str(len(acNodes))
 ffNodeTypes = superTypeDictionary.getTypesFromSuperTypes(['GC'])
 fbNodeTypes = superTypeDictionary.getTypesFromSuperType('CBb')
 
-print 'id, nodeType, isFeedback, isFeedforward'
+print 'id, nodeType, isFeedback, isFeedforward, outputToFb, outputToFf'
 numNeither = 0
 numNotSkipped = 0
 for node in acNodes:
 
     numNotSkipped += 1
-    canBeReachedFromCBb = tp.utils.canBeReachedFromTypes(node, fbNodeTypes, graph)
-    canReachCBb = tp.utils.canReachTypes(node, fbNodeTypes, graph)
-    canReachGC = tp.utils.canReachTypes(node, ffNodeTypes, graph)
+    inputFromCBb = tp.utils.canBeReachedFromTypes(node, fbNodeTypes, graph)
+    outputToFb = tp.utils.canReachTypes(node, fbNodeTypes, graph)
+    outputToFf = tp.utils.canReachTypes(node, ffNodeTypes, graph)
 
-    isFeedbackNode = canBeReachedFromCBb and canReachCBb
-    isFeedForwardNode = canBeReachedFromCBb and canReachGC
+    isFeedbackNode = (inputFromCBb > 0) and (outputToFb > 0)
+    isFeedForwardNode = (inputFromCBb > 0) and (outputToFf > 0)
 
     id = tp.utils.getNodeId(node, graph)
     nodeType = tp.utils.getNodeType(node, graph)
 
     if isFeedbackNode or isFeedForwardNode:
-        print id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode)
+        print id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(outputToFb) + ', ' + str(outputToFf)
     else:
         numNeither += 1
 

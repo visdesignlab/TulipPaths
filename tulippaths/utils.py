@@ -3,20 +3,22 @@
 # Returns true if node can be reached from sourceTypes.
 # sourceTypes is a list of node types (strings).
 def canBeReachedFromTypes(node, sourceTypes, graph):
+    count = 0
     for edge in graph.getInEdges(node):
         edgeSourceType = getNodeType(graph.source(edge), graph)
         if edgeSourceType in sourceTypes:
-            return True
-    return False
+            count += 1
+    return count
 
 # Returns true only if node can reach target types.
 # targetTypes is a list of node types (strings).
 def canReachTypes(node, targetTypes, graph):
+    count = 0
     for edge in graph.getOutEdges(node):
         edgeTargetType = getNodeType(graph.target(edge), graph)
         if edgeTargetType in targetTypes:
-            return True
-    return False
+            count += 1
+    return count
 
 def getAllEdgeTypes(graph):
     edgeTypes = []
