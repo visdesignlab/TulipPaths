@@ -40,6 +40,15 @@ class SuperTypeDictionary:
         else:
             assert False, "Could not find superType == " + superType
 
+    # Returns the node types contained in superTypes
+    def getTypesFromSuperTypes(self, superTypes):
+        nodeTypes = []
+
+        for superType in superTypes:
+            nodeTypes += self.getTypesFromSuperType(superType)
+
+        return nodeTypes
+
     # Returns true only if nodeType is in superType
     def isTypeInSuperType(self, nodeType, superType):
         return nodeType in self._dictionary[superType]
