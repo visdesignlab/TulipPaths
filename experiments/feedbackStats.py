@@ -27,7 +27,7 @@ print 'Num nodes complete enough for analysis: ' + str(len(acNodes))
 ffNodeTypes = superTypeDictionary.getTypesFromSuperTypes(['GC'])
 fbNodeTypes = superTypeDictionary.getTypesFromSuperType('CBb')
 
-print 'id, nodeType, isFeedback, isFeedforward, outputToFb, outputToFf'
+print 'id, nodeType, isFeedback, isFeedforward, num inputs, num fb outputs, num ff outpus'
 numNeither = 0
 numNotSkipped = 0
 for node in acNodes:
@@ -44,7 +44,7 @@ for node in acNodes:
     nodeType = tp.utils.getNodeType(node, graph)
 
     if isFeedbackNode or isFeedForwardNode:
-        print id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(outputToFb) + ', ' + str(outputToFf)
+        print id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(inputFromCBb) + ', ' + str(outputToFb) + ', ' + str(outputToFf)
     else:
         numNeither += 1
 
