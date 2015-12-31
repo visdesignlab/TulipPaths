@@ -68,6 +68,3 @@ class TestFindPaths(TestCase):
         pathFinder = tp.PathFinder(graph)
 
         pathFinder.findConstrainedPaths(source, constrainedToEdgeTypes, constrainedToNodeTypes)
-        print len(pathFinder.valid)
-        for path in pathFinder.valid:
-            print path.toStringOfTypes()

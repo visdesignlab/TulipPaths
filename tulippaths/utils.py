@@ -1,24 +1,40 @@
 """ Misc utilities for accessing and manipulating tulip graphs """
 
+import tulippaths as tp
+
 # Returns true if node can be reached from sourceTypes.
 # sourceTypes is a list of node types (strings).
 def canBeReachedFromTypes(node, sourceTypes, graph):
-    count = 0
+    paths = []
     for edge in graph.getInEdges(node):
-        edgeSourceType = getNodeType(graph.source(edge), graph)
-        if edgeSourceType in sourceTypes:
-            count += 1
-    return count
+        sourceNode = graph.source(edge)
+        edgeSourceType = getNodeType(sourceNode, graph)
+        edgeType = getEdgeType(edge, graph)
+        if edgeSourceType in sourceTypes and edgeType not in ['Adherens', 'Touch']:
+            path = tp.Path(graph)
+            path.addNode(sourceNode)
+            path.addEdge(edge)
+            path.addNode(node)
+
+            paths.append(path)
+
+    return paths
 
 # Returns true only if node can reach target types.
 # targetTypes is a list of node types (strings).
 def canReachTypes(node, targetTypes, graph):
-    count = 0
+    paths = []
     for edge in graph.getOutEdges(node):
-        edgeTargetType = getNodeType(graph.target(edge), graph)
-        if edgeTargetType in targetTypes:
-            count += 1
-    return count
+        targetNode = graph.target(edge)
+        edgeTargetType = getNodeType(targetNode, graph)
+        edgeType = getEdgeType(edge, graph)
+        if edgeTargetType in targetTypes and edgeType not in ['Adherens', 'Touch']:
+            path = tp.Path(graph)
+            path.addNode(node)
+            path.addEdge(edge)
+            path.addNode(targetNode)
+            paths.append(path)
+    return paths
 
 def getAllEdgeTypes(graph):
     edgeTypes = []

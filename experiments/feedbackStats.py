@@ -2,9 +2,10 @@ from tulip import *
 from tulipgui import *
 import tulippaths as tp
 
-graphFile = '../data/514_4hops.tlp'
+graphFile = '../data/514_10hops_31Dec15.tlp'
+#graphFile = '../data/test_feedback.tlp'
 graph = tlp.loadGraph(graphFile)
-percentCompletenessThreshold = 0.2
+percentCompletenessThreshold = 0.0
 
 completeness = tp.utils.getApproximateAnnotationCompleteness(graph)
 
@@ -25,9 +26,14 @@ print 'Num nodes complete enough for analysis: ' + str(len(acNodes))
 
 
 ffNodeTypes = superTypeDictionary.getTypesFromSuperTypes(['GC'])
-fbNodeTypes = superTypeDictionary.getTypesFromSuperType('CBb')
+print ffNodeTypes
+fbNodeTypes = superTypeDictionary.getTypesFromSuperTypes(['CBb', 'CBa'])
 
-print 'id, nodeType, isFeedback, isFeedforward, num inputs, num fb outputs, num ff outpus'
+outputCountsStr = 'id, nodeType, isFeedback, isFeedforward, num inputs, num fb outputs, num ff outputs, annotation\n'
+inputFromCbStr = 'id, inputs\n'
+outputToFfStr = 'id, outputs\n'
+outputToFbStr = 'id, outputs\n'
+
 numNeither = 0
 numNotSkipped = 0
 for node in acNodes:
@@ -37,16 +43,60 @@ for node in acNodes:
     outputToFb = tp.utils.canReachTypes(node, fbNodeTypes, graph)
     outputToFf = tp.utils.canReachTypes(node, ffNodeTypes, graph)
 
-    isFeedbackNode = (inputFromCBb > 0) and (outputToFb > 0)
-    isFeedForwardNode = (inputFromCBb > 0) and (outputToFf > 0)
+    isFeedbackNode = (len(inputFromCBb) > 0) and (len(outputToFb) > 0)
+    isFeedForwardNode = (len(inputFromCBb) > 0) and (len(outputToFf) > 0)
 
     id = tp.utils.getNodeId(node, graph)
     nodeType = tp.utils.getNodeType(node, graph)
 
     if isFeedbackNode or isFeedForwardNode:
-        print id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(inputFromCBb) + ', ' + str(outputToFb) + ', ' + str(outputToFf)
+        outputCountsStr += id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(len(inputFromCBb)) + ', ' + str(len(outputToFb)) + ', ' + str(len(outputToFf)) + ', ' + str(completeness[node]) + '\n'
     else:
         numNeither += 1
+
+    localPathsStr = ''
+
+    if len(inputFromCBb) > 0:
+        for path in inputFromCBb:
+            localPathsStr += '[' + path.toStringOfIds() + ']; '
+            localPathsStr = localPathsStr.replace(',', '')
+
+        inputFromCbStr += id + ', ' + localPathsStr + '\n'
+
+    localPathsStr = ''
+
+    if len(outputToFf) > 0:
+        for path in outputToFf:
+            localPathsStr += '[' + path.toStringOfIds() + ']; '
+            localPathsStr = localPathsStr.replace(',', '')
+
+        outputToFfStr += id + ', ' + localPathsStr + '\n'
+
+    localPathsStr = ''
+
+    if len(outputToFb) > 0:
+        for path in outputToFb:
+            localPathsStr += '[' + path.toStringOfIds() + ']; '
+            localPathsStr = localPathsStr.replace(',', '')
+
+        outputToFbStr += id + ', ' + localPathsStr + '\n'
+
+
+stats = open('stats.csv', 'w')
+stats.write(outputCountsStr)
+stats.close()
+
+stats = open('inputPaths.csv', 'w')
+stats.write(inputFromCbStr)
+stats.close()
+
+stats = open('outputFf.csv', 'w')
+stats.write(outputToFfStr)
+stats.close()
+
+stats = open('outputFb.csv', 'w')
+stats.write(outputToFbStr)
+stats.close()
 
 
 print 'percent neither ff nor fb: '  + str(numNeither / float(numNotSkipped))

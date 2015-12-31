@@ -108,15 +108,15 @@ class TestUtils(TestCase):
 
         # Node of cell id 1 should be reachable from GAC Aii label
         source = tp.utils.getNodeById(1, graph)
-        self.assertTrue(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph))
+        self.assertTrue(len(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph)) == 1)
 
         # Node of cell id 5860 should be able to reach CBb3-4i (cell id #1)
         source = tp.utils.getNodeById(5860, graph)
-        self.assertTrue(tp.utils.canReachTypes(source, ['CBb3-4i'], graph))
+        self.assertTrue(len(tp.utils.canReachTypes(source, ['CBb3-4i'], graph)))
 
         source = tp.utils.getNodeById(606, graph)
-        self.assertFalse(tp.utils.canReachTypes(source, ['CBb3-4i'], graph))
-        self.assertFalse(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph))
+        self.assertTrue(len(tp.utils.canReachTypes(source, ['CBb3-4i'], graph)) == 0)
+        self.assertTrue(len(tp.utils.canBeReachedFromTypes(source, ['GAC Aii'], graph)) == 0)
 
     def test_getNodesByType(self):
         self.file = '../data/test_two.tlp'
