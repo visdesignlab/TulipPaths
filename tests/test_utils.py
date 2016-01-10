@@ -1,7 +1,10 @@
+import unittest
 from unittest import TestCase
 
 from tulip import *
 import tulippaths as tp
+
+import re
 
 class TestUtils(TestCase):
 
@@ -139,3 +142,51 @@ class TestUtils(TestCase):
 
         for node in nodes:
             self.assertTrue(tp.utils.getNodeType(node, graph) in nodeTypes)
+
+    def test_getNodesByTypeRegex(self):
+        self.file = '../data/test_two.tlp'
+
+        # Test multiple cases by looping through this dictionary.
+        # "regex": num_nodes
+        test_cases = {
+            "^$": 0,
+            "^GAC Aii$": 1,
+            "^GC ON$": 1,
+            "^CBb3-4i$": 2,
+            "^CBb4w$": 1,
+            "^GA?C.*$": 2,
+            "^CBb.*$": 3
+        }
+
+        graph = tlp.loadGraph(self.file)
+
+        for test_regex, expected_results in test_cases.iteritems():
+            nodes = tp.utils.getNodesByTypeRegex(test_regex, graph)
+
+            self.assertTrue(len(nodes) == expected_results)
+            for node in nodes:
+                self.assertTrue(
+                    re.search(re.compile(test_regex),
+                              tp.utils.getNodeType(node, graph)))
+
+    def test_getNodesByTypeRegexes(self):
+        self.file = '../data/test_two.tlp'
+
+        graph = tlp.loadGraph(self.file)
+
+        # Test multiple cases by looping through this dictionary.
+        # "regex,other_regex": num_nodes
+        test_cases = {
+            "^GAC Aii$,^CBb3-4i$": 3,
+            "^GA?C.*$,^CBb3-4i$": 4
+        }
+
+        for test_regex_list, expected_results in test_cases.iteritems():
+            nodeTypeRegexes = test_regex_list.split(',')
+            nodes = tp.utils.getNodesByTypeRegexes(nodeTypeRegexes, graph)
+
+            self.assertTrue(len(nodes) == expected_results)
+
+
+if __name__ == "__main__":
+    unittest.main()

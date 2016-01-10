@@ -1,6 +1,7 @@
 """ Misc utilities for accessing and manipulating tulip graphs """
 
 import tulippaths as tp
+import re
 
 # Returns true if node can be reached from sourceTypes.
 # sourceTypes is a list of node types (strings).
@@ -150,6 +151,26 @@ def getNodesByTypes(types, graph):
     nodes = []
     for nodeType in types:
         nodes += getNodesByType(nodeType, graph)
+    return nodes
+
+# Returns a list of nodes whose type labels contain a sequence matching
+# the specified regular expression. (Corresponds to getNodesByType() but
+# with a regex search)
+def getNodesByTypeRegex(type_regex, graph):
+    nodes = []
+    for node in graph.getNodes():
+        nodeType = getNodeType(node, graph)
+        if re.search(re.compile(type_regex), nodeType):
+            nodes.append(node)
+    return nodes
+
+# Returns a list of nodes whose type labels contain a sequence matching any of
+# the specified regular expressions. (Corresponds to getNodesByTypes() but with
+# a regex searches)
+def getNodesByTypeRegexes(type_regexes, graph):
+    nodes = []
+    for nodeTypeRegex in type_regexes:
+        nodes += getNodesByTypeRegex(nodeTypeRegex, graph)
     return nodes
 
 def getNodeId(node, graph):
