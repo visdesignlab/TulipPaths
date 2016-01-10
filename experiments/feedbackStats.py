@@ -36,6 +36,15 @@ outputToFbStr = 'id, outputs\n'
 
 numNeither = 0
 numNotSkipped = 0
+
+gcNodesToCBbNodes = {}
+ffNodes = tp.utils.getNodesByTypes(ffNodeTypes, graph)
+fbNodes = tp.utils.getNodesByTypes(fbNodeTypes, graph)
+for node in ffNodes:
+    gcNodesToCBbNodes[node] = {}
+    for nodeType in fbNodeTypes:
+        gcNodesToCBbNodes[node][nodeType] = []
+
 for node in acNodes:
 
     numNotSkipped += 1
@@ -53,6 +62,7 @@ for node in acNodes:
         outputCountsStr += id + ', ' + nodeType + ', ' + str(isFeedbackNode) + ', ' + str(isFeedForwardNode) + ', ' + str(len(inputFromCBb)) + ', ' + str(len(outputToFb)) + ', ' + str(len(outputToFf)) + ', ' + str(completeness[node]) + '\n'
     else:
         numNeither += 1
+
 
     localPathsStr = ''
 
@@ -80,6 +90,39 @@ for node in acNodes:
             localPathsStr = localPathsStr.replace(',', '')
 
         outputToFbStr += id + ', ' + localPathsStr + '\n'
+
+    for path in outputToFf:
+        gcNode = path.nodes[1]
+        print 'gc nodes type is' + tp.utils.getNodeType(gcNode, graph)
+        for startPath in inputFromCBb:
+            cbbNode = startPath.nodes[0]
+            nodeType = tp.utils.getNodeType(cbbNode, graph)
+            gcNodesToCBbNodes[gcNode][nodeType].append(cbbNode)
+
+print gcNodesToCBbNodes
+
+stats = open('connectivity_matrix.csv', 'w')
+stats.write('nodeid, node label,')
+for nodeType in fbNodeTypes:
+    stats.write(', ' + nodeType)
+stats.write('\n')
+for node in gcNodesToCBbNodes.keys():
+
+    check = 0
+    for nodeType in fbNodeTypes:
+        check += len(gcNodesToCBbNodes[node][nodeType])
+
+    if check == 0:
+        print ' skipping node ' + tp.utils.getNodeId(node, graph) + ', ' + tp.utils.getNodeType(node, graph)
+        continue
+
+
+    stats.write(tp.utils.getNodeId(node, graph) + ', ' + tp.utils.getNodeType(node, graph) + ', ')
+    for nodeType in fbNodeTypes:
+        stats.write(str(len(gcNodesToCBbNodes[node][nodeType])) + ', ')
+    stats.write('\n')
+stats.close()
+
 
 
 stats = open('stats.csv', 'w')
