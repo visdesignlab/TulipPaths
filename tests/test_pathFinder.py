@@ -56,6 +56,8 @@ class TestFindPaths(TestCase):
 
         self.assertTrue(len(finder.valid) == 3)
 
+    # TODO this test appears to be ineffective because the PathFinder
+    # finds no paths for some reason
     def test_findConstrainedPaths(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
@@ -69,6 +71,32 @@ class TestFindPaths(TestCase):
         pathFinder = tp.PathFinder(graph)
 
         pathFinder.findConstrainedPaths(source, constrainedToEdgeTypes, constrainedToNodeTypes)
+
+        for path in pathFinder.valid:
+            self.assertTrue(path.isInTypeConstraints(constrainedToEdgeTypes,
+                                                     constrainedToNodeTypes))
+
+    # TODO this test appears to be ineffective because the PathFinder
+    # finds no paths for some reason
+    def test_findRegexConstrainedPaths(self):
+        graphFile = '../data/test_one.tlp'
+        graph = tlp.loadGraph(graphFile)
+        tp.VERBOSE = True
+        source = tp.utils.getNodeById(176, graph)
+        target = tp.utils.getNodeById(5530, graph)
+
+        constrainedToEdgeTypeRegexes = [".+ Synapse", "^Adhe.+$"]
+        constrainedToNodeTypeRegexes = ["CBb3-.+$", "^GC [ON|OFF]$", "[A-Z]Bb4w"]
+
+        pathFinder = tp.PathFinder(graph)
+
+        pathFinder.findRegexConstrainedPaths(source,
+                                             constrainedToEdgeTypeRegexes,
+                                             constrainedToNodeTypeRegexes)
+
+        for path in pathFinder.valid:
+            self.assertTrue(path.isInRegexTypeConstraints(
+                constrainedToEdgeTypeRegexes, constrainedToNodeTypeRegexes))
 
 
 if __name__ == "__main__":
