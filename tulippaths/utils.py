@@ -156,20 +156,20 @@ def getNodesByTypes(types, graph):
 # Returns a list of nodes whose type labels contain a sequence matching
 # the specified regular expression. (Corresponds to getNodesByType() but
 # with a regex search)
-def getNodesByTypeRegex(type_regex, graph):
+def getNodesByTypeRegex(typeRegex, graph):
     nodes = []
     for node in graph.getNodes():
         nodeType = getNodeType(node, graph)
-        if re.search(re.compile(type_regex), nodeType):
+        if re.search(re.compile(typeRegex), nodeType):
             nodes.append(node)
     return nodes
 
 # Returns a list of nodes whose type labels contain a sequence matching any of
 # the specified regular expressions. (Corresponds to getNodesByTypes() but with
 # a regex searches)
-def getNodesByTypeRegexes(type_regexes, graph):
+def getNodesByTypeRegexes(typeRegexes, graph):
     nodes = []
-    for nodeTypeRegex in type_regexes:
+    for nodeTypeRegex in typeRegexes:
         nodes += getNodesByTypeRegex(nodeTypeRegex, graph)
     return nodes
 
