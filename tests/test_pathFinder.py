@@ -23,7 +23,6 @@ class TestFindPaths(TestCase):
         self.assertTrue(len(finder.failed) == 0)
 
     def test_findPathOne(self):
-        tp.VERBOSE = True
         graphFile = '../data/test_one.tlp'
         sourceId = 176
         targetId = 606
@@ -42,7 +41,6 @@ class TestFindPaths(TestCase):
             self.assertTrue(path.isSane())
 
     def test_findAllPaths(self):
-        tp.VERBOSE = True
         graphFile = '../data/test_one.tlp'
         maxNumHops = 2
         sourceId = 176
@@ -56,47 +54,40 @@ class TestFindPaths(TestCase):
 
         self.assertTrue(len(finder.valid) == 3)
 
-    # TODO this test appears to be ineffective because the PathFinder
-    # finds no paths for some reason
     def test_findConstrainedPaths(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
-        tp.VERBOSE = True
         source = tp.utils.getNodeById(176, graph)
-        target = tp.utils.getNodeById(5530, graph)
 
-        constrainedToEdgeTypes = ["Ribbon Synapse", "Adherens"]
-        constrainedToNodeTypes = ["CBb3-4i", "GC ON", "CBb4w"]
+        edgeConstraints = ["Ribbon Synapse", "Adherens"]
+        nodeConstraints = ["CBb3-4i", "GC ON", "CBb4w"]
 
         pathFinder = tp.PathFinder(graph)
 
-        pathFinder.findConstrainedPaths(source, constrainedToEdgeTypes, constrainedToNodeTypes)
+        pathFinder.findConstrainedPaths(source, edgeConstraints, nodeConstraints)
+
+        self.assertTrue(len(pathFinder.valid) == 1)
 
         for path in pathFinder.valid:
-            self.assertTrue(path.isInTypeConstraints(constrainedToEdgeTypes,
-                                                     constrainedToNodeTypes))
+            self.assertTrue(path.isInTypeConstraints(edgeConstraints,
+                                                     nodeConstraints))
 
-    # TODO this test appears to be ineffective because the PathFinder
-    # finds no paths for some reason
     def test_findRegexConstrainedPaths(self):
-        graphFile = '../data/test_one.tlp'
+        graphFile = '../data/test_two.tlp'
         graph = tlp.loadGraph(graphFile)
-        tp.VERBOSE = True
         source = tp.utils.getNodeById(176, graph)
-        target = tp.utils.getNodeById(5530, graph)
 
-        constrainedToEdgeTypeRegexes = [".+ Synapse", "^Adhe.+$"]
-        constrainedToNodeTypeRegexes = ["CBb3-.+$", "^GC [ON|OFF]$", "[A-Z]Bb4w"]
+        edgeConstraintRegexes = [".+ Synapse", "^Adhe.+$"]
+        nodeConstraintRegexes = ["CBb3-.+$", "^GC ON", "[A-Z]Bb4w"]
 
         pathFinder = tp.PathFinder(graph)
 
-        pathFinder.findRegexConstrainedPaths(source,
-                                             constrainedToEdgeTypeRegexes,
-                                             constrainedToNodeTypeRegexes)
+        pathFinder.findRegexConstrainedPaths(source, edgeConstraintRegexes, nodeConstraintRegexes)
+
+        self.assertTrue(len(pathFinder.valid) == 1)
 
         for path in pathFinder.valid:
-            self.assertTrue(path.isInRegexTypeConstraints(
-                constrainedToEdgeTypeRegexes, constrainedToNodeTypeRegexes))
+            self.assertTrue(path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes))
 
 
 if __name__ == "__main__":

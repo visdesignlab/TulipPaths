@@ -7,8 +7,6 @@ class TestPathFinderWrapper(TestCase):
     def test_findConstrainedPaths(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
-        tp.VERBOSE = True
-        source = tp.utils.getNodeById(176, graph)
 
         edgeConstraints = ["Ribbon Synapse", "Adherens"]
         nodeConstraints = ["CBb3-4i", "GC ON", "CBb4w"]
@@ -17,7 +15,7 @@ class TestPathFinderWrapper(TestCase):
 
         pathFinderWrapper = tp.PathFinderWrapper(graph)
 
-        paths = pathFinderWrapper.findConstrainedPathsFromType(sourceType, nodeConstraints, edgeConstraints)
+        paths = pathFinderWrapper.findConstrainedPathsFromType(sourceType, edgeConstraints, nodeConstraints)
 
         path = paths[0]
 

@@ -29,35 +29,34 @@ class Path:
     def hasLoop(self):
         return self.nodes[0] in self.nodes[1:]
 
-    def isInTypeConstraints(self, constrainedEdges, constrainedNodes):
+    def isInTypeConstraints(self, edgeConstraints, nodeConstraints):
 
         for i in range(0, len(self.edges)):
             edge = self.edges[i]
             edgeType = utils.getEdgeType(edge, self.graph)
-            if constrainedEdges[i] != edgeType:
+            if edgeConstraints[i] != edgeType:
                 return False
 
         for i in range(0, len(self.nodes)):
             node = self.nodes[i]
             nodeType = utils.getNodeType(node, self.graph)
-            if constrainedNodes[i] != nodeType:
+            if nodeConstraints[i] != nodeType:
                 return False
 
         return True
 
-    def isInRegexTypeConstraints(self, constrainedEdgeRegexes,
-                                 constrainedNodeRegexes):
+    def isInRegexTypeConstraints(self, edgeConstraintsRegexes, nodeConstraintsRegexes):
 
         for i in range(0, len(self.edges)):
             edge = self.edges[i]
             edgeType = utils.getEdgeType(edge, self.graph)
-            if not re.search(re.compile(constrainedEdgeRegexes[i]), edgeType):
+            if not re.search(re.compile(edgeConstraintsRegexes[i]), edgeType):
                 return False
 
         for i in range(0, len(self.nodes)):
             node = self.nodes[i]
             nodeType = utils.getNodeType(node, self.graph)
-            if not re.search(re.compile(constrainedNodeRegexes[i]), nodeType):
+            if not re.search(re.compile(nodeConstraintsRegexes[i]), nodeType):
                 return False
 
         return True
