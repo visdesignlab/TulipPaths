@@ -168,6 +168,7 @@ stats.write('nodeid, node label')
 for nodeType in desiredLabels:
     stats.write(', ' + nodeType)
 stats.write('\n')
+
 for id in ids:
     node = tp.utils.getNodeById(id, graph)
     check = 0
@@ -209,6 +210,27 @@ for key in acUsage.keys():
     stats.write(str(id) + ', ' +  type + ', ' + str(len(acUsage[key])) + ', ' + listOfGcs + '\n')
 stats.close()
 
+# for each ac being used
+stats = open('acs_connectivity_matrix.csv', 'w')
+stats.write('node, label')
+for label in desiredLabels:
+    stats.write(',' + label)
+stats.write('\n')
+for acNode in acUsage.keys():
+    stats.write(str(tp.utils.getNodeId(acNode, graph)))
+    stats.write(', ' + str(tp.utils.getNodeType(acNode, graph)) + ',' )
+    for label in desiredLabels:
+        # count the number of times it is used
+        usage = []
+        for id in ids:
+            gc = tp.utils.getNodeById(id, graph)
+            listOfGcsAcs = numAcsInMotif[gc][label]
+            for temp in listOfGcsAcs:
+                if temp == acNode:
+                  usage.append(gc)
+        stats.write(str(len(usage))+',')
+    stats.write('\n')
+stats.close()
 
 stats = open('stats.csv', 'w')
 stats.write(outputCountsStr)
