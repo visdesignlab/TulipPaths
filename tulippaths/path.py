@@ -1,6 +1,7 @@
 """ Object representing a specific path in a graph - nodes and edges """
 
 import utils as utils
+import re
 
 class Path:
     # TODO: Smarter default constructor.
@@ -40,6 +41,23 @@ class Path:
             node = self.nodes[i]
             nodeType = utils.getNodeType(node, self.graph)
             if constrainedNodes[i] != nodeType:
+                return False
+
+        return True
+
+    def isInRegexTypeConstraints(self, constrainedEdgeRegexes,
+                                 constrainedNodeRegexes):
+
+        for i in range(0, len(self.edges)):
+            edge = self.edges[i]
+            edgeType = utils.getEdgeType(edge, self.graph)
+            if not re.search(re.compile(constrainedEdgeRegexes[i]), edgeType):
+                return False
+
+        for i in range(0, len(self.nodes)):
+            node = self.nodes[i]
+            nodeType = utils.getNodeType(node, self.graph)
+            if not re.search(re.compile(constrainedNodeRegexes[i]), nodeType):
                 return False
 
         return True

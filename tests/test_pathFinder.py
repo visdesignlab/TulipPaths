@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 from tulip import *
 import tulippaths as tp
@@ -68,3 +69,7 @@ class TestFindPaths(TestCase):
         pathFinder = tp.PathFinder(graph)
 
         pathFinder.findConstrainedPaths(source, constrainedToEdgeTypes, constrainedToNodeTypes)
+
+
+if __name__ == "__main__":
+    unittest.main()
