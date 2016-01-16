@@ -154,7 +154,7 @@ class PathFinder:
         for path in self.failed:
             assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
 
-    def findConstrainedPaths(self, source, nodeConstraints, edgeConstraints):
+    def findConstrainedPaths(self, source, edgeConstraints, nodeConstraints):
 
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
@@ -168,6 +168,19 @@ class PathFinder:
 
         self.valid = matches
 
+    def findRegexConstrainedPaths(self, source, edgeConstraintRegexes, nodeConstraintRegexes):
+
+        assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
+
+        self.findAllPaths(source, len(edgeConstraintRegexes))
+
+        matches = []
+
+        for path in self.valid:
+            if path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes):
+                matches.append(path)
+
+        self.valid = matches
 
     def reset(self):
         self.valid = []

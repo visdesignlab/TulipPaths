@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 from tulip import *
 import tulippaths as tp
@@ -41,7 +42,7 @@ class TestPath(TestCase):
     def test_toStringOfTypes(self):
         self.assertTrue(self.path.toStringOfTypes() == 'GC ON, Adherens, CBb4w')
 
-    def test_findConstrainedPaths(self):
+    def test_isInTypeConstraints(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
 
@@ -59,6 +60,33 @@ class TestPath(TestCase):
                 constrainedEdges = ["Ribbon Synapse", "Adherens"]
                 constrainedNodes = ["CBb3-4i", "GC ON", "CBb4w"]
                 self.assertTrue(path.isInTypeConstraints(constrainedEdges, constrainedNodes))
+
+    def test_isInRegexTypeConstraints(self):
+        graphFile = '../data/test_one.tlp'
+        graph = tlp.loadGraph(graphFile)
+
+        source = tp.utils.getNodeById(176, graph)
+        target = tp.utils.getNodeById(5530, graph)
+
+        pathFinder = tp.PathFinder(graph)
+
+        pathFinder.findPaths(source, target, 2)
+
+        for path in pathFinder.valid:
+            if path.size() < 3:
+                continue
+            else:
+                # Make sure the path satisfies valid regex constraints
+                constrainedEdgeRegexes = [ "R.* Synapse", "Adh[a-z]rens" ]
+                constrainedNodeRegexes = [ "CBb3-[1-9]i", "^GZ?C ON$", "C[A-Z]b4w" ]
+                self.assertTrue(path.isInRegexTypeConstraints(
+                    constrainedEdgeRegexes, constrainedNodeRegexes))
+                # Make sure the path does not satisfy invalid regex constraints
+                constrainedEdgeRegexes = [ "Cthulhu F'taghn", "R'lyeh Synapse" ]
+                constrainedNodeRegexes = [ "^Nyarlathotep$", "^$", "[0-1].*" ]
+                self.assertFalse(path.isInRegexTypeConstraints(
+                    constrainedEdgeRegexes, constrainedNodeRegexes))
+
 
     def test_isSynapticPath(self):
 
@@ -79,3 +107,7 @@ class TestPath(TestCase):
                 self.assertFalse(path.isSynapticPath())
             else:
                 self.assertTrue(False) # Should never get here.
+
+
+if __name__ == "__main__":
+    unittest.main()
