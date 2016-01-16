@@ -1,7 +1,7 @@
 from tulip import *
 from tulipgui import *
 import tulippaths as tp
-
+import json
 graphFile = '../data/514_10hops_31Dec15.tlp'
 #graphFile = '../data/test_feedback.tlp'
 graph = tlp.loadGraph(graphFile)
@@ -121,7 +121,8 @@ for node in acNodes:
 print gcNodesToCBbNodes
 
 ids = [606 ,6857 ,15796 ,5107 ,8575 ,74047 ,53399 ,53436 ,54695 ,54701 ,52882 ,8580 ,70924 ,64887 ,64923 ,7594 ,31024 ,29198 ,68539 ,16087, 5118]
-desiredLabels = ["CBb3m", "CBb5w", "CBb4w", "CBb3-4i", "CBb5i", "CBb5-6i", "CBb4i", "CBb3-4-5i", "CBb3", "CBb4-5-6i", "CBb3i"]
+#desiredLabels = ["CBb3m", "CBb5w", "CBb4w", "CBb3-4i", "CBb5i", "CBb5-6i", "CBb4i", "CBb3-4-5i", "CBb3", "CBb4-5-6i", "CBb3i"]
+desiredLabels = superTypeDictionary.getTypesFromSuperTypes(['CBb', 'CBa'])
 stats = open('connectivity_matrix_counting_motifs.csv', 'w')
 stats.write('node id, node label')
 for nodeType in desiredLabels:
