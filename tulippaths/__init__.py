@@ -9,3 +9,4 @@ from .pathStats import *
 from .pathTracker import *
 from .pathFinderWrapper import *
 from .superTypeDictionary import *
+from .connectivityMatrix import *
