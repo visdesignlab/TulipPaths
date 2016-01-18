@@ -14,6 +14,5 @@ edgeConstraints = ['.*', '.*']
 
 matrix = tp.ConnectivityMatrix(graph)
 matrix.activate(nodeConstraints, edgeConstraints)
-jsonObject = matrix.getPathCountJsonMatrix()
-print json.dumps(jsonObject)
-
+jsonObject = matrix.getAsJsonObject(True)
+json.dumps(jsonObject)

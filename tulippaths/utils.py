@@ -185,6 +185,14 @@ def getNodeType(node, graph):
     else:
         return 'null'
 
+def getNodesTypes(nodes, graph):
+    types = []
+    for node in nodes:
+        nodeType = getNodeType(node, graph)
+        if nodeType not in types:
+            types.append(nodeType)
+    return types
+
 def isEdgeTypeInGraph(edgeType, graph):
     for edge in graph.getEdges():
         otherType = getEdgeType(edge, graph)
