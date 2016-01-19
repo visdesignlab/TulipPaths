@@ -3,16 +3,29 @@ from tulipgui import *
 import tulippaths as tp
 import json
 
-graphFile = '../data/test_feedback.tlp'
-#graphFile = '../data/514_10hops.tlp'
+#graphFile = '../data/test_feedback.tlp'
+graphFile = '../data/514_10hops.tlp'
 graph = tlp.loadGraph(graphFile)
 
-acRegexes = ['AC', 'IAC', 'YAC']
+acRegexes = ['AC', 'IAC', 'YAC', 'GAC']
 acRegexes = '(?:%s)' % '|'.join(acRegexes)
-nodeConstraints = ['CBb.*', acRegexes, 'GC']
+nodeConstraints = ['CBb.*', acRegexes, 'CBb.*']
 edgeConstraints = ['.*', '.*']
 
+"""
 matrix = tp.ConnectivityMatrix(graph)
 matrix.activate(nodeConstraints, edgeConstraints)
+matrix.collapseSources()
+matrix.collapseTargets()
 jsonObject = matrix.getAsJsonObject(True)
-json.dumps(jsonObject)
+print json.dumps(jsonObject)
+"""
+
+nodeConstraints = ['CBb.*', 'CBb.*']
+edgeConstraints = ['Gap Junction']
+matrix = tp.ConnectivityMatrix(graph)
+matrix.activate(nodeConstraints, edgeConstraints)
+matrix.collapseSources()
+matrix.collapseTargets()
+jsonObject = matrix.getAsJsonObject(True)
+print json.dumps(jsonObject)
