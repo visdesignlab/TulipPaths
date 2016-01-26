@@ -1,6 +1,7 @@
 """ Object representing a specific path in a graph - nodes and edges """
 
 import utils as utils
+import tulippaths as tp
 import re
 
 class Path:
@@ -83,6 +84,23 @@ class Path:
 
         return True
 
+    def isSameSuperType(self, other):
+        if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
+            return False
+
+        for i in range(0, len(self.edges)):
+            if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
+                return False
+
+        superTypeDictionary = tp.SuperTypeDictionary()
+
+        for i in range(0, len(self.nodes)):
+            if not superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph))\
+                    == superTypeDictionary.getSuperTypeFromType(utils.getNodeType(other.nodes[i], self.graph)):
+                return False
+
+        return True
+
     # Returns false only if the path contains an edge of type 'adherens' or 'touch'.
     def isSynapticPath(self):
         for edge in self.edges:
@@ -90,6 +108,16 @@ class Path:
             if edgeType in ['Adherens', 'Touch']:
                 return False
         return True
+
+    def isInNetworkPath(self):
+        seenNodes = {}
+        for node in self.nodes:
+            nodeType = utils.getNodeType(node, self.graph)
+            if nodeType in seenNodes:
+                return True
+            else:
+                seenNodes[nodeType] = 1
+        return False
 
     def size(self):
         return len(self.nodes)
