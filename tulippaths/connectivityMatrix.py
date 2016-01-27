@@ -79,7 +79,11 @@ class ConnectivityMatrix:
         # Matrix is N x N where N is the number of sources and targets.
         sources = utils.getNodesByTypeRegex(nodeConstraints[0], self._graph)
         targets = utils.getNodesByTypeRegex(nodeConstraints[len(nodeConstraints) - 1], self._graph)
+
+
         nodes = sources + targets
+
+
         self._activateMatrix(nodes)
 
         # Find paths for each source. Shove them into the matrix.
@@ -91,7 +95,25 @@ class ConnectivityMatrix:
 
         # Cache the initial matrix.
         self._initialMatrix = copy.deepcopy(self._matrix)
+        """
+        pathTypeCounts = {}
+        acIdCounts = {}
+        for path in self._paths:
+            if path.toStringOfTypes() in pathTypeCounts.keys():
+                pathTypeCounts[path.toStringOfTypes()] += 1
+            else:
+                pathTypeCounts[path.toStringOfTypes()] = 1
 
+            if path.nodes[1] in acIdCounts.keys():
+                acIdCounts[path.nodes[1]] += 1
+            else:
+                acIdCounts[path.nodes[1]] = 1
+
+        for key in acIdCounts.keys():
+            print utils.getNodeId(key, self._graph), ',', utils.getNodeType(key, self._graph), ',', acIdCounts[key]
+        for key in pathTypeCounts.keys():
+            print key, ';', pathTypeCounts[key]
+        """
     def collapseSources(self):
         """
             Updates _matrix s.t. all rows of the same label get collapsed to a single row.
@@ -162,7 +184,6 @@ class ConnectivityMatrix:
         if removeEmptyGridCells:
             usedRows = self._getUsedRowIndexes()
             usedCols = self._getUsedColIndexes()
-
             newMatrix = []
             for i in range(0, len(usedRows)):
                 row = []
@@ -187,7 +208,6 @@ class ConnectivityMatrix:
                 colLabels.append(self._colLabels[colIndex])
 
         else:
-
             for row in self._matrix:
                 newRow = []
                 for col in row:

@@ -2,7 +2,7 @@ from tulip import *
 from tulipgui import *
 import tulippaths as tp
 import json
-graphFile = '../data/514_10hops_31Dec15.tlp'
+graphFile = '../data/514_10hops_22Jan16.tlp'
 #graphFile = '../data/test_feedback.tlp'
 graph = tlp.loadGraph(graphFile)
 percentCompletenessThreshold = 0.0
@@ -147,7 +147,8 @@ stats.close()
 stats = open('connectivity_matrix.csv', 'w')
 stats.write('nodeid, node label')
 for nodeType in desiredLabels:
-    stats.write(', ' + nodeType)
+    if len(tp.utils.getNodesByType(nodeType, graph)) > 0:
+        stats.write(', ' + nodeType)
 stats.write('\n')
 for id in ids:
     node = tp.utils.getNodeById(id, graph)
@@ -160,7 +161,8 @@ for id in ids:
 
     stats.write(tp.utils.getNodeId(node, graph) + ', ' + tp.utils.getNodeType(node, graph) + ', ')
     for nodeType in desiredLabels:
-        stats.write(str(len(gcNodesToCBbNodes[node][nodeType])) + ', ')
+            if len(tp.utils.getNodesByType(nodeType, graph)) > 0:
+                stats.write(str(len(gcNodesToCBbNodes[node][nodeType])) + ', ')
     stats.write('\n')
 stats.close()
 
