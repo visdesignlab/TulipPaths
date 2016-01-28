@@ -186,7 +186,3 @@ class TestUtils(TestCase):
             nodes = tp.utils.getNodesByTypeRegexes(nodeTypeRegexes, graph)
 
             self.assertTrue(len(nodes) == expected_results)
-
-
-if __name__ == "__main__":
-    unittest.main()
