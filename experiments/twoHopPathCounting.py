@@ -18,7 +18,7 @@ import tulippaths as tp
 # Path parameters
 graphFile = '../data/514_2hops.tlp'
 #sourceNodeId = 593
-sourceNodeId = 168
+sourceNodeId = 5279
 maxNumHops = 2
 
 # We will visualize our second valid path for debugging. This assumes that we'll find at least two paths in the graph.
@@ -98,9 +98,17 @@ for path in pathFinder.valid:
 # for count in uniqueTypesCount:
 #    print str(count)
 
-print "Printing unique super types counts:"
-for count in uniqueSuperTypesCount:
-   print str(count)
+# print "Printing unique super types counts:"
+# for count in uniqueSuperTypesCount:
+#    print str(count)
+
+print "Types"
+for i in range (0, len(uniqueTypesCount)):
+    print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+
+print "Super Types"
+for i in range (0, len(uniqueSuperTypesCount)):
+    print str(uniqueSuperTypesCount[i]) + "\t" + str(uniqueSuperTypes[i].toStringOfSuperTypes())
 
 print '\n' + str(numValid) + " total " + str(maxNumHops) + "-hop synaptic paths from node #" + str(sourceNodeId)
 

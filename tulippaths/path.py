@@ -144,3 +144,13 @@ class Path:
             string += utils.getEdgeType(self.edges[i], self.graph) + ', '
         string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
+
+    def toStringOfSuperTypes(self):
+        string = ''
+        superTypeDictionary = tp.SuperTypeDictionary()
+
+        for i in range(0, len(self.edges)):
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + ', '
+            string += utils.getEdgeType(self.edges[i], self.graph) + ', '
+        string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
+        return string
