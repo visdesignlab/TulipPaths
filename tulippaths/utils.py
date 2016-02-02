@@ -138,7 +138,7 @@ def getNodeById(id, graph):
     for node in graph.getNodes():
         if int(nodeIds[node]) == id:
             return node
-    assert False, "Failed to find node by id"
+    assert False, "Failed to find node by id " + id
 
 def getNodesByType(type, graph):
     nodes = []

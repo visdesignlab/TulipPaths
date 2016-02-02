@@ -176,10 +176,12 @@ class ConnectivityMatrix:
         self._matrix = copy.deepcopy(newMatrix)
         self._colLabels = targetTypes
 
-    def getAsJsonObject(self, removeEmptyGridCells=False):
+    def getAsJsonObject(self, removeEmptyGridCells=False, replaceCellIdsWithIndexes=False):
         newMatrix = []
         rowLabels = []
         colLabels = []
+        if replaceCellIdsWithIndexes and (self._targetsCollapsed or self._sourcesCollapsed):
+            assert False, "Cannot replace ids with indexes if sources or targets are collapsed"
 
         if removeEmptyGridCells:
             usedRows = self._getUsedRowIndexes()
@@ -217,6 +219,18 @@ class ConnectivityMatrix:
             rowLabels = self._rowLabels
             colLabels = self._colLabels
 
+        if replaceCellIdsWithIndexes:
+            newRowLabels = []
+            for label in rowLabels:
+                print label
+                newRowLabels.append(int(utils.getNodeById(int(label), self._graph).id))
+            rowLabels = newRowLabels
+
+            newColLabels = []
+            for label in colLabels:
+                print label
+                newColLabels.append(int(utils.getNodeById(int(label), self._graph).id))
+            colLabels = newColLabels
 
         jsonObject = {}
         jsonObject['row_labels'] = rowLabels
