@@ -154,3 +154,39 @@ class Path:
             string += utils.getEdgeType(self.edges[i], self.graph) + ', '
         string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
         return string
+
+    def toStringOfSuperTypesNoEdges(self):
+        string = ''
+        superTypeDictionary = tp.SuperTypeDictionary()
+
+        for i in range(0, len(self.edges)):
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + ', '
+            # string += utils.getEdgeType(self.edges[i], self.graph) + ', '
+        string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
+        return string
+
+    def getDistanceFromOtherPath(self, other):
+        distance = 0
+        for i in range(0, len(self.edges)):
+            if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
+                distance += 1
+
+        for i in range(0, len(self.nodes)):
+            if not utils.getNodeType(self.nodes[i], self.graph) == utils.getNodeType(other.nodes[i], self.graph):
+                distance += 1
+
+        return distance
+
+    def getSuperDistanceFromOtherPath(self, other):
+        distance = 0
+        superTypeDictionary = tp.SuperTypeDictionary()
+        # for i in range(0, len(self.edges)):
+        #     if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
+        #         distance += 1
+
+        for i in range(0, len(self.nodes)):
+            if not superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) \
+                    == superTypeDictionary.getSuperTypeFromType(utils.getNodeType(other.nodes[i], self.graph)):
+                distance += 1
+
+        return distance

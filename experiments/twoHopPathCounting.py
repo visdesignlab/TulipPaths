@@ -16,9 +16,9 @@ from tulipgui import *
 import tulippaths as tp
 
 # Path parameters
-graphFile = '../data/514_2hops.tlp'
+graphFile = '../data/514_10hops_22Jan16.tlp'
 #sourceNodeId = 593
-sourceNodeId = 5279
+sourceNodeId = 483
 maxNumHops = 2
 
 # We will visualize our second valid path for debugging. This assumes that we'll find at least two paths in the graph.
@@ -45,7 +45,7 @@ numValid = 0
 numInNetwork = 0
 numNonSynapticAndInNetwork = 0
 
-print 'The valid paths are:'
+# print 'The valid paths are:'
 for path in pathFinder.valid:
     nonSynaptic = False
     inNetwork = False
@@ -53,11 +53,15 @@ for path in pathFinder.valid:
     if not path.isSynapticPath():
         numNonSynaptic += 1
         nonSynaptic = True
+
     if path.isInNetworkPath():
         numInNetwork += 1
         inNetwork = True
+
     if nonSynaptic and inNetwork:
         numNonSynapticAndInNetwork += 1
+
+    # We want to ignore paths that are not synaptic or are in network
     if nonSynaptic or inNetwork:
         continue
 
@@ -89,26 +93,67 @@ for path in pathFinder.valid:
         uniqueSuperTypes.append(path)
         uniqueSuperTypesCount.append(1)
 
-# check = 0
-# for j in range(0, len(uniqueTypesCount)):
-#     check = check + uniqueTypesCount[j]
-# assert check==len(pathFinder.valid)
+mostCommonPath = uniqueTypes[0]
+pathFrequency = uniqueTypesCount[0]
+hammingDistanceHistogram = [0, 0, 0, 0, 0, 0]
 
-# print "Printing unique types counts:"
-# for count in uniqueTypesCount:
-#    print str(count)
-
-# print "Printing unique super types counts:"
-# for count in uniqueSuperTypesCount:
-#    print str(count)
-
-print "Types"
+# print "Types"
 for i in range (0, len(uniqueTypesCount)):
-    print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+    # print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+    if(pathFrequency < uniqueTypesCount[i]):
+        pathFrequency = uniqueTypesCount[i]
+        mostCommonPath = uniqueTypes[i]
+
+mostCommonSuperPath = uniqueSuperTypes[0]
+superPathFrequency = uniqueSuperTypesCount[0]
+hammingDistanceSuperHistogram = [0, 0, 0, 0, 0, 0]
+
+for i in range (0, len(uniqueSuperTypesCount)):
+    # print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+    if(superPathFrequency < uniqueSuperTypesCount[i]):
+        superPathFrequency = uniqueSuperTypesCount[i]
+        mostCommonSuperPath = uniqueSuperTypes[i]
 
 print "Super Types"
 for i in range (0, len(uniqueSuperTypesCount)):
     print str(uniqueSuperTypesCount[i]) + "\t" + str(uniqueSuperTypes[i].toStringOfSuperTypes())
+
+print "\nMost common path is " + str(mostCommonPath.toStringOfTypes())
+print "Distances from other paths:"
+
+print "\nHamming Distance\tFrequency\tPath"
+
+for i in range (0, len(uniqueTypesCount)):
+    toPrint = ""
+    # for j in range (0, len(uniqueTypesCount)):
+        # toPrint += str(uniqueTypes[i].getDistanceFromOtherPath(uniqueTypes[j])) + "\t"
+    # print toPrint
+    print str(mostCommonPath.getDistanceFromOtherPath(uniqueTypes[i])) + "\t" + str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+    hammingDistanceHistogram[mostCommonPath.getDistanceFromOtherPath(uniqueTypes[i])] += uniqueTypesCount[i]
+
+
+print "Hamming Distance\tFrequency"
+
+for i in range (0, len(hammingDistanceHistogram)):
+    print str(i) + "\t" + str(hammingDistanceHistogram[i])
+
+print "********************"
+print "Super types"
+print "\nHamming Distance\tFrequency\tPath"
+for i in range (0, len(uniqueSuperTypesCount)):
+    toPrint = ""
+    # for j in range (0, len(uniqueTypesCount)):
+        # toPrint += str(uniqueTypes[i].getDistanceFromOtherPath(uniqueTypes[j])) + "\t"
+    # print toPrint
+    print str(mostCommonSuperPath.getSuperDistanceFromOtherPath(uniqueSuperTypes[i])) + "\t" + str(uniqueSuperTypesCount[i]) + "\t" + str(uniqueSuperTypes[i].toStringOfSuperTypesNoEdges())
+    hammingDistanceSuperHistogram[mostCommonSuperPath.getSuperDistanceFromOtherPath(uniqueSuperTypes[i])] += uniqueSuperTypesCount[i]
+
+
+print "Hamming Distance\tFrequency"
+
+for i in range (0, len(hammingDistanceSuperHistogram)):
+    print str(i) + "\t" + str(hammingDistanceSuperHistogram[i])
+
 
 print '\n' + str(numValid) + " total " + str(maxNumHops) + "-hop synaptic paths from node #" + str(sourceNodeId)
 
