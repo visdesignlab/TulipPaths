@@ -19,7 +19,7 @@ class TestSuperTypeDictionary(TestCase):
 
     def test_getTypesFromSuperTypes(self):
         superTypes = tp.SuperTypeDictionary()
-        self.assertTrue(len(superTypes.getTypesFromSuperTypes(['YAC', 'CBb'])) == 46)
+        self.assertTrue(len(superTypes.getTypesFromSuperTypes(['YAC', 'CBb'])) == 47)
 
     def test_isTypeInSuperType(self):
         superTypes = tp.SuperTypeDictionary()
