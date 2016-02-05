@@ -138,7 +138,7 @@ def getNodeById(id, graph):
     for node in graph.getNodes():
         if int(nodeIds[node]) == id:
             return node
-    assert False, "Failed to find node by id"
+    assert False, "Failed to find node by id " + id
 
 def getNodesByType(type, graph):
     nodes = []
@@ -184,6 +184,14 @@ def getNodeType(node, graph):
         return viewLabel[0].strip()
     else:
         return 'null'
+
+def getNodesTypes(nodes, graph):
+    types = []
+    for node in nodes:
+        nodeType = getNodeType(node, graph)
+        if nodeType not in types:
+            types.append(nodeType)
+    return types
 
 def isEdgeTypeInGraph(edgeType, graph):
     for edge in graph.getEdges():
