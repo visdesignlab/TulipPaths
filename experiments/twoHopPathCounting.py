@@ -99,7 +99,7 @@ hammingDistanceHistogram = [0, 0, 0, 0, 0, 0]
 
 # print "Types"
 for i in range (0, len(uniqueTypesCount)):
-    # print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
+    print str(uniqueTypesCount[i]) + "\t" + str(uniqueTypes[i].toStringOfTypes())
     if(pathFrequency < uniqueTypesCount[i]):
         pathFrequency = uniqueTypesCount[i]
         mostCommonPath = uniqueTypes[i]
@@ -166,3 +166,12 @@ print '\n' + str(numNonSynaptic) + " non-synaptic paths were ignored, " + str(nu
 
 print '\n' + str(sourceNodeId) + '\t' + str(numValid) + '\t' + str(len(uniqueTypesCount)) + '\t' + \
       str(len(uniqueSuperTypesCount)) + '\t' + str(numNonSynaptic) + '\t' + str(numInNetwork) + '\t' + str(numNonSynapticAndInNetwork)
+
+superTypeFile = open("../data/superTypes.csv", "w")
+superTypeFile.write("SuperIndex,Path,Frequency")
+nodeTypeFile = open("../data/nodeTypes.csv", "w")
+nodeTypeFile.write("SuperIndex,NodeIndex,Path,Frequency")
+nodeEdgeTypeFile = open("../data/nodeAndEdgeTypes.csv", "w")
+nodeEdgeTypeFile.write("SuperIndex,NodeIndex,Path,Frequency")
+
+#Map super node types -> node types -> node edge types
