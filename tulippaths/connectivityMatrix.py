@@ -45,6 +45,14 @@ class ConnectivityMatrix:
     def _getNodeIndex(self, node):
         return self._nodes.index(node)
 
+    def _getPathAsIndexes(self, path):
+        pathIndexes = []
+        for i in range(0, len(path.nodes)):
+            pathIndexes.append(int(path.nodes[i].id))
+            if i < len(path.edges):
+                pathIndexes.append(int(path.edges[i].id))
+        return pathIndexes
+
     def _getUsedColIndexes(self):
         usedColIndexes = []
         for i in range(0, len(self._matrix)):
@@ -181,7 +189,11 @@ class ConnectivityMatrix:
                         if j in usedCols:
                             newColIndex = usedCols.index(j)
                             col = row[j]
-                            newMatrix[newRowIndex][newColIndex] = len(col)
+                            pathList = []
+                            for k in range(0, len(col)):
+                                pathList.append(self._getPathAsIndexes(self._paths[col[k]]))
+
+                            newMatrix[newRowIndex][newColIndex] = pathList
 
             for rowIndex in usedRows:
                 rowLabels.append(self._rowLabels[rowIndex])
@@ -193,7 +205,10 @@ class ConnectivityMatrix:
             for row in self._matrix:
                 newRow = []
                 for col in row:
-                    newRow.append(len(col))
+                    pathList = []
+                    for k in range(0, len(col)):
+                        pathList.append(self._getPathAsIndexes(self._paths[col[k]]))
+                    newRow.append(pathList)
                 newMatrix.append(newRow)
 
             rowLabels = self._rowLabels
@@ -202,13 +217,11 @@ class ConnectivityMatrix:
         if replaceCellIdsWithIndexes:
             newRowLabels = []
             for label in rowLabels:
-                print label
                 newRowLabels.append(int(utils.getNodeById(int(label), self._graph).id))
             rowLabels = newRowLabels
 
             newColLabels = []
             for label in colLabels:
-                print label
                 newColLabels.append(int(utils.getNodeById(int(label), self._graph).id))
             colLabels = newColLabels
 

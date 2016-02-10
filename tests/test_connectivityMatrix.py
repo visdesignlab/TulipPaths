@@ -42,17 +42,18 @@ class TestConnectivityMatrix(TestCase):
     # Json object format is meant to be input into reorder.js
     def test_getAsJsonObject(self):
         removeUnusedNodes = False
+        print json.dumps(self.matrix.getAsJsonObject(removeUnusedNodes))
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["168", "120", "142", "1724", "5107"], '
-                                 '"matrix": [[0, 0, 0, 0, 0], [0, 0, 0, 0, 1], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]], '
+                                 '"matrix": [[[], [], [], [], []], [[], [], [], [], [[2, 3, 4, 4, 6]]], [[], [], [], [], []], [[], [], [[5, 1, 1, 6, 3]], [], []], [[], [], [], [], []]], '
                                  '"col_labels": ["168", "120", "142", "1724", "5107"]}')
 
         removeUnusedNodes = True
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["120", "1724"], '
-                                 '"matrix": [[1, 0], [0, 1]], '
+                                 '"matrix": [[[[2, 3, 4, 4, 6]], []], [[], [[5, 1, 1, 6, 3]]]], '
                                  '"col_labels": ["5107", "142"]}')
 
     # Collapse sources and targets of connectivity matrix by their node type!
@@ -62,14 +63,14 @@ class TestConnectivityMatrix(TestCase):
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["CBb3m", "GC"], '
-                                 '"matrix": [[0, 0, 1, 0, 1], [0, 0, 0, 0, 0]], '
+                                 '"matrix": [[[], [], [[5, 1, 1, 6, 3]], [], [[2, 3, 4, 4, 6]]], [[], [], [], [], []]], '
                                  '"col_labels": ["168", "120", "142", "1724", "5107"]}')
 
         removeUnusedNodes = True
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["CBb3m"], '
-                                 '"matrix": [[1, 1]], '
+                                 '"matrix": [[[[5, 1, 1, 6, 3]], [[2, 3, 4, 4, 6]]]], '
                                  '"col_labels": ["142", "5107"]}')
 
         self.matrix.reset()
@@ -78,9 +79,8 @@ class TestConnectivityMatrix(TestCase):
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["168", "120", "142", "1724", "5107"], '
-                                 '"matrix": [[0, 0], [0, 1], [0, 0], [0, 1], [0, 0]], '
+                                 '"matrix": [[[], []], [[], [[2, 3, 4, 4, 6]]], [[], []], [[], [[5, 1, 1, 6, 3]]], [[], []]], '
                                  '"col_labels": ["CBb3m", "GC"]}')
-
 
 if __name__ == "__main__":
     unittest.main()
