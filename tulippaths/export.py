@@ -16,10 +16,14 @@ def graphToJson(graph):
         nodes.append(dictionary)
 
     for edge in graph.getEdges():
+        source = graph.source(edge)
+        target = graph.target(edge)
         dictionary = {
             "ID": edge.id,
-            "SourceStructureID": int(tp.utils.getNodeId(graph.source(edge), graph)),
-            "TargetStructureID": int(tp.utils.getNodeId(graph.target(edge), graph)),
+            "SourceStructureID": int(tp.utils.getNodeId(source, graph)),
+            "TargetStructureID": int(tp.utils.getNodeId(target, graph)),
+            "SourceID": int(source.id),
+            "TargetID": int(target.id),
             "Type": tp.utils.getEdgeType(edge, graph),
             "LinkedStructures": tp.utils.getEdgeLinkedStructures(edge, graph)
         }
