@@ -30,8 +30,8 @@ class ConnectivityMatrix:
             self._matrix.append(row)
 
         for node in self._nodes:
-            self._rowLabels.append(utils.getNodeId(node, self._graph))
-            self._colLabels.append(utils.getNodeId(node, self._graph))
+            self._rowLabels.append(node.id)
+            self._colLabels.append(node.id)
 
     def _addPathToMatrix(self, path):
         source = path.nodes[0]
@@ -86,83 +86,36 @@ class ConnectivityMatrix:
 
         # Matrix is N x N where N is the number of sources and targets.
         sources = utils.getNodesByTypeRegex(nodeConstraints[0], self._graph)
-        targets = utils.getNodesByTypeRegex(nodeConstraints[len(nodeConstraints) - 1], self._graph)
-
-        nodes = sources + targets
-
-        self._activateMatrix(nodes)
 
         # Find paths for each source. Shove them into the matrix.
+        allPaths = []
         for node in sources:
             pathFinder = PathFinder(self._graph)
             pathFinder.findRegexConstrainedPaths(node, edgeConstraints, nodeConstraints)
             for path in pathFinder.valid:
-                self._addPathToMatrix(path)
+                allPaths.append(path)
+
+        self.activateFromPaths(allPaths)
+
+    def activateFromPaths(self, paths):
+        allNodes = []
+        for path in paths:
+            print path.toString()
+            source = path.nodes[0]
+            target = path.getLastNode()
+            if source not in allNodes:
+                allNodes.append(source)
+            if target not in allNodes:
+                allNodes.append(target)
+
+        self._activateMatrix(allNodes)
+
+        for path in paths:
+            self._addPathToMatrix(path)
 
         # Cache the initial matrix.
         self._initialMatrix = copy.deepcopy(self._matrix)
 
-    def collapseSources(self):
-        """
-            Updates _matrix s.t. all rows of the same label get collapsed to a single row.
-        """
-        if self._sourcesCollapsed:
-            return
-
-        sourceTypes = utils.getNodesTypes(self._nodes, self._graph)
-        newMatrix = []
-        newCols = []
-        for node in self._nodes:
-            newCols.append(utils.getNodeId(node, self._graph))
-
-        for sourceType in sourceTypes:
-            newRow = [[] for node in self._nodes]
-            for i in range(0, len(self._matrix)):
-                rowType = utils.getNodeType(self._nodes[i], self._graph)
-                row = self._matrix[i]
-                if rowType == sourceType:
-                    for j in range(0, len(row)):
-                        col = row[j]
-                        if len(col) > 0:
-                            newRow[j] += col
-            newMatrix.append(newRow)
-
-        self._matrix = copy.deepcopy(newMatrix)
-        self._colLabels = newCols
-        self._rowLabels = sourceTypes
-
-    def collapseTargets(self):
-        """
-            Updates _matrix s.t. all cols of the same label get collapsed to a single col.
-        """
-
-        if self._targetsCollapsed:
-            return
-
-        self._targetsCollapsed = True
-
-        targetTypes = utils.getNodesTypes(self._nodes, self._graph)
-        newMatrix = []
-
-        # Initialize newMatrix
-        for i in range(0, len(self._matrix)):
-            newRow = []
-            for j in range(0, len(targetTypes)):
-                newRow.append([])
-            newMatrix.append(newRow)
-
-        # Populate new matrix
-        for i in range(0, len(self._matrix)):
-            row = self._matrix[i]
-            for j in range(0, len(row)):
-                col = row[j]
-                if len(col) > 0:
-                    colType = utils.getNodeType(self._nodes[j], self._graph)
-                    colIndex = targetTypes.index(colType)
-                    newMatrix[i][colIndex] += col
-
-        self._matrix = copy.deepcopy(newMatrix)
-        self._colLabels = targetTypes
 
     def getAsJsonObject(self, removeEmptyGridCells=False, replaceCellIdsWithIndexes=False):
         newMatrix = []
@@ -213,17 +166,6 @@ class ConnectivityMatrix:
 
             rowLabels = self._rowLabels
             colLabels = self._colLabels
-
-        if replaceCellIdsWithIndexes:
-            newRowLabels = []
-            for label in rowLabels:
-                newRowLabels.append(int(utils.getNodeById(int(label), self._graph).id))
-            rowLabels = newRowLabels
-
-            newColLabels = []
-            for label in colLabels:
-                newColLabels.append(int(utils.getNodeById(int(label), self._graph).id))
-            colLabels = newColLabels
 
         jsonObject = {}
         jsonObject['row_labels'] = rowLabels

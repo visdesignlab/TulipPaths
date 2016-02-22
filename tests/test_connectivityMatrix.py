@@ -23,18 +23,19 @@ class TestConnectivityMatrix(TestCase):
     # The connectivity matrix should find two paths in this test.
     def test_activate(self):
         matrix = self.matrix
-        self.assertTrue(len(matrix._matrix) == 5)
+        print matrix._matrix
+        self.assertTrue(len(matrix._matrix) == 4)
         for i in range(0, len(matrix._matrix)):
             row = matrix._matrix[i]
-            self.assertTrue(len(row) == 5)
-            if i == 1:
-                self.assertTrue(len(row[4]) == 1)
+            self.assertTrue(len(row) == 4)
+            if i == 0:
+                self.assertTrue(len(row[3]) == 1)
                 self.assertTrue(
-                        matrix.getPathAt(row[4][0]).toStringOfTypes() == 'CBb3m, Ribbon Synapse, IAC, Conventional, GC')
-            elif i == 3:
+                        matrix.getPathAt(row[3][0]).toStringOfTypes() == 'CBb3m, Ribbon Synapse, IAC, Conventional, GC')
+            elif i == 4:
                 self.assertTrue(len(row[2]) == 1)
                 self.assertTrue(
-                        matrix.getPathAt(row[2][0]).toStringOfTypes() == 'CBb3m, Ribbon Synapse, YAC, Conventional, GC')
+                        matrix.getPathAt(row[1][0]).toStringOfTypes() == 'CBb3m, Ribbon Synapse, YAC, Conventional, GC')
             else:
                 for col in row:
                     self.assertTrue(len(col) == 0)
