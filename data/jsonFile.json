@@ -21,7 +21,7 @@
         {
             "inV": 201,
             "label": "superToNodeType",
-            "outV": 200,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -33,7 +33,7 @@
         {
             "inV": 202,
             "label": "superToNodeType",
-            "outV": 201,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -51,7 +51,7 @@
         {
             "inV": 203,
             "label": "superToNodeType",
-            "outV": 202,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -63,7 +63,7 @@
         {
             "inV": 204,
             "label": "superToNodeType",
-            "outV": 203,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -75,7 +75,7 @@
         {
             "inV": 205,
             "label": "superToNodeType",
-            "outV": 204,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -87,7 +87,7 @@
         {
             "inV": 206,
             "label": "superToNodeType",
-            "outV": 205,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -99,7 +99,7 @@
         {
             "inV": 207,
             "label": "superToNodeType",
-            "outV": 206,
+            "outV": 100,
             "type": "edge"
         },
         {
@@ -135,7 +135,7 @@
         {
             "inV": 211,
             "label": "superToNodeType",
-            "outV": 210,
+            "outV": 110,
             "type": "edge"
         },
         {
@@ -147,7 +147,7 @@
         {
             "inV": 212,
             "label": "superToNodeType",
-            "outV": 211,
+            "outV": 110,
             "type": "edge"
         },
         {
@@ -177,7 +177,7 @@
         {
             "inV": 221,
             "label": "superToNodeType",
-            "outV": 220,
+            "outV": 120,
             "type": "edge"
         },
         {
@@ -189,7 +189,7 @@
         {
             "inV": 222,
             "label": "superToNodeType",
-            "outV": 221,
+            "outV": 120,
             "type": "edge"
         },
         {
@@ -225,7 +225,7 @@
         {
             "inV": 241,
             "label": "superToNodeType",
-            "outV": 240,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -237,7 +237,7 @@
         {
             "inV": 242,
             "label": "superToNodeType",
-            "outV": 241,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -249,7 +249,7 @@
         {
             "inV": 243,
             "label": "superToNodeType",
-            "outV": 242,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -261,7 +261,7 @@
         {
             "inV": 244,
             "label": "superToNodeType",
-            "outV": 243,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -273,7 +273,7 @@
         {
             "inV": 245,
             "label": "superToNodeType",
-            "outV": 244,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -285,7 +285,7 @@
         {
             "inV": 246,
             "label": "superToNodeType",
-            "outV": 245,
+            "outV": 140,
             "type": "edge"
         },
         {
@@ -309,7 +309,7 @@
         {
             "inV": 251,
             "label": "superToNodeType",
-            "outV": 250,
+            "outV": 150,
             "type": "edge"
         },
         {
@@ -351,7 +351,7 @@
         {
             "inV": 271,
             "label": "superToNodeType",
-            "outV": 270,
+            "outV": 170,
             "type": "edge"
         },
         {
@@ -363,7 +363,7 @@
         {
             "inV": 272,
             "label": "superToNodeType",
-            "outV": 271,
+            "outV": 170,
             "type": "edge"
         },
         {
@@ -393,7 +393,7 @@
         {
             "inV": 281,
             "label": "superToNodeType",
-            "outV": 280,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -405,7 +405,7 @@
         {
             "inV": 282,
             "label": "superToNodeType",
-            "outV": 281,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -417,7 +417,7 @@
         {
             "inV": 283,
             "label": "superToNodeType",
-            "outV": 282,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -429,7 +429,7 @@
         {
             "inV": 284,
             "label": "superToNodeType",
-            "outV": 283,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -441,7 +441,7 @@
         {
             "inV": 285,
             "label": "superToNodeType",
-            "outV": 284,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -459,7 +459,7 @@
         {
             "inV": 286,
             "label": "superToNodeType",
-            "outV": 285,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -477,7 +477,7 @@
         {
             "inV": 287,
             "label": "superToNodeType",
-            "outV": 286,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -489,7 +489,7 @@
         {
             "inV": 288,
             "label": "superToNodeType",
-            "outV": 287,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -501,7 +501,7 @@
         {
             "inV": 289,
             "label": "superToNodeType",
-            "outV": 288,
+            "outV": 180,
             "type": "edge"
         },
         {
@@ -537,7 +537,7 @@
         {
             "inV": 2101,
             "label": "superToNodeType",
-            "outV": 2100,
+            "outV": 1100,
             "type": "edge"
         },
         {
@@ -603,7 +603,7 @@
         {
             "inV": 2131,
             "label": "superToNodeType",
-            "outV": 2130,
+            "outV": 1130,
             "type": "edge"
         },
         {
@@ -627,7 +627,7 @@
         {
             "inV": 2132,
             "label": "superToNodeType",
-            "outV": 2131,
+            "outV": 1130,
             "type": "edge"
         },
         {
@@ -657,7 +657,7 @@
         {
             "inV": 2141,
             "label": "superToNodeType",
-            "outV": 2140,
+            "outV": 1140,
             "type": "edge"
         },
         {
@@ -681,7 +681,7 @@
         {
             "inV": 2151,
             "label": "superToNodeType",
-            "outV": 2150,
+            "outV": 1150,
             "type": "edge"
         },
         {
@@ -723,7 +723,7 @@
         {
             "inV": 2171,
             "label": "superToNodeType",
-            "outV": 2170,
+            "outV": 1170,
             "type": "edge"
         },
         {
@@ -735,7 +735,7 @@
         {
             "inV": 2172,
             "label": "superToNodeType",
-            "outV": 2171,
+            "outV": 1170,
             "type": "edge"
         },
         {
@@ -747,7 +747,7 @@
         {
             "inV": 2173,
             "label": "superToNodeType",
-            "outV": 2172,
+            "outV": 1170,
             "type": "edge"
         },
         {
@@ -783,7 +783,7 @@
         {
             "inV": 2191,
             "label": "superToNodeType",
-            "outV": 2190,
+            "outV": 1190,
             "type": "edge"
         },
         {

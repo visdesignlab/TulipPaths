@@ -123,12 +123,12 @@ for superIndex in range(0, len(superTypes)):
         inV = nodeTypes[superIndex][nodeIndex].getId()
         pathJsonObject.addVertex(nodeTypes[superIndex][nodeIndex])
         pathJsonObject.addEdge(tp.PathTypeEdge(inV, outV, "superToNodeType"))
-        # Now the node type is the new inV
-        outV = inV
+
+        nodeTypeOutV = nodeTypes[superIndex][nodeIndex].getId()
         for nodeAndEdgeIndex in range(0, len(nodeAndEdgeTypes[superIndex][nodeIndex])):
             inV = nodeAndEdgeTypes[superIndex][nodeIndex][nodeAndEdgeIndex].getId()
             pathJsonObject.addVertex(nodeAndEdgeTypes[superIndex][nodeIndex][nodeAndEdgeIndex])
-            pathJsonObject.addEdge(tp.PathTypeEdge(inV, outV, "nodeToNodeAndEdgeType"))
+            pathJsonObject.addEdge(tp.PathTypeEdge(inV, nodeTypeOutV, "nodeToNodeAndEdgeType"))
 
 jsonFile = open("../data/jsonFile.json", "w")
 jsonObject = pathJsonObject.getAsJsonObject()
