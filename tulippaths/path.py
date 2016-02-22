@@ -84,13 +84,23 @@ class Path:
 
         return True
 
+    def isSameNodeType(self, other):
+        if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
+            return False
+
+        for i in range(0, len(self.nodes)):
+            if not utils.getNodeType(self.nodes[i], self.graph) == utils.getNodeType(other.nodes[i], self.graph):
+                return False
+
+        return True
+
     def isSameSuperType(self, other):
         if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
             return False
 
-        for i in range(0, len(self.edges)):
-            if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
-                return False
+        # for i in range(0, len(self.edges)):
+        #     if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
+        #         return False
 
         superTypeDictionary = tp.SuperTypeDictionary()
 
@@ -145,22 +155,37 @@ class Path:
         string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
 
+    def toStringOfTypesJson(self):
+        string = ''
+        for i in range(0, len(self.edges)):
+            string += utils.getNodeType(self.nodes[i], self.graph) + '-'
+            string += utils.getEdgeType(self.edges[i], self.graph) + '-'
+        string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
+        return string
+
+    def toStringOfNodeTypes(self):
+        string = ''
+        for i in range(0, len(self.edges)):
+            string += utils.getNodeType(self.nodes[i], self.graph) + '-'
+        string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
+        return string
+
     def toStringOfSuperTypes(self):
         string = ''
         superTypeDictionary = tp.SuperTypeDictionary()
 
         for i in range(0, len(self.edges)):
-            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + ', '
-            string += utils.getEdgeType(self.edges[i], self.graph) + ', '
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + '-'
+            string += utils.getEdgeType(self.edges[i], self.graph) + '-'
         string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
         return string
 
-    def toStringOfSuperTypesNoEdges(self):
+    def toStringOfNodeSuperTypes(self):
         string = ''
         superTypeDictionary = tp.SuperTypeDictionary()
 
         for i in range(0, len(self.edges)):
-            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + ', '
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + '-'
             # string += utils.getEdgeType(self.edges[i], self.graph) + ', '
         string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
         return string
