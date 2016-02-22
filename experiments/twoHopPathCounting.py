@@ -84,6 +84,7 @@ for path in pathFinder.valid:
         superTypeIndex+=1
     else:
         currentSuperTypeIndex = superTypeDict[superTypeString].getSuperIndex()
+        superTypes[currentSuperTypeIndex].addFrequency(1)
         nodeTypeString = path.toStringOfNodeTypes()
         nodeAndEdgeTypeString = path.toStringOfTypesJson()
         nodeIndex = 0
@@ -98,19 +99,19 @@ for path in pathFinder.valid:
         # Case 3: Super Type is found, but Node Type is new. Add new Node Type and Node and Edge type to the appropriate indices
         if not found:
             nodeIndex = len(nodeTypes[currentSuperTypeIndex])
-            nodeTypes[currentSuperTypeIndex].append(tp.PathTypeVertex("NodeType", superTypeIndex, nodeIndex, nodeTypeString, 1))
-            nodeAndEdgeTypes[currentSuperTypeIndex].append([tp.PathTypeVertex("NodeAndEdgeType", superTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1)])
+            nodeTypes[currentSuperTypeIndex].append(tp.PathTypeVertex("NodeType", currentSuperTypeIndex, nodeIndex, nodeTypeString, 1))
+            nodeAndEdgeTypes[currentSuperTypeIndex].append([tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1)])
         else:
             found = False
             for j in range(0, len(nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex])):
                 # Case 2a: Super Type is found, Node Type is found, and Node and Edge type is also found. Update node and edge frequency
-                if nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex][j] == nodeAndEdgeTypeString:
+                if nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex][j].getPath() == nodeAndEdgeTypeString:
                     nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex][j].addFrequency(1)
                     found = True
                     break
             # Case 2b: Super Type is found, Node Type is found, but Node and Edge type is not. Add new Node and Edge type.
             if not found:
-                nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex].append(tp.PathTypeVertex("NodeAndEdgeType", superTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1))
+                nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex].append(tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1))
 
 # Walk through super types, node types, and node and edge types; add vertices and edges, respectively
 # Note: inV is the "parent" vertex, and outV is the "child"

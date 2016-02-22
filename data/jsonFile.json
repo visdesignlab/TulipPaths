@@ -13,129 +13,99 @@
             "type": "edge"
         },
         {
-            "inV": 390,
+            "inV": 300,
             "label": "nodeToNodeAndEdgeType",
             "outV": 200,
             "type": "edge"
         },
         {
-            "inV": 3170,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 200,
-            "type": "edge"
-        },
-        {
-            "inV": 211,
+            "inV": 201,
             "label": "superToNodeType",
             "outV": 200,
             "type": "edge"
         },
         {
-            "inV": 311,
+            "inV": 301,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 211,
+            "outV": 201,
             "type": "edge"
         },
         {
-            "inV": 2152,
+            "inV": 202,
             "label": "superToNodeType",
-            "outV": 211,
+            "outV": 201,
             "type": "edge"
         },
         {
-            "inV": 3152,
+            "inV": 302,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2152,
+            "outV": 202,
             "type": "edge"
         },
         {
-            "inV": 3152,
+            "inV": 302,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2152,
+            "outV": 202,
             "type": "edge"
         },
         {
-            "inV": 3232,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2152,
-            "type": "edge"
-        },
-        {
-            "inV": 2153,
+            "inV": 203,
             "label": "superToNodeType",
-            "outV": 2152,
+            "outV": 202,
             "type": "edge"
         },
         {
-            "inV": 3153,
+            "inV": 303,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2153,
+            "outV": 203,
             "type": "edge"
         },
         {
-            "inV": 2154,
+            "inV": 204,
             "label": "superToNodeType",
-            "outV": 2153,
+            "outV": 203,
             "type": "edge"
         },
         {
-            "inV": 3154,
+            "inV": 304,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2154,
+            "outV": 204,
             "type": "edge"
         },
         {
-            "inV": 2275,
+            "inV": 205,
             "label": "superToNodeType",
-            "outV": 2154,
+            "outV": 204,
             "type": "edge"
         },
         {
-            "inV": 3275,
+            "inV": 305,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2275,
+            "outV": 205,
             "type": "edge"
         },
         {
-            "inV": 3285,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2275,
-            "type": "edge"
-        },
-        {
-            "inV": 3285,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2275,
-            "type": "edge"
-        },
-        {
-            "inV": 3295,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2275,
-            "type": "edge"
-        },
-        {
-            "inV": 2286,
+            "inV": 206,
             "label": "superToNodeType",
-            "outV": 2275,
+            "outV": 205,
             "type": "edge"
         },
         {
-            "inV": 3286,
+            "inV": 306,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2286,
+            "outV": 206,
             "type": "edge"
         },
         {
-            "inV": 2287,
+            "inV": 207,
             "label": "superToNodeType",
-            "outV": 2286,
+            "outV": 206,
             "type": "edge"
         },
         {
-            "inV": 3287,
+            "inV": 307,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2287,
+            "outV": 207,
             "type": "edge"
         },
         {
@@ -151,177 +121,45 @@
             "type": "edge"
         },
         {
-            "inV": 320,
+            "inV": 310,
             "label": "nodeToNodeAndEdgeType",
             "outV": 210,
             "type": "edge"
         },
         {
-            "inV": 3180,
+            "inV": 310,
             "label": "nodeToNodeAndEdgeType",
             "outV": 210,
             "type": "edge"
         },
         {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 210,
-            "type": "edge"
-        },
-        {
-            "inV": 2231,
+            "inV": 211,
             "label": "superToNodeType",
             "outV": 210,
             "type": "edge"
         },
         {
-            "inV": 3231,
+            "inV": 311,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2231,
+            "outV": 211,
             "type": "edge"
         },
         {
-            "inV": 2272,
+            "inV": 212,
             "label": "superToNodeType",
-            "outV": 2231,
+            "outV": 211,
             "type": "edge"
         },
         {
-            "inV": 3272,
+            "inV": 312,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
+            "outV": 212,
             "type": "edge"
         },
         {
-            "inV": 3272,
+            "inV": 312,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3272,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3282,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3282,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3282,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
-            "type": "edge"
-        },
-        {
-            "inV": 3282,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2272,
+            "outV": 212,
             "type": "edge"
         },
         {
@@ -337,87 +175,27 @@
             "type": "edge"
         },
         {
-            "inV": 380,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 220,
-            "type": "edge"
-        },
-        {
-            "inV": 3220,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 220,
-            "type": "edge"
-        },
-        {
-            "inV": 231,
+            "inV": 221,
             "label": "superToNodeType",
             "outV": 220,
             "type": "edge"
         },
         {
-            "inV": 331,
+            "inV": 321,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 231,
+            "outV": 221,
             "type": "edge"
         },
         {
-            "inV": 361,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 231,
-            "type": "edge"
-        },
-        {
-            "inV": 381,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 231,
-            "type": "edge"
-        },
-        {
-            "inV": 3221,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 231,
-            "type": "edge"
-        },
-        {
-            "inV": 252,
+            "inV": 222,
             "label": "superToNodeType",
-            "outV": 231,
+            "outV": 221,
             "type": "edge"
         },
         {
-            "inV": 352,
+            "inV": 322,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 362,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 382,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 382,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 3222,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 3222,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
+            "outV": 222,
             "type": "edge"
         },
         {
@@ -428,12 +206,6 @@
         },
         {
             "inV": 330,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 230,
-            "type": "edge"
-        },
-        {
-            "inV": 3220,
             "label": "nodeToNodeAndEdgeType",
             "outV": 230,
             "type": "edge"
@@ -451,129 +223,75 @@
             "type": "edge"
         },
         {
-            "inV": 380,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 240,
-            "type": "edge"
-        },
-        {
-            "inV": 3220,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 240,
-            "type": "edge"
-        },
-        {
-            "inV": 251,
+            "inV": 241,
             "label": "superToNodeType",
             "outV": 240,
             "type": "edge"
         },
         {
-            "inV": 351,
+            "inV": 341,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 251,
+            "outV": 241,
             "type": "edge"
         },
         {
-            "inV": 361,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 251,
-            "type": "edge"
-        },
-        {
-            "inV": 381,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 251,
-            "type": "edge"
-        },
-        {
-            "inV": 3221,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 251,
-            "type": "edge"
-        },
-        {
-            "inV": 252,
+            "inV": 242,
             "label": "superToNodeType",
-            "outV": 251,
+            "outV": 241,
             "type": "edge"
         },
         {
-            "inV": 352,
+            "inV": 342,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
+            "outV": 242,
             "type": "edge"
         },
         {
-            "inV": 382,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 252,
-            "type": "edge"
-        },
-        {
-            "inV": 253,
+            "inV": 243,
             "label": "superToNodeType",
-            "outV": 252,
+            "outV": 242,
             "type": "edge"
         },
         {
-            "inV": 353,
+            "inV": 343,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 253,
+            "outV": 243,
             "type": "edge"
         },
         {
-            "inV": 383,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 253,
-            "type": "edge"
-        },
-        {
-            "inV": 264,
+            "inV": 244,
             "label": "superToNodeType",
-            "outV": 253,
+            "outV": 243,
             "type": "edge"
         },
         {
-            "inV": 364,
+            "inV": 344,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 264,
+            "outV": 244,
             "type": "edge"
         },
         {
-            "inV": 384,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 264,
-            "type": "edge"
-        },
-        {
-            "inV": 275,
+            "inV": 245,
             "label": "superToNodeType",
-            "outV": 264,
+            "outV": 244,
             "type": "edge"
         },
         {
-            "inV": 375,
+            "inV": 345,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 275,
+            "outV": 245,
             "type": "edge"
         },
         {
-            "inV": 286,
+            "inV": 246,
             "label": "superToNodeType",
-            "outV": 275,
+            "outV": 245,
             "type": "edge"
         },
         {
-            "inV": 386,
+            "inV": 346,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 286,
-            "type": "edge"
-        },
-        {
-            "inV": 3226,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 286,
+            "outV": 246,
             "type": "edge"
         },
         {
@@ -589,27 +307,15 @@
             "type": "edge"
         },
         {
-            "inV": 380,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 250,
-            "type": "edge"
-        },
-        {
-            "inV": 3220,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 250,
-            "type": "edge"
-        },
-        {
-            "inV": 281,
+            "inV": 251,
             "label": "superToNodeType",
             "outV": 250,
             "type": "edge"
         },
         {
-            "inV": 381,
+            "inV": 351,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 281,
+            "outV": 251,
             "type": "edge"
         },
         {
@@ -625,7 +331,7 @@
             "type": "edge"
         },
         {
-            "inV": 380,
+            "inV": 360,
             "label": "nodeToNodeAndEdgeType",
             "outV": 260,
             "type": "edge"
@@ -643,9 +349,51 @@
             "type": "edge"
         },
         {
-            "inV": 281,
+            "inV": 271,
             "label": "superToNodeType",
             "outV": 270,
+            "type": "edge"
+        },
+        {
+            "inV": 371,
+            "label": "nodeToNodeAndEdgeType",
+            "outV": 271,
+            "type": "edge"
+        },
+        {
+            "inV": 272,
+            "label": "superToNodeType",
+            "outV": 271,
+            "type": "edge"
+        },
+        {
+            "inV": 372,
+            "label": "nodeToNodeAndEdgeType",
+            "outV": 272,
+            "type": "edge"
+        },
+        {
+            "inV": 280,
+            "label": "superToNodeType",
+            "outV": 180,
+            "type": "edge"
+        },
+        {
+            "inV": 380,
+            "label": "nodeToNodeAndEdgeType",
+            "outV": 280,
+            "type": "edge"
+        },
+        {
+            "inV": 380,
+            "label": "nodeToNodeAndEdgeType",
+            "outV": 280,
+            "type": "edge"
+        },
+        {
+            "inV": 281,
+            "label": "superToNodeType",
+            "outV": 280,
             "type": "edge"
         },
         {
@@ -667,183 +415,99 @@
             "type": "edge"
         },
         {
-            "inV": 3222,
-            "label": "nodeToNodeAndEdgeType",
+            "inV": 283,
+            "label": "superToNodeType",
             "outV": 282,
             "type": "edge"
         },
         {
-            "inV": 280,
+            "inV": 383,
+            "label": "nodeToNodeAndEdgeType",
+            "outV": 283,
+            "type": "edge"
+        },
+        {
+            "inV": 284,
             "label": "superToNodeType",
-            "outV": 180,
+            "outV": 283,
             "type": "edge"
         },
         {
-            "inV": 380,
+            "inV": 384,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 280,
+            "outV": 284,
             "type": "edge"
         },
         {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 280,
-            "type": "edge"
-        },
-        {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 280,
-            "type": "edge"
-        },
-        {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 280,
-            "type": "edge"
-        },
-        {
-            "inV": 2141,
+            "inV": 285,
             "label": "superToNodeType",
-            "outV": 280,
+            "outV": 284,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 385,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 285,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 385,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 285,
             "type": "edge"
         },
         {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 2142,
+            "inV": 286,
             "label": "superToNodeType",
-            "outV": 2141,
+            "outV": 285,
             "type": "edge"
         },
         {
-            "inV": 3142,
+            "inV": 386,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2142,
+            "outV": 286,
             "type": "edge"
         },
         {
-            "inV": 3142,
+            "inV": 386,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2142,
+            "outV": 286,
             "type": "edge"
         },
         {
-            "inV": 2163,
+            "inV": 287,
             "label": "superToNodeType",
-            "outV": 2142,
+            "outV": 286,
             "type": "edge"
         },
         {
-            "inV": 3163,
+            "inV": 387,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2163,
+            "outV": 287,
             "type": "edge"
         },
         {
-            "inV": 2164,
+            "inV": 288,
             "label": "superToNodeType",
-            "outV": 2163,
+            "outV": 287,
             "type": "edge"
         },
         {
-            "inV": 3164,
+            "inV": 388,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2164,
+            "outV": 288,
             "type": "edge"
         },
         {
-            "inV": 2225,
+            "inV": 289,
             "label": "superToNodeType",
-            "outV": 2164,
+            "outV": 288,
             "type": "edge"
         },
         {
-            "inV": 3225,
+            "inV": 389,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2225,
-            "type": "edge"
-        },
-        {
-            "inV": 3235,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2225,
-            "type": "edge"
-        },
-        {
-            "inV": 2266,
-            "label": "superToNodeType",
-            "outV": 2225,
-            "type": "edge"
-        },
-        {
-            "inV": 3266,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2266,
-            "type": "edge"
-        },
-        {
-            "inV": 3276,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2266,
-            "type": "edge"
-        },
-        {
-            "inV": 3286,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2266,
-            "type": "edge"
-        },
-        {
-            "inV": 2277,
-            "label": "superToNodeType",
-            "outV": 2266,
-            "type": "edge"
-        },
-        {
-            "inV": 3277,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2277,
-            "type": "edge"
-        },
-        {
-            "inV": 2278,
-            "label": "superToNodeType",
-            "outV": 2277,
-            "type": "edge"
-        },
-        {
-            "inV": 3278,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2278,
-            "type": "edge"
-        },
-        {
-            "inV": 2279,
-            "label": "superToNodeType",
-            "outV": 2278,
-            "type": "edge"
-        },
-        {
-            "inV": 3279,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2279,
+            "outV": 289,
             "type": "edge"
         },
         {
@@ -871,27 +535,15 @@
             "type": "edge"
         },
         {
-            "inV": 3120,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2100,
-            "type": "edge"
-        },
-        {
-            "inV": 3130,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2100,
-            "type": "edge"
-        },
-        {
-            "inV": 2141,
+            "inV": 2101,
             "label": "superToNodeType",
             "outV": 2100,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 3101,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 2101,
             "type": "edge"
         },
         {
@@ -902,18 +554,6 @@
         },
         {
             "inV": 3110,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2110,
-            "type": "edge"
-        },
-        {
-            "inV": 3130,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2110,
-            "type": "edge"
-        },
-        {
-            "inV": 3130,
             "label": "nodeToNodeAndEdgeType",
             "outV": 2110,
             "type": "edge"
@@ -931,409 +571,19 @@
             "type": "edge"
         },
         {
-            "inV": 3140,
+            "inV": 3120,
             "label": "nodeToNodeAndEdgeType",
             "outV": 2120,
             "type": "edge"
         },
         {
-            "inV": 3140,
+            "inV": 3120,
             "label": "nodeToNodeAndEdgeType",
             "outV": 2120,
             "type": "edge"
         },
         {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2120,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
+            "inV": 3120,
             "label": "nodeToNodeAndEdgeType",
             "outV": 2120,
             "type": "edge"
@@ -1351,111 +601,45 @@
             "type": "edge"
         },
         {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2130,
-            "type": "edge"
-        },
-        {
-            "inV": 3140,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2130,
-            "type": "edge"
-        },
-        {
-            "inV": 2141,
+            "inV": 2131,
             "label": "superToNodeType",
             "outV": 2130,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 3131,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 2131,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 3131,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 2131,
             "type": "edge"
         },
         {
-            "inV": 3141,
+            "inV": 3131,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
+            "outV": 2131,
             "type": "edge"
         },
         {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 3141,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2141,
-            "type": "edge"
-        },
-        {
-            "inV": 2142,
+            "inV": 2132,
             "label": "superToNodeType",
-            "outV": 2141,
+            "outV": 2131,
             "type": "edge"
         },
         {
-            "inV": 3142,
+            "inV": 3132,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2142,
+            "outV": 2132,
             "type": "edge"
         },
         {
-            "inV": 3142,
+            "inV": 3132,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2142,
+            "outV": 2132,
             "type": "edge"
         },
         {
@@ -1471,21 +655,15 @@
             "type": "edge"
         },
         {
-            "inV": 3270,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2140,
-            "type": "edge"
-        },
-        {
-            "inV": 2261,
+            "inV": 2141,
             "label": "superToNodeType",
             "outV": 2140,
             "type": "edge"
         },
         {
-            "inV": 3261,
+            "inV": 3141,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2261,
+            "outV": 2141,
             "type": "edge"
         },
         {
@@ -1501,51 +679,15 @@
             "type": "edge"
         },
         {
-            "inV": 3170,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2150,
-            "type": "edge"
-        },
-        {
-            "inV": 2271,
+            "inV": 2151,
             "label": "superToNodeType",
             "outV": 2150,
             "type": "edge"
         },
         {
-            "inV": 3271,
+            "inV": 3151,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
-            "type": "edge"
-        },
-        {
-            "inV": 3271,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
-            "type": "edge"
-        },
-        {
-            "inV": 3271,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
-            "type": "edge"
-        },
-        {
-            "inV": 3271,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
-            "type": "edge"
-        },
-        {
-            "inV": 3271,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
-            "type": "edge"
-        },
-        {
-            "inV": 3271,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2271,
+            "outV": 2151,
             "type": "edge"
         },
         {
@@ -1573,87 +715,45 @@
             "type": "edge"
         },
         {
-            "inV": 3180,
+            "inV": 3170,
             "label": "nodeToNodeAndEdgeType",
             "outV": 2170,
             "type": "edge"
         },
         {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 3180,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2170,
-            "type": "edge"
-        },
-        {
-            "inV": 2221,
+            "inV": 2171,
             "label": "superToNodeType",
             "outV": 2170,
             "type": "edge"
         },
         {
-            "inV": 3221,
+            "inV": 3171,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2221,
+            "outV": 2171,
             "type": "edge"
         },
         {
-            "inV": 2262,
+            "inV": 2172,
             "label": "superToNodeType",
-            "outV": 2221,
+            "outV": 2171,
             "type": "edge"
         },
         {
-            "inV": 3262,
+            "inV": 3172,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2262,
+            "outV": 2172,
             "type": "edge"
         },
         {
-            "inV": 3262,
-            "label": "nodeToNodeAndEdgeType",
-            "outV": 2262,
-            "type": "edge"
-        },
-        {
-            "inV": 2273,
+            "inV": 2173,
             "label": "superToNodeType",
-            "outV": 2262,
+            "outV": 2172,
             "type": "edge"
         },
         {
-            "inV": 3273,
+            "inV": 3173,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2273,
+            "outV": 2173,
             "type": "edge"
         },
         {
@@ -1681,15 +781,15 @@
             "type": "edge"
         },
         {
-            "inV": 2211,
+            "inV": 2191,
             "label": "superToNodeType",
             "outV": 2190,
             "type": "edge"
         },
         {
-            "inV": 3211,
+            "inV": 3191,
             "label": "nodeToNodeAndEdgeType",
-            "outV": 2211,
+            "outV": 2191,
             "type": "edge"
         },
         {
@@ -1804,7 +904,7 @@
     "vertices": [
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 15,
             "id": 100,
             "nodeIndex": 0,
             "path": "CBb-YAC-GC",
@@ -1822,7 +922,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 300,
             "nodeIndex": 0,
             "path": "CBb5-BC Conventional Synapse-YAC-Conventional-GC",
@@ -1832,195 +932,150 @@
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 390,
-            "nodeIndex": 0,
-            "path": "CBb5-BC Conventional Synapse-YAC-Conventional-GC",
-            "superIndex": 9,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3170,
+            "id": 300,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-GC",
-            "superIndex": 17,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 211,
+            "id": 201,
             "nodeIndex": 1,
             "path": "CBb5-YAC-GC ON",
-            "superIndex": 1,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 311,
+            "id": 301,
             "nodeIndex": 1,
             "path": "CBb5-BC Conventional Synapse-YAC-Conventional-GC ON",
-            "superIndex": 1,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 3,
-            "id": 2152,
+            "id": 202,
             "nodeIndex": 2,
             "path": "CBb5-YAC Starburst-GC",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3152,
+            "frequency": 2,
+            "id": 302,
             "nodeIndex": 2,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-GC",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3152,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-GC",
-            "superIndex": 15,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3232,
+            "id": 302,
             "nodeIndex": 2,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Gap Junction-GC",
-            "superIndex": 23,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2153,
+            "id": 203,
             "nodeIndex": 3,
             "path": "CBb5-YAC Starburst-GC ON/OFF",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3153,
+            "id": 303,
             "nodeIndex": 3,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-GC ON/OFF",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2154,
+            "id": 204,
             "nodeIndex": 4,
             "path": "CBb5-YAC ON-GC",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3154,
+            "id": 304,
             "nodeIndex": 4,
             "path": "CBb5-Ribbon Synapse-YAC ON-Conventional-GC",
-            "superIndex": 15,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 4,
-            "id": 2275,
+            "id": 205,
             "nodeIndex": 5,
             "path": "CBb5-AC-GC",
-            "superIndex": 27,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3275,
+            "frequency": 4,
+            "id": 305,
             "nodeIndex": 5,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-GC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3285,
-            "nodeIndex": 5,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-GC",
-            "superIndex": 28,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3285,
-            "nodeIndex": 5,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-GC",
-            "superIndex": 28,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3295,
-            "nodeIndex": 5,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-GC",
-            "superIndex": 29,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2286,
+            "id": 206,
             "nodeIndex": 6,
             "path": "CBb5-AC-GC ON",
-            "superIndex": 28,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3286,
+            "id": 306,
             "nodeIndex": 6,
             "path": "CBb5-Ribbon Synapse-AC-Gap Junction-GC ON",
-            "superIndex": 28,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2287,
+            "id": 207,
             "nodeIndex": 7,
             "path": "CBb5-AC-GC OFF",
-            "superIndex": 28,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3287,
+            "id": 307,
             "nodeIndex": 7,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-GC OFF",
-            "superIndex": 28,
+            "superIndex": 0,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 28,
             "id": 110,
             "nodeIndex": 0,
             "path": "CBb-YAC-null",
@@ -2038,7 +1093,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 310,
             "nodeIndex": 0,
             "path": "CBb5-BC Conventional Synapse-YAC-Conventional-null",
@@ -2047,268 +1102,70 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 320,
-            "nodeIndex": 0,
-            "path": "CBb5-BC Conventional Synapse-YAC-Conventional-null",
-            "superIndex": 2,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
+            "frequency": 12,
+            "id": 310,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3270,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3270,
+            "id": 310,
             "nodeIndex": 0,
             "path": "CBb5-BC Conventional Synapse-YAC-Gap Junction-null",
-            "superIndex": 27,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2231,
+            "id": 211,
             "nodeIndex": 1,
             "path": "CBb5-YAC Starburst-null",
-            "superIndex": 23,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3231,
+            "id": 311,
             "nodeIndex": 1,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-null",
-            "superIndex": 23,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 12,
-            "id": 2272,
+            "id": 212,
             "nodeIndex": 2,
             "path": "CBb5-AC-null",
-            "superIndex": 27,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
+            "frequency": 9,
+            "id": 312,
             "nodeIndex": 2,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 27,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
+            "frequency": 3,
+            "id": 312,
             "nodeIndex": 2,
             "path": "CBb5-BC Conventional Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-BC Conventional Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-BC Conventional Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3272,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3282,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 28,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3282,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 28,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3282,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 28,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3282,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-null",
-            "superIndex": 28,
+            "superIndex": 1,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 13,
             "id": 120,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-CBb",
@@ -2326,7 +1183,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 320,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb4w",
@@ -2334,134 +1191,44 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 380,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb4w",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3220,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb4w",
-            "superIndex": 22,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 4,
-            "id": 231,
+            "id": 221,
             "nodeIndex": 1,
             "path": "CBb5-GAC Aii-CBb6",
-            "superIndex": 3,
+            "superIndex": 2,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 331,
+            "frequency": 4,
+            "id": 321,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb6",
-            "superIndex": 3,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 361,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb6",
-            "superIndex": 6,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 381,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb6",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3221,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb6",
-            "superIndex": 22,
+            "superIndex": 2,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 6,
-            "id": 252,
+            "id": 222,
             "nodeIndex": 2,
             "path": "CBb5-GAC Aii-CBb3n",
-            "superIndex": 5,
+            "superIndex": 2,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 352,
+            "frequency": 6,
+            "id": 322,
             "nodeIndex": 2,
             "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 5,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 362,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 6,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 382,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 382,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3222,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 22,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3222,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Gap Junction-CBb3n",
-            "superIndex": 22,
+            "superIndex": 2,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 130,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-Bipolar cell",
@@ -2479,7 +1246,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 330,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBx2-3",
@@ -2487,17 +1254,8 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3220,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBx2-3",
-            "superIndex": 22,
-            "type": "vertex"
-        },
-        {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 16,
             "id": 140,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-CBa",
@@ -2515,7 +1273,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 340,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa2",
@@ -2523,197 +1281,116 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 380,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa2",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3220,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa2",
-            "superIndex": 22,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 4,
-            "id": 251,
+            "id": 241,
             "nodeIndex": 1,
             "path": "CBb5-GAC Aii-CBa1",
-            "superIndex": 5,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 351,
+            "frequency": 4,
+            "id": 341,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1",
-            "superIndex": 5,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 361,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1",
-            "superIndex": 6,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 381,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3221,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1",
-            "superIndex": 22,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 252,
+            "id": 242,
             "nodeIndex": 2,
             "path": "CBb5-GAC Aii-CBa1w",
-            "superIndex": 5,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 352,
+            "frequency": 2,
+            "id": 342,
             "nodeIndex": 2,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1w",
-            "superIndex": 5,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 382,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa1w",
-            "superIndex": 8,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 253,
+            "id": 243,
             "nodeIndex": 3,
             "path": "CBb5-GAC Aii-CBab2-4",
-            "superIndex": 5,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 353,
+            "frequency": 2,
+            "id": 343,
             "nodeIndex": 3,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBab2-4",
-            "superIndex": 5,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 383,
-            "nodeIndex": 3,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBab2-4",
-            "superIndex": 8,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 264,
+            "id": 244,
             "nodeIndex": 4,
             "path": "CBb5-GAC Aii-CBa",
-            "superIndex": 6,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 364,
+            "frequency": 2,
+            "id": 344,
             "nodeIndex": 4,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa",
-            "superIndex": 6,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 384,
-            "nodeIndex": 4,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBa",
-            "superIndex": 8,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 275,
+            "id": 245,
             "nodeIndex": 5,
             "path": "CBb5-GAC Aii-CBabw",
-            "superIndex": 7,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 375,
+            "id": 345,
             "nodeIndex": 5,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBabw",
-            "superIndex": 7,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 286,
+            "id": 246,
             "nodeIndex": 6,
             "path": "CBb5-GAC Aii-CBab",
-            "superIndex": 8,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 386,
+            "frequency": 2,
+            "id": 346,
             "nodeIndex": 6,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBab",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3226,
-            "nodeIndex": 6,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-CBab",
-            "superIndex": 22,
+            "superIndex": 4,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 4,
             "id": 150,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-GC",
@@ -2731,7 +1408,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 350,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-GC",
@@ -2739,44 +1416,26 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 380,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-GC",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3220,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-GC",
-            "superIndex": 22,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 281,
+            "id": 251,
             "nodeIndex": 1,
             "path": "CBb5-GAC Aii-GC Delta L1",
-            "superIndex": 8,
+            "superIndex": 5,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 381,
+            "id": 351,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-GC Delta L1",
-            "superIndex": 8,
+            "superIndex": 5,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 160,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-null",
@@ -2804,15 +1463,15 @@
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 380,
+            "id": 360,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-null",
-            "superIndex": 8,
+            "superIndex": 6,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 4,
             "id": 170,
             "nodeIndex": 0,
             "path": "CBb-GAC Aii-YAC",
@@ -2840,51 +1499,42 @@
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 281,
+            "id": 271,
             "nodeIndex": 1,
             "path": "CBb5-GAC Aii-AC",
-            "superIndex": 8,
+            "superIndex": 7,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 381,
+            "id": 371,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-AC",
-            "superIndex": 8,
+            "superIndex": 7,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 282,
+            "id": 272,
             "nodeIndex": 2,
             "path": "CBb5-GAC Aii-YAC",
-            "superIndex": 8,
+            "superIndex": 7,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 382,
+            "frequency": 2,
+            "id": 372,
             "nodeIndex": 2,
             "path": "CBb5-Gap Junction-GAC Aii-Conventional-YAC",
-            "superIndex": 8,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3222,
-            "nodeIndex": 2,
-            "path": "CBb5-Gap Junction-GAC Aii-Conventional-YAC",
-            "superIndex": 22,
+            "superIndex": 7,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 19,
             "id": 180,
             "nodeIndex": 0,
             "path": "CBb-YAC-CBb",
@@ -2902,7 +1552,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 380,
             "nodeIndex": 0,
             "path": "CBb5-BC Conventional Synapse-YAC-Conventional-CBb6",
@@ -2912,244 +1562,190 @@
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3270,
+            "id": 380,
             "nodeIndex": 0,
             "path": "CBb5-BC Conventional Synapse-YAC-Unknown-CBb6",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3270,
-            "nodeIndex": 0,
-            "path": "CBb5-BC Conventional Synapse-YAC-Conventional-CBb6",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3270,
-            "nodeIndex": 0,
-            "path": "CBb5-BC Conventional Synapse-YAC-Conventional-CBb6",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 3,
-            "id": 2141,
+            "id": 281,
             "nodeIndex": 1,
             "path": "CBb5-YAC Starburst-CBb3n",
-            "superIndex": 14,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
+            "frequency": 3,
+            "id": 381,
             "nodeIndex": 1,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb3n",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb3n",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb3n",
-            "superIndex": 14,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 2142,
+            "id": 282,
             "nodeIndex": 2,
             "path": "CBb5-YAC Starburst-CBb4w",
-            "superIndex": 14,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3142,
+            "frequency": 2,
+            "id": 382,
             "nodeIndex": 2,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb4w",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3142,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb4w",
-            "superIndex": 14,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2163,
+            "id": 283,
             "nodeIndex": 3,
             "path": "CBb5-YAC-CBb3n",
-            "superIndex": 16,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3163,
+            "id": 383,
             "nodeIndex": 3,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-CBb3n",
-            "superIndex": 16,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2164,
+            "id": 284,
             "nodeIndex": 4,
             "path": "CBb5-YAC-CBb5-6",
-            "superIndex": 16,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3164,
+            "id": 384,
             "nodeIndex": 4,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-CBb5-6",
-            "superIndex": 16,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 2225,
+            "id": 285,
             "nodeIndex": 5,
             "path": "CBb5-YAC Starburst-CBb6",
-            "superIndex": 22,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3225,
+            "id": 385,
             "nodeIndex": 5,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Unknown-CBb6",
-            "superIndex": 22,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3235,
+            "id": 385,
             "nodeIndex": 5,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBb6",
-            "superIndex": 23,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 3,
-            "id": 2266,
+            "id": 286,
             "nodeIndex": 6,
             "path": "CBb5-AC-CBb6",
-            "superIndex": 26,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3266,
+            "frequency": 2,
+            "id": 386,
             "nodeIndex": 6,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-CBb6",
-            "superIndex": 26,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3276,
-            "nodeIndex": 6,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-CBb6",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3286,
+            "id": 386,
             "nodeIndex": 6,
             "path": "CBb5-Unknown-AC-Conventional-CBb6",
-            "superIndex": 28,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2277,
+            "id": 287,
             "nodeIndex": 7,
             "path": "CBb5-AC-CBb",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3277,
+            "id": 387,
             "nodeIndex": 7,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-CBb",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2278,
+            "id": 288,
             "nodeIndex": 8,
             "path": "CBb5-AC-CBb3n",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3278,
+            "id": 388,
             "nodeIndex": 8,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-CBb3n",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2279,
+            "id": 289,
             "nodeIndex": 9,
             "path": "CBb5-YAC-CBbwf",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3279,
+            "id": 389,
             "nodeIndex": 9,
             "path": "CBb5-BC Conventional Synapse-YAC-Conventional-CBbwf",
-            "superIndex": 27,
+            "superIndex": 8,
             "type": "vertex"
         },
         {
@@ -3181,7 +1777,7 @@
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 4,
             "id": 1100,
             "nodeIndex": 0,
             "path": "CBb-CBb-CBb",
@@ -3199,7 +1795,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 3100,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Gap Junction-CBb3",
@@ -3207,44 +1803,26 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3120,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Gap Junction-CBb3",
-            "superIndex": 12,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3130,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Gap Junction-CBb3",
-            "superIndex": 13,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2141,
+            "id": 2101,
             "nodeIndex": 1,
             "path": "CBb5-CBb3n-CBb4",
-            "superIndex": 14,
+            "superIndex": 10,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3141,
+            "id": 3101,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-CBb3n-Gap Junction-CBb4",
-            "superIndex": 14,
+            "superIndex": 10,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 1110,
             "nodeIndex": 0,
             "path": "CBb-CBb-GC",
@@ -3262,7 +1840,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 3110,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-GC",
@@ -3270,26 +1848,8 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3130,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-GC",
-            "superIndex": 13,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3130,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-GC",
-            "superIndex": 13,
-            "type": "vertex"
-        },
-        {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 69,
             "id": 1120,
             "nodeIndex": 0,
             "path": "CBb-CBb-null",
@@ -3307,7 +1867,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 8,
             "id": 3120,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
@@ -3316,619 +1876,34 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
+            "frequency": 49,
+            "id": 3120,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
+            "superIndex": 12,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
+            "frequency": 11,
+            "id": 3120,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
+            "superIndex": 12,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
+            "id": 3120,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Gap Junction-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-null",
-            "superIndex": 14,
+            "superIndex": 12,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 17,
             "id": 1130,
             "nodeIndex": 0,
             "path": "CBb-CBb-YAC",
@@ -3946,7 +1921,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 3130,
             "nodeIndex": 0,
             "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-YAC",
@@ -3954,170 +1929,71 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-YAC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3140,
-            "nodeIndex": 0,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-YAC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 12,
-            "id": 2141,
+            "id": 2131,
             "nodeIndex": 1,
             "path": "CBb5-CBb3n-AC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
+            "frequency": 8,
+            "id": 3131,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
+            "frequency": 2,
+            "id": 3131,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-CBb3n-Unknown-AC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
+            "frequency": 2,
+            "id": 3131,
             "nodeIndex": 1,
             "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Unknown-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-AC",
-            "superIndex": 14,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3141,
-            "nodeIndex": 1,
-            "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-AC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 2142,
+            "id": 2132,
             "nodeIndex": 2,
             "path": "CBb5-CBb3n-XAC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3142,
+            "id": 3132,
             "nodeIndex": 2,
             "path": "CBb5-Gap Junction-CBb3n-BC Conventional Synapse-XAC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3142,
+            "id": 3132,
             "nodeIndex": 2,
             "path": "CBb5-Gap Junction-CBb3n-Ribbon Synapse-XAC",
-            "superIndex": 14,
+            "superIndex": 13,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 3,
             "id": 1140,
             "nodeIndex": 0,
             "path": "CBb-YAC-Bipolar cell",
@@ -4135,7 +2011,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 3140,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBx",
@@ -4143,35 +2019,26 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3270,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-CBx",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2261,
+            "id": 2141,
             "nodeIndex": 1,
             "path": "CBb5-YAC WF-CBx",
-            "superIndex": 26,
+            "superIndex": 14,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3261,
+            "id": 3141,
             "nodeIndex": 1,
             "path": "CBb5-Ribbon Synapse-YAC WF-Conventional-CBx",
-            "superIndex": 26,
+            "superIndex": 14,
             "type": "vertex"
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 8,
             "id": 1150,
             "nodeIndex": 0,
             "path": "CBb-YAC-Rod BC",
@@ -4189,7 +2056,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 3150,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-Rod BC",
@@ -4197,75 +2064,21 @@
             "type": "vertex"
         },
         {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3170,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-Rod BC",
-            "superIndex": 17,
-            "type": "vertex"
-        },
-        {
             "dataType": "NodeType",
             "frequency": 6,
-            "id": 2271,
+            "id": 2151,
             "nodeIndex": 1,
             "path": "CBb5-AC-Rod BC",
-            "superIndex": 27,
+            "superIndex": 15,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
+            "frequency": 6,
+            "id": 3151,
             "nodeIndex": 1,
             "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3271,
-            "nodeIndex": 1,
-            "path": "CBb5-Ribbon Synapse-AC-Conventional-Rod BC",
-            "superIndex": 27,
+            "superIndex": 15,
             "type": "vertex"
         },
         {
@@ -4297,7 +2110,7 @@
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 12,
             "id": 1170,
             "nodeIndex": 0,
             "path": "CBb-YAC-YAC",
@@ -4315,7 +2128,7 @@
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
+            "frequency": 7,
             "id": 3170,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
@@ -4325,127 +2138,64 @@
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
+            "id": 3170,
             "nodeIndex": 0,
             "path": "CBb5-Ribbon Synapse-YAC-Cistern Pre-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3180,
-            "nodeIndex": 0,
-            "path": "CBb5-Ribbon Synapse-YAC-Conventional-AC",
-            "superIndex": 18,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2221,
+            "id": 2171,
             "nodeIndex": 1,
             "path": "CBb5-YAC Starburst-AC",
-            "superIndex": 22,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3221,
+            "id": 3171,
             "nodeIndex": 1,
             "path": "CBb5-Ribbon Synapse-YAC Starburst-Conventional-AC",
-            "superIndex": 22,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 2,
-            "id": 2262,
+            "id": 2172,
             "nodeIndex": 2,
             "path": "CBb5-YAC WF-AC",
-            "superIndex": 26,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3262,
+            "frequency": 2,
+            "id": 3172,
             "nodeIndex": 2,
             "path": "CBb5-Ribbon Synapse-YAC WF-Conventional-AC",
-            "superIndex": 26,
-            "type": "vertex"
-        },
-        {
-            "dataType": "NodeAndEdgeType",
-            "frequency": 1,
-            "id": 3262,
-            "nodeIndex": 2,
-            "path": "CBb5-Ribbon Synapse-YAC WF-Conventional-AC",
-            "superIndex": 26,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2273,
+            "id": 2173,
             "nodeIndex": 3,
             "path": "CBb5-YAC-YAC Ai",
-            "superIndex": 27,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3273,
+            "id": 3173,
             "nodeIndex": 3,
             "path": "CBb5-Ribbon Synapse-YAC-Conventional-YAC Ai",
-            "superIndex": 27,
+            "superIndex": 17,
             "type": "vertex"
         },
         {
@@ -4477,7 +2227,7 @@
         },
         {
             "dataType": "SuperType",
-            "frequency": 1,
+            "frequency": 2,
             "id": 1190,
             "nodeIndex": 0,
             "path": "CBb-GAC-CBb",
@@ -4505,19 +2255,19 @@
         {
             "dataType": "NodeType",
             "frequency": 1,
-            "id": 2211,
+            "id": 2191,
             "nodeIndex": 1,
             "path": "CBb5-GAC-CBb3",
-            "superIndex": 21,
+            "superIndex": 19,
             "type": "vertex"
         },
         {
             "dataType": "NodeAndEdgeType",
             "frequency": 1,
-            "id": 3211,
+            "id": 3191,
             "nodeIndex": 1,
             "path": "CBb5-BC Conventional Synapse-GAC-Gap Junction-CBb3",
-            "superIndex": 21,
+            "superIndex": 19,
             "type": "vertex"
         },
         {
