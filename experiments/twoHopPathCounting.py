@@ -74,13 +74,13 @@ for path in pathFinder.valid:
     superTypeString = path.toStringOfNodeSuperTypes()
     # Case 1: Super type has not been seen before, so we need to add new Super Type, Node Type, and Node and Edge Type
     if superTypeString not in superTypeDict:
-        superVertex = tp.PathTypeVertex("SuperType", superTypeIndex, 0, superTypeString, 1)
+        superVertex = tp.PathTypeVertex("SuperType", superTypeIndex, 0, 0, superTypeString, 1)
         # To make searching for super types quick
         superTypeDict[superTypeString] = superVertex
         # Using array/list here to make getting super types out sequentially later easy
         superTypes.append(superVertex)
-        nodeTypes.append([tp.PathTypeVertex("NodeType", superTypeIndex, 0, path.toStringOfNodeTypes(), 1)])
-        nodeAndEdgeTypes.append([[tp.PathTypeVertex("NodeAndEdgeType", superTypeIndex, 0, path.toStringOfTypesJson(), 1)]])
+        nodeTypes.append([tp.PathTypeVertex("NodeType", superTypeIndex, 0, 0, path.toStringOfNodeTypes(), 1)])
+        nodeAndEdgeTypes.append([[tp.PathTypeVertex("NodeAndEdgeType", superTypeIndex, 0, 0, path.toStringOfTypesJson(), 1)]])
         superTypeIndex+=1
     else:
         currentSuperTypeIndex = superTypeDict[superTypeString].getSuperIndex()
@@ -99,8 +99,8 @@ for path in pathFinder.valid:
         # Case 3: Super Type is found, but Node Type is new. Add new Node Type and Node and Edge type to the appropriate indices
         if not found:
             nodeIndex = len(nodeTypes[currentSuperTypeIndex])
-            nodeTypes[currentSuperTypeIndex].append(tp.PathTypeVertex("NodeType", currentSuperTypeIndex, nodeIndex, nodeTypeString, 1))
-            nodeAndEdgeTypes[currentSuperTypeIndex].append([tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1)])
+            nodeTypes[currentSuperTypeIndex].append(tp.PathTypeVertex("NodeType", currentSuperTypeIndex, nodeIndex, 0, nodeTypeString, 1))
+            nodeAndEdgeTypes[currentSuperTypeIndex].append([tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, 0, nodeAndEdgeTypeString, 1)])
         else:
             found = False
             for j in range(0, len(nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex])):
@@ -111,7 +111,7 @@ for path in pathFinder.valid:
                     break
             # Case 2b: Super Type is found, Node Type is found, but Node and Edge type is not. Add new Node and Edge type.
             if not found:
-                nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex].append(tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, nodeAndEdgeTypeString, 1))
+                nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex].append(tp.PathTypeVertex("NodeAndEdgeType", currentSuperTypeIndex, nodeIndex, len(nodeAndEdgeTypes[currentSuperTypeIndex][nodeIndex]), nodeAndEdgeTypeString, 1))
 
 # Walk through super types, node types, and node and edge types; add vertices and edges, respectively
 # Note: inV is the "parent" vertex, and outV is the "child"

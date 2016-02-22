@@ -3,10 +3,11 @@ __author__ = 'Dasha'
 """ Object representing a path type (super type, node type, or node and edge type) """
 
 class PathTypeVertex:
-    def __init__(self, dataType, superIndex, nodeIndex, path, frequency):
+    def __init__(self, dataType, superIndex, nodeIndex, nodeAndEdgeIndex, path, frequency):
         self.dataType = dataType
         self.superIndex = superIndex
         self.nodeIndex = nodeIndex
+        self.nodeAndEdgeIndex = nodeAndEdgeIndex
         self.path = path
         self.frequency = int(frequency)
         if self.dataType == "SuperType":
@@ -15,7 +16,7 @@ class PathTypeVertex:
             self._id = "2"
         else:
             self._id = "3"
-        self._id += str(self.superIndex) + str(self.nodeIndex)
+        self._id += str(self.superIndex) + str(self.nodeIndex) + str(self.nodeAndEdgeIndex)
 
     def addFrequency(self, frequency):
         self.frequency += int(frequency)
@@ -28,6 +29,9 @@ class PathTypeVertex:
 
     def getNodeIndex(self):
         return self.nodeIndex
+
+    def getNodeAndEdgeIndex(self):
+        return self.nodeAndEdgeIndex
 
     def getPath(self):
         return self.path
@@ -65,6 +69,7 @@ class PathType:
             'dataType' : vertex.getDataType(),
             'superIndex' : int(vertex.getSuperIndex()),
             'nodeIndex' : int(vertex.getNodeIndex()),
+            'nodeAndEdgeIndex' : int(vertex.getNodeAndEdgeIndex()),
             'path' : vertex.getPath(),
             'frequency' : int(vertex.getFrequency())
         }
