@@ -58,9 +58,10 @@ class PathTypeEdge:
         return self.label
 
 class PathType:
-    def __init__(self):
+    def __init__(self, sourceNodeId):
         self.vertices = []
         self.edges = []
+        self.sourceNodeId = sourceNodeId
 
     def addVertex(self, vertex):
         vertexDict = {
@@ -88,6 +89,7 @@ class PathType:
 
     def getAsJsonObject(self):
         jsonObject = {}
+        jsonObject['sourceNodeId'] = self.sourceNodeId
         jsonObject['vertices'] = self.vertices
         jsonObject['edges'] = self.edges
 
