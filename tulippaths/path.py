@@ -84,33 +84,6 @@ class Path:
 
         return True
 
-    def isSameNodeType(self, other):
-        if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
-            return False
-
-        for i in range(0, len(self.nodes)):
-            if not utils.getNodeType(self.nodes[i], self.graph) == utils.getNodeType(other.nodes[i], self.graph):
-                return False
-
-        return True
-
-    def isSameSuperType(self, other):
-        if (not len(self.nodes) == len(other.nodes)) or (not len(self.edges) == len(other.edges)):
-            return False
-
-        # for i in range(0, len(self.edges)):
-        #     if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
-        #         return False
-
-        superTypeDictionary = tp.SuperTypeDictionary()
-
-        for i in range(0, len(self.nodes)):
-            if not superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph))\
-                    == superTypeDictionary.getSuperTypeFromType(utils.getNodeType(other.nodes[i], self.graph)):
-                return False
-
-        return True
-
     # Returns false only if the path contains an edge of type 'adherens' or 'touch'.
     def isSynapticPath(self):
         for edge in self.edges:
@@ -155,63 +128,36 @@ class Path:
         string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
 
-    def toStringOfTypesJson(self):
+    def toDelimitedStringOfTypes(self, delimiter):
         string = ''
         for i in range(0, len(self.edges)):
-            string += utils.getNodeType(self.nodes[i], self.graph) + '-'
-            string += utils.getEdgeType(self.edges[i], self.graph) + '-'
+            string += utils.getNodeType(self.nodes[i], self.graph) + delimiter
+            string += utils.getEdgeType(self.edges[i], self.graph) + delimiter
         string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
 
-    def toStringOfNodeTypes(self):
+    def toStringOfNodeTypes(self, delimiter):
         string = ''
         for i in range(0, len(self.edges)):
-            string += utils.getNodeType(self.nodes[i], self.graph) + '-'
+            string += utils.getNodeType(self.nodes[i], self.graph) + delimiter
         string += utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph)
         return string
 
-    def toStringOfSuperTypes(self):
+    def toStringOfSuperTypes(self, delimiter):
         string = ''
         superTypeDictionary = tp.SuperTypeDictionary()
 
         for i in range(0, len(self.edges)):
-            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + '-'
-            string += utils.getEdgeType(self.edges[i], self.graph) + '-'
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + delimiter
+            string += utils.getEdgeType(self.edges[i], self.graph) + delimiter
         string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
         return string
 
-    def toStringOfNodeSuperTypes(self):
+    def toStringOfNodeSuperTypes(self, delimiter):
         string = ''
         superTypeDictionary = tp.SuperTypeDictionary()
 
         for i in range(0, len(self.edges)):
-            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + '-'
-            # string += utils.getEdgeType(self.edges[i], self.graph) + ', '
+            string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) + delimiter
         string += superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[len(self.nodes) - 1], self.graph))
         return string
-
-    def getDistanceFromOtherPath(self, other):
-        distance = 0
-        for i in range(0, len(self.edges)):
-            if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
-                distance += 1
-
-        for i in range(0, len(self.nodes)):
-            if not utils.getNodeType(self.nodes[i], self.graph) == utils.getNodeType(other.nodes[i], self.graph):
-                distance += 1
-
-        return distance
-
-    def getSuperDistanceFromOtherPath(self, other):
-        distance = 0
-        superTypeDictionary = tp.SuperTypeDictionary()
-        # for i in range(0, len(self.edges)):
-        #     if not utils.getEdgeType(self.edges[i], self.graph) == utils.getEdgeType(other.edges[i], self.graph):
-        #         distance += 1
-
-        for i in range(0, len(self.nodes)):
-            if not superTypeDictionary.getSuperTypeFromType(utils.getNodeType(self.nodes[i], self.graph)) \
-                    == superTypeDictionary.getSuperTypeFromType(utils.getNodeType(other.nodes[i], self.graph)):
-                distance += 1
-
-        return distance

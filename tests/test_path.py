@@ -42,6 +42,12 @@ class TestPath(TestCase):
     def test_toStringOfTypes(self):
         self.assertTrue(self.path.toStringOfTypes() == 'GC ON, Adherens, CBb4w')
 
+    def test_toDelimitedStringOfTypes(self):
+        self.assertTrue(self.path.toDelimitedStringOfTypes('-') == 'GC ON-Adherens-CBb4w')
+
+    def testIsNotInNetworkPath(self):
+        self.assertFalse(self.path.isInNetworkPath())
+
     def test_isInTypeConstraints(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
