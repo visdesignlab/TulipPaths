@@ -1,6 +1,10 @@
 *.pyc
+*.pyo
 *workspace.xml
 *.pyo
 .idea/TulipPaths.iml
 .idea/misc.xml
 .idea/workspace.xml
+*.DS_Store
+*.swp
+*/.ropeproject/*
