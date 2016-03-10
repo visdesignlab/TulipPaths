@@ -20,6 +20,13 @@ class FileOutputPlugin(tlp.Algorithm):
         # the file we just created
         self.addStringParameter(self._outputFileLabel, "", self._outputFilepath)
 
+    def check(self):
+        return True
+
+    def run(self):
+        return True
+
+
     def outputFilepath(self, filename):
         """ Return the full filepath of a file with the given name,
         placing it in the home directory
@@ -33,14 +40,14 @@ class FileOutputPlugin(tlp.Algorithm):
     def beginFileOutput(self):
         """ Open the output file for writing and prepare to record output """
         self._outputFilepath = self.dataSet[self._outputFileLabel]
-        self._outputFile = open(self._outputFilpath, 'w')
+        self._outputFile = open(self._outputFilepath, 'w')
 
     def endFileOutput(self):
         """ Close the output file, saving whatever has been written """
         self._outputFile.close()
 
-    def printToFile(self, message):
+    def printToFile(self, message=''):
         """ Print a message to the output file followed by a newline. Assumes
         beginFileOutput() has been called
         """
-        self._outputFile.write(message + '\n')
+        self._outputFile.write(str(message) + '\n')

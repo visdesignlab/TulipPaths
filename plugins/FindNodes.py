@@ -1,27 +1,14 @@
-from tulip import *
+from FileOutputPlugin import FileOutputPlugin
 import tulipplugins
 import tulippaths as tp
-import fileOutput
-import os.path
 
-class FindNodes(tlp.Algorithm):
+class FindNodes(FileOutputPlugin):
     def __init__(self, context):
-        tlp.Algorithm.__init__(self, context)
+        FileOutputPlugin.__init__(self, context)
 
         # Accept one argument: a regex defining possible desired node labels
         self.nodeRegexLabel = "Node Type Regex"
         self.addStringParameter(self.nodeRegexLabel, "", "CBb3m")
-
-        self.outputFileLabel = 'file::Output File'
-
-        # Create an empty output file if none exists
-        outputFilename = fileOutput.defaultOutputFile('NodeStats')
-        if not os.path.isfile(outputFilename):
-            outputFile = open(outputFilename, 'w')
-            outputFile.close()
-
-        self.addStringParameter(self.outputFileLabel, "",
-                                outputFilename)
 
     def check(self):
         print("====== Checking input")
@@ -57,7 +44,7 @@ class FindNodes(tlp.Algorithm):
             viewSelection[edge] = False
 
         # Open the file for saving output
-        outputFile = open(self.dataSet[self.outputFileLabel], 'w')
+        self.beginFileOutput()
 
         print("====== Searching for nodes\n")
         print("Type of node (regex): " + nodeRegex)
@@ -71,15 +58,16 @@ class FindNodes(tlp.Algorithm):
         print("===== Printing node ids\n")
 
         print(nodeRegex)
-        outputFile.write(nodeRegex + '\n')
+        self.printToFile(nodeRegex)
         for node in nodes:
             print(node.id)
-            outputFile.write(str(node.id) + '\n')
+            self.printToFile(node.id)
 
         print('\n===== Done printing node ids\n')
 
         print('===== Printing node statistics')
-        outputFile.write('\nStatistics\n')
+        self.printToFile()
+        self.printToFile('Statistics')
 
         # Count the frequency of different specific node types which match
         # the regex
@@ -100,11 +88,12 @@ class FindNodes(tlp.Algorithm):
                     float(nodeTypeFrequencies[nodeType]) / float(len(nodes)))
 
             print message
-            outputFile.write(message + '\n')
+            self.printToFile(message)
 
         print('\n===== Done printing node statistics\n')
 
-        outputFile.close()
+        # Save the output file's changes
+        self.endFileOutput()
         return True
 
 
