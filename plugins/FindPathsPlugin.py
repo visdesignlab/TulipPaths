@@ -3,8 +3,8 @@ from tulip import *
 import tulippaths as tp
 
 
-exampleCellLabels = ['CBb3m', 'AC', 'Rod BC']
-exampleEdgeTypes = ['Ribbon Synapse', 'Conventional']
+exampleCellLabel = 'CBb3m'
+exampleEdgeType = 'Ribbon Synapse'
 
 
 class FindPathsPlugin(FileOutputPlugin):
@@ -32,9 +32,9 @@ class FindPathsPlugin(FileOutputPlugin):
 
         # Add all the parameters we need in an intuitive sequence
         for i in range(self.hops):
-            self.addStringParameter(self._nodeLabels[i], "", exampleCellLabels[i])
-            self.addStringParameter(self._edgeTypes[i], "", exampleEdgeTypes[i])
-        self.addStringParameter(self._nodeLabels[self.hops], "", exampleCellLabels[self.hops])
+            self.addStringParameter(self._nodeLabels[i], "", exampleCellLabel)
+            self.addStringParameter(self._edgeTypes[i], "", exampleEdgeType)
+        self.addStringParameter(self._nodeLabels[self.hops], "", exampleCellLabel)
 
     def check(self):
         print "====== Checking inputs"

@@ -99,4 +99,4 @@ class FindNodes(FileOutputPlugin):
 
 # The line below does the magic to register the plugin to the plugin database
 # and updates the GUI to make it accessible through the menus.
-tulipplugins.registerPlugin("FindNodes", "Find Nodes (Regex)", "Nathaniel Nelson", "14/12/2015", "", "1.0")
+tulipplugins.registerPlugin("FindNodes", "Find Nodes (Regex)", "Nathaniel Nelson", "9/3/2016", "", "1.0")
