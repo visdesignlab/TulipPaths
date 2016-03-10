@@ -42,22 +42,22 @@ class FindPathsPlugin(FileOutputPlugin):
         print "\n== Checking node types"
         nodeTypes = self.getNodeTypeConstraints()
         for nodeType in nodeTypes:
-            nodes = tp.utils.getNodesByType(nodeType, self.graph)
+            nodes = tp.utils.getNodesByTypeRegex(nodeType, self.graph)
             if len(nodes) == 0:
-                print "\n====== Could not find nodes of type: " + nodeType + "\n"
-                return (False, "Could not find nodes of type: " + nodeType)
+                print "\n====== Could not find nodes matching type regex: " + nodeType + "\n"
+                return (False, "Could not find nodes matching type regex: " + nodeType)
             else:
-                print "Num nodes with type " + nodeType + ": " + str(len(nodes))
+                print "Num nodes matching type regex " + nodeType + ": " + str(len(nodes))
 
         print    "\n== Checking edge types"
         edgeTypes = self.getEdgeTypeConstraints()
-        allEdgesByType = tp.utils.getDictionaryOfEdgeTypes(self.graph)
         for edgeType in edgeTypes:
-            if edgeType not in allEdgesByType.keys():
-                print "\n====== Could not find edges of type: " + edgeType + "!\n"
-                return (False, "Could not find edges of type: " + edgeType)
+            edges = tp.utils.getEdgesByTypeRegex(edgeType, self.graph)
+            if len(edges) == 0:
+                print "\n====== Could not find edges matching type regex: " + edgeType + "!\n"
+                return (False, "Could not find edges matching type regex: " + edgeType)
             else:
-                print "Num edges with type " + edgeType + ": " + str(len(allEdgesByType[edgeType]))
+                print "Num edges matching type regex " + edgeType + ": " + str(len(edges))
 
         print "\n====== Inputs passed!\n"
 
@@ -121,20 +121,20 @@ class FindPathsPlugin(FileOutputPlugin):
         print "\n===== Done printing path ids\n"
         # Print those paths
 
-        print "===== Printing path statistics\n"
-        self.printToFile()
-        self.printToFile('Statistics')
+        # print "===== Printing path statistics\n"
+        # self.printToFile()
+        # self.printToFile('Statistics')
 
-        sourceNodesWithPath = []
-        targetNodesWithPath = []
+        # sourceNodesWithPath = []
+        # targetNodesWithPath = []
 
         for path in paths:
 
-            if path.nodes[0] not in sourceNodesWithPath:
-                sourceNodesWithPath.append(path.nodes[0])
+            # if path.nodes[0] not in sourceNodesWithPath:
+                # sourceNodesWithPath.append(path.nodes[0])
 
-            if path.nodes[2] not in targetNodesWithPath:
-                targetNodesWithPath.append(path.nodes[2])
+            # if path.nodes[2] not in targetNodesWithPath:
+                # targetNodesWithPath.append(path.nodes[2])
 
             for node in path.nodes:
                 viewSelection[node] = True
@@ -142,20 +142,20 @@ class FindPathsPlugin(FileOutputPlugin):
             for edge in path.edges:
                 viewSelection[edge] = True
 
-        nodeTypeDictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)
-        nodesInPath =  "Percent of " + nodeTypes[0] + " nodes part of a path: " + "{0:.3f}".format(
-            float(len(sourceNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[0]])))
+        # nodeTypeDictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)
+        # nodesInPath =  "Percent of " + nodeTypes[0] + " nodes part of a path: " + "{0:.3f}".format(
+            # float(len(sourceNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[0]])))
 
-        print nodesInPath
-        self.printToFile(nodesInPath)
+        # print nodesInPath
+        # self.printToFile(nodesInPath)
 
-        nodesInPath = "Percent of " + nodeTypes[self.hops] + " nodes part of a path: " + "{0:.3f}".format(
-            float(len(targetNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[self.hops]])))
+        # nodesInPath = "Percent of " + nodeTypes[self.hops] + " nodes part of a path: " + "{0:.3f}".format(
+            # float(len(targetNodesWithPath)) / float(len(nodeTypeDictionary[nodeTypes[self.hops]])))
 
-        print nodesInPath
-        self.printToFile(nodesInPath)
+        # print nodesInPath
+        # self.printToFile(nodesInPath)
 
 
-        print "\n===== Done printing path statistics\n"
+        # print "\n===== Done printing path statistics\n"
 
         return True
