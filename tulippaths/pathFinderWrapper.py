@@ -17,6 +17,17 @@ class PathFinderWrapper:
 
         return paths
 
+    def findConstrainedPathsFromTypeRegex(self, sourceTypeRegex, nodeConstraints, edgeConstraints):
+
+        sources = tp.utils.getNodesByTypeRegex(sourceTypeRegex, self.graph)
+
+        paths = []
+
+        for source in sources:
+            paths += self.findRegexConstrainedPathsFromSource(source, nodeConstraints, edgeConstraints)
+
+        return paths
+
     def findConstrainedPathsFromSource(self, source, nodeConstraints, edgeConstraints):
 
         pathFinder = tp.PathFinder(self.graph)
@@ -25,5 +36,11 @@ class PathFinderWrapper:
 
         return pathFinder.valid
 
+    def findRegexConstrainedPathsFromSource(self, source, nodeConstraints, edgeConstraints):
 
+        pathFinder = tp.PathFinder(self.graph)
+
+        pathFinder.findRegexConstrainedPaths(source, nodeConstraints, edgeConstraints)
+
+        return pathFinder.valid
 

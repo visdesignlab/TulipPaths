@@ -99,27 +99,30 @@ class FindPathsPlugin(FileOutputPlugin):
         print "Type of path: " + pathTypeString
 
         wrapper = tp.PathFinderWrapper(self.graph)
-        paths = wrapper.findConstrainedPathsFromType(sourceType, nodeTypes, edgeTypes)
+        paths = wrapper.findConstrainedPathsFromTypeRegex(sourceType, nodeTypes, edgeTypes)
 
         print "Total num paths found: " + str(len(paths))
         print "\n====== Done searching for paths\n"
 
         print "===== Printing path ids\n"
 
-        print pathTypeString
-        self.printToFile(pathTypeString)
+        # First check how many different types of paths have matched the regex
+        # specifications
+        pathTypesFound = set()
         for path in paths:
+            pathTypesFound.add(path.toStringOfTypes())
 
-            if not path.toStringOfTypes() == pathTypeString:
-                print "Something went wrong. I found a path type that does not match!"
-                print path.toStringOfTypes()
-                return False
-
-            print path.toStringOfIds()
-            self.printToFile(path.toStringOfIds())
+        # Now print every path as a list of IDs, but grouped together by path
+        # type
+        for pathType in pathTypesFound:
+            print pathType
+            self.printToFile(pathType)
+            for path in paths:
+                if pathType == path.toStringOfTypes():
+                    print path.toStringOfIds()
+                    self.printToFile(path.toStringOfIds())
 
         print "\n===== Done printing path ids\n"
-        # Print those paths
 
         # print "===== Printing path statistics\n"
         # self.printToFile()
@@ -136,9 +139,9 @@ class FindPathsPlugin(FileOutputPlugin):
             # if path.nodes[2] not in targetNodesWithPath:
                 # targetNodesWithPath.append(path.nodes[2])
 
+            # Mark all parts of the path as visually selected
             for node in path.nodes:
                 viewSelection[node] = True
-
             for edge in path.edges:
                 viewSelection[edge] = True
 
@@ -157,5 +160,7 @@ class FindPathsPlugin(FileOutputPlugin):
 
 
         # print "\n===== Done printing path statistics\n"
+
+        self.endFileOutput()
 
         return True
