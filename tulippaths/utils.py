@@ -117,6 +117,40 @@ def getDictionaryOfNodeTypes(graph):
 
     return dictionary
 
+def getEdgesByType(type, graph):
+    edges = []
+    for edge in graph.getEdges():
+        if getEdgeType(edge, graph) == type:
+            edges.append(edge)
+    return edges
+
+def getEdgesByTypes(types, graph):
+    edges = []
+    for edgeType in types:
+        edges += getEdgesByType(edgeType, graph)
+    return edges
+
+# Returns a list of edges whose type labels contain a sequence matching
+# the specified regular expression. (Corresponds to getEdgesByType() but
+# with a regex search)
+def getEdgesByTypeRegex(type_regex, graph):
+    edges = []
+    for edge in graph.getEdges():
+        edgeType = getEdgeType(edge, graph)
+        if re.search(re.compile(type_regex), edgeType):
+            edges.append(edge)
+    return edges
+
+# Returns a list of edges whose type labels contain a sequence matching any of
+# the specified regular expressions. (Corresponds to getEdgesByTypes() but with
+# a regex searches)
+def getNodesByTypeRegexes(type_regexes, graph):
+    edges = []
+    for edgeTypeRegex in type_regexes:
+        edges += getEdgesByTypeRegex(edgeTypeRegex, graph)
+    return edges
+
+
 def getEdgeType(edge, graph):
     edgeTypes = graph.getProperty("edgeType")
     return edgeTypes[edge]
