@@ -168,7 +168,7 @@ class PathFinder:
 
         self.valid = matches
 
-    def findRegexConstrainedPaths(self, source, edgeConstraintRegexes, nodeConstraintRegexes):
+    def findRegexConstrainedPaths(self, source, nodeConstraintRegexes, edgeConstraintRegexes):
 
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
