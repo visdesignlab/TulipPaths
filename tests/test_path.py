@@ -80,12 +80,12 @@ class TestPath(TestCase):
                 constrainedEdgeRegexes = [ "R.* Synapse", "Adh[a-z]rens" ]
                 constrainedNodeRegexes = [ "CBb3-[1-9]i", "^GZ?C ON$", "C[A-Z]b4w" ]
                 self.assertTrue(path.isInRegexTypeConstraints(
-                    constrainedEdgeRegexes, constrainedNodeRegexes))
+                    constrainedNodeRegexes, constrainedEdgeRegexes))
                 # Make sure the path does not satisfy invalid regex constraints
                 constrainedEdgeRegexes = [ "Cthulhu F'taghn", "R'lyeh Synapse" ]
                 constrainedNodeRegexes = [ "^Nyarlathotep$", "^$", "[0-1].*" ]
                 self.assertFalse(path.isInRegexTypeConstraints(
-                    constrainedEdgeRegexes, constrainedNodeRegexes))
+                    constrainedNodeRegexes, constrainedEdgeRegexes))
 
 
     def test_isSynapticPath(self):

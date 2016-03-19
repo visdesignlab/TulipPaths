@@ -87,7 +87,6 @@ class ConnectivityMatrix:
         # Matrix is N x N where N is the number of sources and targets.
         sources = utils.getNodesByTypeRegex(nodeConstraints[0], self._graph)
         targets = utils.getNodesByTypeRegex(nodeConstraints[len(nodeConstraints) - 1], self._graph)
-
         nodes = sources + targets
 
         self._activateMatrix(nodes)
@@ -95,7 +94,7 @@ class ConnectivityMatrix:
         # Find paths for each source. Shove them into the matrix.
         for node in sources:
             pathFinder = PathFinder(self._graph)
-            pathFinder.findRegexConstrainedPaths(node, edgeConstraints, nodeConstraints)
+            pathFinder.findRegexConstrainedPaths(node, nodeConstraints, edgeConstraints)
             for path in pathFinder.valid:
                 self._addPathToMatrix(path)
 

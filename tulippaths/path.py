@@ -46,18 +46,18 @@ class Path:
 
         return True
 
-    def isInRegexTypeConstraints(self, edgeConstraintsRegexes, nodeConstraintsRegexes):
+    def isInRegexTypeConstraints(self, nodeConstraintsRegexes, edgeConstraintsRegexes):
 
         for i in range(0, len(self.edges)):
             edge = self.edges[i]
             edgeType = utils.getEdgeType(edge, self.graph)
-            if not re.search(re.compile(edgeConstraintsRegexes[i]), edgeType):
+            if not utils.isRegexExactMatch(edgeConstraintsRegexes[i], edgeType):
                 return False
 
         for i in range(0, len(self.nodes)):
             node = self.nodes[i]
             nodeType = utils.getNodeType(node, self.graph)
-            if not re.search(re.compile(nodeConstraintsRegexes[i]), nodeType):
+            if not utils.isRegexExactMatch(nodeConstraintsRegexes[i], nodeType):
                 return False
 
         return True

@@ -177,7 +177,7 @@ class PathFinder:
         matches = []
 
         for path in self.valid:
-            if path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes):
+            if path.isInRegexTypeConstraints(nodeConstraintRegexes, edgeConstraintRegexes):
                 matches.append(path)
 
         self.valid = matches

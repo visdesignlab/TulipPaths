@@ -133,23 +133,13 @@ def getEdgesByTypes(types, graph):
 # Returns a list of edges whose type labels contain a sequence matching
 # the specified regular expression. (Corresponds to getEdgesByType() but
 # with a regex search)
-def getEdgesByTypeRegex(type_regex, graph):
+def getEdgesByTypeRegex(typeRegex, graph):
     edges = []
     for edge in graph.getEdges():
         edgeType = getEdgeType(edge, graph)
-        if re.search(re.compile(type_regex), edgeType):
+        if isRegexExactMatch(typeRegex, edgeType):
             edges.append(edge)
     return edges
-
-# Returns a list of edges whose type labels contain a sequence matching any of
-# the specified regular expressions. (Corresponds to getEdgesByTypes() but with
-# a regex searches)
-def getNodesByTypeRegexes(type_regexes, graph):
-    edges = []
-    for edgeTypeRegex in type_regexes:
-        edges += getEdgesByTypeRegex(edgeTypeRegex, graph)
-    return edges
-
 
 def getEdgeType(edge, graph):
     edgeTypes = graph.getProperty("edgeType")
@@ -194,13 +184,10 @@ def getNodesByTypeRegex(typeRegex, graph):
     nodes = []
     for node in graph.getNodes():
         nodeType = getNodeType(node, graph)
-        if re.search(re.compile(typeRegex), nodeType):
+        if isRegexExactMatch(typeRegex, nodeType):
             nodes.append(node)
     return nodes
 
-# Returns a list of nodes whose type labels contain a sequence matching any of
-# the specified regular expressions. (Corresponds to getNodesByTypes() but with
-# a regex searches)
 def getNodesByTypeRegexes(typeRegexes, graph):
     nodes = []
     for nodeTypeRegex in typeRegexes:
@@ -234,6 +221,10 @@ def isEdgeTypeInGraph(edgeType, graph):
             return True
 
     return False
+
+def isRegexExactMatch(regex, target):
+    match = re.search(re.compile(regex), target)
+    return match and match.group(0) == target
 
 def setNodeColor(color, graph):
     viewColor = graph.getColorProperty("viewColor")
