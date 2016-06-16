@@ -181,17 +181,15 @@ class PathFinder:
         for path in self.failed:
             assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
 
-    def findRegexConstrainedPathsFromSource(self, node, edgeConstraintRegexes, nodeConstraintRegexes):
+    def findRegexConstrainedPathsFromSource(self, source, edgeConstraintRegexes, nodeConstraintRegexes):
 
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
         queue = Queue()
 
-        for currentNode in utils.getNodesByTypeRegex(nodeConstraintRegexes[0], self.graph):
-            if currentNode == node:
-                path = Path(self.graph)
-                path.addNode(node)
-                queue.put(path)
+        path = Path(self.graph)
+        path.addNode(source)
+        queue.put(path)
 
         self._findRegexConstrainedPaths(queue, edgeConstraintRegexes, nodeConstraintRegexes)
 
@@ -207,6 +205,7 @@ class PathFinder:
             queue.put(path)
 
         self._findRegexConstrainedPaths(queue, edgeConstraintRegexes, nodeConstraintRegexes)
+
 
     def reset(self):
         self.valid = []

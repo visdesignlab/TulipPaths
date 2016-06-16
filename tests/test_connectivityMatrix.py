@@ -42,7 +42,6 @@ class TestConnectivityMatrix(TestCase):
     # Json object format is meant to be input into reorder.js
     def test_getAsJsonObject(self):
         removeUnusedNodes = False
-        print json.dumps(self.matrix.getAsJsonObject(removeUnusedNodes))
         self.assertOutputMatches(self.matrix,
                                  removeUnusedNodes,
                                  '{"row_labels": ["168", "120", "142", "1724", "5107"], '

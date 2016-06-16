@@ -1,32 +1,9 @@
-""" Scratch work to get info about one node. """
 from tulip import *
-from tulipgui import *
 import tulippaths as tp
 
-showCompleteness = True
+graph = tlp.loadGraph("../data/514_10hops.tlp")
 
-# Path parameters
-graphFile = '../data/514_476_10hops.tlp'
-graph = tlp.loadGraph(graphFile)
+sources = tp.utils.getNodesByTypeRegex("CBb4w", graph)
 
-def getUniqueLabels(nodes, graph):
-    uniqueLabels = []
-    for node in nodes:
-        label = tp.utils.getNodeType(node, graph)
-        if label not in uniqueLabels:
-            uniqueLabels.append(label)
-    return uniqueLabels
-
-completeness = {}
-
-if showCompleteness:
-    completeness = tp.utils.getApproximateAnnotationCompleteness(graph)
-
-node = tp.utils.getNodeById(593, graph)
-
-neighborLabels = {}
-for edge in graph.getOutEdges(593):
-    target = graph.target(edge)
-    print tp.utils.getEdgeType(edge, graph)
-
-    
+for source in sources:
+    print tp.utils.getNodeType(source, graph)

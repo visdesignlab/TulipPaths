@@ -36,7 +36,6 @@ class FindPathsPlugin(FileOutputPlugin):
         self.addStringParameter(self._nodeLabels[self.hops], "", exampleCellLabel)
 
     def check(self):
-
         nodeTypes = self.getNodeTypeConstraints()
         for nodeType in nodeTypes:
             nodes = tp.utils.getNodesByTypeRegex(nodeType, self.graph)
@@ -67,6 +66,7 @@ class FindPathsPlugin(FileOutputPlugin):
     def run(self):
         nodeTypes = self.getNodeTypeConstraints()
         edgeTypes = self.getEdgeTypeConstraints()
+
         sourceType = nodeTypes[0]
         viewSelection = self.graph.getBooleanProperty("viewSelection")
 
@@ -79,13 +79,22 @@ class FindPathsPlugin(FileOutputPlugin):
         self.beginFileOutput()
 
         pathTypeString = ''
-
         for i in range(self.hops):
             pathTypeString += nodeTypes[i] + ", " + edgeTypes[i] + ", "
         pathTypeString += nodeTypes[self.hops]
 
         wrapper = tp.PathFinderWrapper(self.graph)
         paths = wrapper.findConstrainedPathsFromTypeRegex(sourceType, nodeTypes, edgeTypes)
+
+        # Write the file header
+        self.printToFile("Plugin: Find " + str(self.hops) + "-hop paths")
+        query = ""
+        for i in range(self.hops):
+            query += " " + nodeTypes[i] + ","
+            query += " " + edgeTypes[i] + ","
+        query += " " + nodeTypes[self.hops]
+        self.printToFile("Query:" + query)
+        self.printToFile("Num paths found: " + str(len(paths)))
 
         # First check how many different types of paths have matched the regex
         # specifications

@@ -62,13 +62,12 @@ class TestFindPaths(TestCase):
         nodeConstraintRegexes = ["CBb3-.+$", "^GC ON", "[A-Z]Bb4w"]
 
         pathFinder = tp.PathFinder(graph)
-
         pathFinder.findRegexConstrainedPaths(edgeConstraintRegexes, nodeConstraintRegexes)
 
         self.assertTrue(len(pathFinder.valid) == 2)
 
         for path in pathFinder.valid:
-            self.assertTrue(path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes))
+            self.assertTrue(path.isInRegexTypeConstraints(nodeConstraintRegexes, edgeConstraintRegexes))
 
 
 if __name__ == "__main__":

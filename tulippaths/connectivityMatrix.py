@@ -87,7 +87,6 @@ class ConnectivityMatrix:
         # Matrix is N x N where N is the number of sources and targets.
         sources = utils.getNodesByTypeRegex(nodeConstraints[0], self._graph)
         targets = utils.getNodesByTypeRegex(nodeConstraints[len(nodeConstraints) - 1], self._graph)
-
         nodes = sources + targets
 
         self._activateMatrix(nodes)
