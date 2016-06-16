@@ -11,6 +11,33 @@ class PathFinder:
         self.valid = []
         self.failed = []
 
+    def _findRegexConstrainedPaths(self, queue, edgeConstraintRegexes, nodeConstraintRegexes):
+        maxNumHops = len(edgeConstraintRegexes)
+        while not queue.empty():
+            currentPath = queue.get()
+            currentNode = currentPath.getLastNode()
+            currentHop = len(currentPath.edges)
+
+            if currentHop == maxNumHops:
+                self.valid.append(currentPath)
+                continue
+
+            for nextEdge in self.graph.getOutEdges(currentNode):
+                edgeType = utils.getEdgeType(nextEdge, self.graph)
+                if re.search(re.compile(edgeConstraintRegexes[currentHop]), edgeType):
+                    nextNode = self.graph.target(nextEdge)
+                    nodeType = utils.getNodeType(nextNode, self.graph)
+                    if re.search(re.compile(nodeConstraintRegexes[currentHop + 1]), nodeType):
+                        currentPath.addEdge(nextEdge)
+                        currentPath.addNode(nextNode)
+                        queue.put(currentPath)
+
+        for path in self.valid:
+            assert path.isSane(), "Warning - created bad 'valid' path!'" + path.toString()
+
+        for path in self.failed:
+            assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
+
     def findAllPaths(self, source, maxNumHops):
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
@@ -154,33 +181,32 @@ class PathFinder:
         for path in self.failed:
             assert path.isSane(), "Warning - created bad 'failed' path!" + path.toString()
 
-    def findConstrainedPaths(self, source, edgeConstraints, nodeConstraints):
+    def findRegexConstrainedPathsFromSource(self, node, edgeConstraintRegexes, nodeConstraintRegexes):
 
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
-        self.findAllPaths(source, len(edgeConstraints))
+        queue = Queue()
 
-        matches = []
+        for currentNode in utils.getNodesByTypeRegex(nodeConstraintRegexes[0], self.graph):
+            if currentNode == node:
+                path = Path(self.graph)
+                path.addNode(node)
+                queue.put(path)
 
-        for path in self.valid:
-            if path.isInTypeConstraints(edgeConstraints, nodeConstraints):
-                matches.append(path)
+        self._findRegexConstrainedPaths(queue, edgeConstraintRegexes, nodeConstraintRegexes)
 
-        self.valid = matches
-
-    def findRegexConstrainedPaths(self, source, edgeConstraintRegexes, nodeConstraintRegexes):
+    def findRegexConstrainedPaths(self, edgeConstraintRegexes, nodeConstraintRegexes):
 
         assert len(self.valid) == 0 and len(self.failed) == 0, 'Warning - called findPaths before being reset'
 
-        self.findAllPaths(source, len(edgeConstraintRegexes))
+        queue = Queue()
 
-        matches = []
+        for node in utils.getNodesByTypeRegex(nodeConstraintRegexes[0], self.graph):
+            path = Path(self.graph)
+            path.addNode(node)
+            queue.put(path)
 
-        for path in self.valid:
-            if path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes):
-                matches.append(path)
-
-        self.valid = matches
+        self._findRegexConstrainedPaths(queue, edgeConstraintRegexes, nodeConstraintRegexes)
 
     def reset(self):
         self.valid = []

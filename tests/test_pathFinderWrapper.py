@@ -4,18 +4,16 @@ import tulippaths as tp
 
 class TestPathFinderWrapper(TestCase):
 
-    def test_findConstrainedPaths(self):
+    def test_findRegexConstrainedPaths(self):
         graphFile = '../data/test_one.tlp'
         graph = tlp.loadGraph(graphFile)
 
         edgeConstraints = ["Ribbon Synapse", "Adherens"]
         nodeConstraints = ["CBb3-4i", "GC ON", "CBb4w"]
 
-        sourceType = nodeConstraints[0]
-
         pathFinderWrapper = tp.PathFinderWrapper(graph)
 
-        paths = pathFinderWrapper.findConstrainedPathsFromType(sourceType, edgeConstraints, nodeConstraints)
+        paths = pathFinderWrapper.findRegexConstrainedPaths(edgeConstraints, nodeConstraints)
 
         path = paths[0]
 

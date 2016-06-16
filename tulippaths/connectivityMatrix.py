@@ -95,7 +95,7 @@ class ConnectivityMatrix:
         # Find paths for each source. Shove them into the matrix.
         for node in sources:
             pathFinder = PathFinder(self._graph)
-            pathFinder.findRegexConstrainedPaths(node, edgeConstraints, nodeConstraints)
+            pathFinder.findRegexConstrainedPathsFromSource(node, edgeConstraints, nodeConstraints)
             for path in pathFinder.valid:
                 self._addPathToMatrix(path)
 

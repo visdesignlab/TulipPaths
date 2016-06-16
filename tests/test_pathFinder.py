@@ -54,37 +54,18 @@ class TestFindPaths(TestCase):
 
         self.assertTrue(len(finder.valid) == 3)
 
-    def test_findConstrainedPaths(self):
-        graphFile = '../data/test_one.tlp'
-        graph = tlp.loadGraph(graphFile)
-        source = tp.utils.getNodeById(176, graph)
-
-        edgeConstraints = ["Ribbon Synapse", "Adherens"]
-        nodeConstraints = ["CBb3-4i", "GC ON", "CBb4w"]
-
-        pathFinder = tp.PathFinder(graph)
-
-        pathFinder.findConstrainedPaths(source, edgeConstraints, nodeConstraints)
-
-        self.assertTrue(len(pathFinder.valid) == 1)
-
-        for path in pathFinder.valid:
-            self.assertTrue(path.isInTypeConstraints(edgeConstraints,
-                                                     nodeConstraints))
-
     def test_findRegexConstrainedPaths(self):
         graphFile = '../data/test_two.tlp'
         graph = tlp.loadGraph(graphFile)
-        source = tp.utils.getNodeById(176, graph)
 
         edgeConstraintRegexes = [".+ Synapse", "^Adhe.+$"]
         nodeConstraintRegexes = ["CBb3-.+$", "^GC ON", "[A-Z]Bb4w"]
 
         pathFinder = tp.PathFinder(graph)
 
-        pathFinder.findRegexConstrainedPaths(source, edgeConstraintRegexes, nodeConstraintRegexes)
+        pathFinder.findRegexConstrainedPaths(edgeConstraintRegexes, nodeConstraintRegexes)
 
-        self.assertTrue(len(pathFinder.valid) == 1)
+        self.assertTrue(len(pathFinder.valid) == 2)
 
         for path in pathFinder.valid:
             self.assertTrue(path.isInRegexTypeConstraints(edgeConstraintRegexes, nodeConstraintRegexes))
