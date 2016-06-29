@@ -13,7 +13,7 @@ class TestPathFinderWrapper(TestCase):
 
         pathFinderWrapper = tp.PathFinderWrapper(graph)
 
-        paths = pathFinderWrapper.findRegexConstrainedPaths(edgeConstraints, nodeConstraints)
+        paths = pathFinderWrapper.findRegexConstrainedPaths(nodeConstraints, edgeConstraints)
 
         path = paths[0]
 

@@ -10,7 +10,7 @@ class PathFinderWrapper:
 
         pathFinder = tp.PathFinder(self.graph)
 
-        pathFinder.findRegexConstrainedPaths(nodeConstraints, edgeConstraints)
+        pathFinder.findRegexConstrainedPaths(edgeConstraints, nodeConstraints)
 
         return pathFinder.valid
 

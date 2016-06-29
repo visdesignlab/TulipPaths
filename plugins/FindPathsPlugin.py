@@ -2,8 +2,8 @@ from FileOutputPlugin import FileOutputPlugin
 from tulip import *
 import tulippaths as tp
 
-exampleCellLabel = 'CBb3m'
-exampleEdgeType = 'Ribbon Synapse'
+exampleCellLabels = ['CBb4w', 'CBb4w', 'AC', 'Rod BC', 'Rod BC']
+exampleEdgeTypes = ['.*', '.*', '.*', '.*']
 
 
 class FindPathsPlugin(FileOutputPlugin):
@@ -31,9 +31,9 @@ class FindPathsPlugin(FileOutputPlugin):
 
         # Add all the parameters we need in an intuitive sequence
         for i in range(self.hops):
-            self.addStringParameter(self._nodeLabels[i], "", exampleCellLabel)
-            self.addStringParameter(self._edgeTypes[i], "", exampleEdgeType)
-        self.addStringParameter(self._nodeLabels[self.hops], "", exampleCellLabel)
+            self.addStringParameter(self._nodeLabels[i], "", exampleCellLabels[i])
+            self.addStringParameter(self._edgeTypes[i], "", exampleEdgeTypes[i])
+        self.addStringParameter(self._nodeLabels[self.hops], "", exampleCellLabels[self.hops])
 
     def check(self):
         nodeTypes = self.getNodeTypeConstraints()
@@ -67,7 +67,8 @@ class FindPathsPlugin(FileOutputPlugin):
         nodeTypes = self.getNodeTypeConstraints()
         edgeTypes = self.getEdgeTypeConstraints()
 
-        sourceType = nodeTypes[0]
+        print nodeTypes
+        print edgeTypes
         viewSelection = self.graph.getBooleanProperty("viewSelection")
 
         for node in self.graph.getNodes():
@@ -84,7 +85,7 @@ class FindPathsPlugin(FileOutputPlugin):
         pathTypeString += nodeTypes[self.hops]
 
         wrapper = tp.PathFinderWrapper(self.graph)
-        paths = wrapper.findConstrainedPathsFromTypeRegex(sourceType, nodeTypes, edgeTypes)
+        paths = wrapper.findRegexConstrainedPaths(nodeTypes, edgeTypes)
 
         # Write the file header
         self.printToFile("Plugin: Find " + str(self.hops) + "-hop paths")

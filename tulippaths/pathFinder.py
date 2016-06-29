@@ -3,6 +3,8 @@
 from Queue import *
 from config import VERBOSE
 from path import *
+from copy import deepcopy
+
 
 class PathFinder:
 
@@ -18,7 +20,7 @@ class PathFinder:
             currentNode = currentPath.getLastNode()
             currentHop = len(currentPath.edges)
 
-            if currentHop == maxNumHops:
+            if currentHop >= maxNumHops:
                 self.valid.append(currentPath)
                 continue
 
@@ -28,9 +30,10 @@ class PathFinder:
                     nextNode = self.graph.target(nextEdge)
                     nodeType = utils.getNodeType(nextNode, self.graph)
                     if re.search(re.compile(nodeConstraintRegexes[currentHop + 1]), nodeType):
-                        currentPath.addEdge(nextEdge)
-                        currentPath.addNode(nextNode)
-                        queue.put(currentPath)
+                        nextPath = Path(currentPath.graph, currentPath)  # make a deep copy of currentPath
+                        nextPath.addEdge(nextEdge)
+                        nextPath.addNode(nextNode)
+                        queue.put(nextPath)
 
         for path in self.valid:
             assert path.isSane(), "Warning - created bad 'valid' path!'" + path.toString()
