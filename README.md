@@ -6,9 +6,11 @@ This is a set of Tulip plugins and python package for analyzing multi-hop relati
 The plugins enable you to search for nodes and path by their labels inside the Tulip GUI.
 
 Input to the 'Find Nodes (Regex)' plugin is a node label regex. This plugin outputs a list of nodes whose labels match the input to regex to your home directory. It also sets Tulip's view selection to the list of nodes. 
+
 ![Find nodes by labels](images/find_nodes.png)
 
 Input to the 'Find n-Hop Paths (Regex)' is similar to the 'Find Nodes (Regex)' plugin. These plugins output a list of paths and update Tulip's view selection.
+
 ![Find 1-hop paths](images/find_paths.png)
 
 Sample output from the plugins inside Tulip.
@@ -25,5 +27,7 @@ These instructions assume that you want to use the plugins inside Tulip. If you 
 1. Copy the folder TulipPaths/tulippaths into the Tulip plugins directory.
 1. Copy the contents of the TulipPaths/plugins into the Tulip plugins directory.
 1. The Tulip plugins directory should contain these files:
+
 ![Find 1-hop paths](images/installed.png)
-1. Run Tulip. You should see the new plugins in the left sidebar.
+
+You're now ready to run Tulip.
