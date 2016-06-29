@@ -67,8 +67,6 @@ class FindPathsPlugin(FileOutputPlugin):
         nodeTypes = self.getNodeTypeConstraints()
         edgeTypes = self.getEdgeTypeConstraints()
 
-        print nodeTypes
-        print edgeTypes
         viewSelection = self.graph.getBooleanProperty("viewSelection")
 
         for node in self.graph.getNodes():
