@@ -7,15 +7,19 @@ The plugins enable you to search for nodes and path by their labels inside the T
 
 Input to the 'Find Nodes (Regex)' plugin is a node label regex. This plugin outputs a list of nodes whose labels match the input to regex to your home directory. It also sets Tulip's view selection to the list of nodes. 
 
+Sample input for the 'Find Nodes (Regex)' plugin:
+
 ![Find nodes by labels](images/find_nodes.png)
 
 Input to the 'Find n-Hop Paths (Regex)' is similar to the 'Find Nodes (Regex)' plugin. These plugins output a list of paths and update Tulip's view selection.
 
+Sample input for the 'Find 1-Hop Paths (Regex)' plugin:
+
 ![Find 1-hop paths](images/find_paths.png)
 
-Sample output from the plugins inside Tulip.
-![Output](images/output.png)
+Sample output from the plugins inside Tulip:
 
+![Output](images/output.png)
 
 ## Installation
 
