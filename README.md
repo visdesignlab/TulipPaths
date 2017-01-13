@@ -3,7 +3,11 @@ This is a set of Tulip plugins and python package for analyzing multi-hop relati
 
 ## Plugins
 
-The plugins enable you to search for nodes and path by their labels inside the Tulip GUI.
+TulipPaths has plugins for analyzing and cleaning connectome data.
+
+### Find paths plugins
+
+The find paths plugins enable you to search for nodes and path by their labels inside the Tulip GUI.
 
 Input to the 'Find Nodes (Regex)' plugin is a node label regex. This plugin outputs a list of nodes whose labels match the input to regex to your home directory. It also sets Tulip's view selection to the list of nodes. 
 
@@ -20,6 +24,14 @@ Sample input for the 'Find 1-Hop Paths (Regex)' plugin:
 Sample output from the plugins inside Tulip:
 
 ![Output](images/output.png)
+
+### Find Missing Bidirectional Synapses
+
+This plugin will search for bidirectional synapses that are missing reciprocal edges inside tulip.
+
+You can specify which synapse type to search for, the default value is "Gap Junction."
+
+Any edges that the plugin finds are output to the view selection and a user-specified text file. 
 
 ## Installation
 
