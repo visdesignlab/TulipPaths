@@ -39,7 +39,7 @@ These instructions assume that you want to use the plugins inside Tulip. If you 
 
 1. Click the 'clone or download' button and select 'download zip.' This will download TulipPaths-master.zip.
 1. Expand TulipPaths-Master.zip into a folder TulipPaths-Master.
-1. Create the Tulip plugins directory. On MacOS this is /Applications/Tulip-4.8.1.app/Contents/lib/tulip/python. On Windows it is tulip_path/lib/tulip/python and tulip_path is something like C:\Program Files\Tulip. (If you have an older version of TulipPaths installed, make sure to delete all files from this directory.)
+1. Create the Tulip plugins directory. On MacOS this is /Applications/Tulip-4.8.1.app/Contents/lib/tulip/python. On Windows it is something like C:\Program Files\Tulip/lib/tulip/python (If you have an older version of TulipPaths installed, make sure to delete all files from this directory.)
 1. Copy the folder TulipPaths/tulippaths into the Tulip plugins directory.
 1. Copy the contents of the TulipPaths/plugins into the Tulip plugins directory.
 1. The Tulip plugins directory should contain these files:
