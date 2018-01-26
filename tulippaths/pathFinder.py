@@ -1,8 +1,8 @@
 """ This object uses a variation of BFS to identify all paths between two nodes in a graph. """
 
-from Queue import *
-from config import VERBOSE
-from path import *
+from queue import *
+from .config import VERBOSE
+from .path import *
 from copy import deepcopy
 
 
@@ -51,19 +51,19 @@ class PathFinder:
         queue.put(firstPath)
 
         if VERBOSE:
-            print 'starting path search at: ', source
+            print(('starting path search at: ', source))
 
         while not queue.empty():
 
             currentPath = queue.get()
 
             if VERBOSE:
-                print '  the current path is: ', currentPath.toString()
+                print(('  the current path is: ', currentPath.toString()))
 
             if currentPath.size() > maxNumHops:
 
                 if VERBOSE:
-                    print '  current path is longer than maxNumHops. adding it to failed paths.'
+                    print('  current path is longer than maxNumHops. adding it to failed paths.')
 
                 self.valid.append(currentPath)
 
@@ -72,20 +72,20 @@ class PathFinder:
                 currentNode = currentPath.getLastNode()
 
                 if VERBOSE:
-                    print '  looking at next nodes from current path'
-                    print '  the current node is: ', currentNode
+                    print('  looking at next nodes from current path')
+                    print(('  the current node is: ', currentNode))
 
                 for nextEdge in self.graph.getOutEdges(currentNode):
 
                     nextNode = self.graph.target(nextEdge)
 
                     if VERBOSE:
-                        print '    a tentative nextNode is: ', nextNode
+                        print(('    a tentative nextNode is: ', nextNode))
 
                     if currentNode == nextNode:
 
                         if VERBOSE:
-                            print '    currentNode is self connected -- skip this'
+                            print('    currentNode is self connected -- skip this')
 
                         continue
 
@@ -94,8 +94,8 @@ class PathFinder:
                     nextPath.addEdge(nextEdge)
 
                     if VERBOSE:
-                        print '    next node is not target node'
-                        print '    adding new path: ', nextPath.toString()
+                        print('    next node is not target node')
+                        print(('    adding new path: ', nextPath.toString()))
 
                     queue.put(nextPath)
 
@@ -115,20 +115,20 @@ class PathFinder:
         queue.put(firstPath)
 
         if VERBOSE:
-            print 'starting path search at: ', source
-            print 'target node is: ', target
+            print(('starting path search at: ', source))
+            print(('target node is: ', target))
 
         while not queue.empty():
 
             currentPath = queue.get()
 
             if VERBOSE:
-                print '  the current path is: ', currentPath.toString()
+                print(('  the current path is: ', currentPath.toString()))
 
             if currentPath.size() > maxNumHops:
 
                 if VERBOSE:
-                    print '  current path is longer than maxNumHops. adding it to failed paths.'
+                    print('  current path is longer than maxNumHops. adding it to failed paths.')
 
                 self.failed.append(currentPath)
 
@@ -137,20 +137,20 @@ class PathFinder:
                 currentNode = currentPath.getLastNode()
 
                 if VERBOSE:
-                    print '  looking at next nodes from current path'
-                    print '  the current node is: ', currentNode
+                    print('  looking at next nodes from current path')
+                    print(('  the current node is: ', currentNode))
 
                 for nextEdge in self.graph.getOutEdges(currentNode):
 
                     nextNode = self.graph.target(nextEdge)
 
                     if VERBOSE:
-                        print '    a tentative nextNode is: ', nextNode
+                        print(('    a tentative nextNode is: ', nextNode))
 
                     if currentNode == nextNode:
 
                         if VERBOSE:
-                            print '    currentNode is self connected -- skip this'
+                            print('    currentNode is self connected -- skip this')
 
                         continue
 
@@ -161,8 +161,8 @@ class PathFinder:
                         nextPath.addEdge(nextEdge)
 
                         if VERBOSE:
-                            print '    found the target node: ', nextNode
-                            print '    adding succesful path: ', nextPath.toString()
+                            print(('    found the target node: ', nextNode))
+                            print(('    adding succesful path: ', nextPath.toString()))
 
                         self.valid.append(nextPath)
 
@@ -173,8 +173,8 @@ class PathFinder:
                         nextPath.addEdge(nextEdge)
 
                         if VERBOSE:
-                            print '    next node is not target node'
-                            print '    adding new path: ', nextPath.toString()
+                            print('    next node is not target node')
+                            print(('    adding new path: ', nextPath.toString()))
 
                         queue.put(nextPath)
 

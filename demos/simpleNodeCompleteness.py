@@ -25,7 +25,7 @@ for node in graph.getNodes():
         graph.delNode(node)
         numIncomplete += 1
 
-print 'num complete, num almost complete, num incomplete'
-print str(numComplete) + ', ' + str(numAlmostComplete) + ', ' + str(numIncomplete)
+print('num complete, num almost complete, num incomplete')
+print((str(numComplete) + ', ' + str(numAlmostComplete) + ', ' + str(numIncomplete)))
 
 nodeLinkView = tlpgui.createNodeLinkDiagramView(graph)

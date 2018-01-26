@@ -20,4 +20,4 @@ nodeTypes = superTypeDictionary.getTypesFromSuperTypes(['YAC', 'GAC'])
 nodes = tp.utils.getNodesByTypes(nodeTypes, graph)
 
 for node in nodes:
-    print str(tp.utils.getNodeId(node, graph)) + ', ' + str(completeness[node])
+    print((str(tp.utils.getNodeId(node, graph)) + ', ' + str(completeness[node])))

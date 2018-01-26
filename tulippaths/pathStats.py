@@ -1,5 +1,5 @@
-from path import *
-from pathFinder import *
+from .path import *
+from .pathFinder import *
 
 class PathStats:
 

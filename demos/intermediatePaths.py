@@ -25,13 +25,13 @@ finder = tp.PathFinder(graph)
 results = finder.findPaths(source, target, maxNumHops)
 
 # Print paths
-print 'The failed paths are:'
+print('The failed paths are:')
 for path in finder.failed:
-    print '  ' + path.toString()
+    print(('  ' + path.toString()))
 
-print 'The valid paths are:'
+print('The valid paths are:')
 for path in finder.valid:
-    print '  ' + path.toString()
+    print(('  ' + path.toString()))
 
 # Make all edges and nodes transparent
 transparentGrey = tlp.Color(50, 50, 50, 50)

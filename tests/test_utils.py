@@ -82,7 +82,7 @@ class TestUtils(TestCase):
         self.graph = tlp.loadGraph(self.file)
         dictionary = tp.utils.getDictionaryOfEdgeTypes(self.graph)
 
-        for key in dictionary.keys():
+        for key in list(dictionary.keys()):
             values = dictionary[key]
             for edge in values:
                 self.assertTrue(tp.utils.getEdgeType(edge, self.graph) == key)
@@ -93,7 +93,7 @@ class TestUtils(TestCase):
 
         dictionary = tp.utils.getDictionaryOfNodeTypes(self.graph)
 
-        for key in dictionary.keys():
+        for key in list(dictionary.keys()):
             values = dictionary[key]
             for node in values:
                 self.assertTrue(tp.utils.getNodeType(node, self.graph) == key)
@@ -160,7 +160,7 @@ class TestUtils(TestCase):
 
         graph = tlp.loadGraph(self.file)
 
-        for test_regex, expected_results in test_cases.iteritems():
+        for test_regex, expected_results in list(test_cases.items()):
             nodes = tp.utils.getNodesByTypeRegex(test_regex, graph)
 
             self.assertTrue(len(nodes) == expected_results)
@@ -181,7 +181,7 @@ class TestUtils(TestCase):
             "^GA?C.*$,^CBb3-4i$": 4
         }
 
-        for test_regex_list, expected_results in test_cases.iteritems():
+        for test_regex_list, expected_results in list(test_cases.items()):
             nodeTypeRegexes = test_regex_list.split(',')
             nodes = tp.utils.getNodesByTypeRegexes(nodeTypeRegexes, graph)
 
