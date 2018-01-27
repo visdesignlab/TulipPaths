@@ -1,6 +1,6 @@
 """ Object representing a specific path in a graph - nodes and edges """
 
-import utils as utils
+from . import utils as utils
 import tulippaths as tp
 import re
 

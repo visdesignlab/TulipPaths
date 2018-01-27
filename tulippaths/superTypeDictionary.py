@@ -28,14 +28,14 @@ class SuperTypeDictionary:
 
     # Returns the superType that nodeType belongs to.
     def getSuperTypeFromType(self, nodeType):
-        for key in self._dictionary.keys():
+        for key in list(self._dictionary.keys()):
             if nodeType in self._dictionary[key]:
                 return key
         assert False, 'Could not find super type of nodeType' + nodeType
 
     # Returns the node types contained in superType
     def getTypesFromSuperType(self, superType):
-        if self._dictionary.has_key(superType):
+        if superType in self._dictionary:
             return self._dictionary[superType]
         else:
             assert False, "Could not find superType == " + superType

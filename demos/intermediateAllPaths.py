@@ -19,11 +19,11 @@ source = tp.getNodeById(sourceNodeId, graph)
 finder = tp.PathFinder(graph)
 results = finder.findAllPaths(source, maxNumHops)
 
-print 'The valid paths are:'
+print('The valid paths are:')
 for path in finder.valid:
-    print '  ' + path.toString()
-    print '  ' + path.toStringOfTypes()
-    print '  ' + path.toStringOfIds()
+    print(('  ' + path.toString()))
+    print(('  ' + path.toStringOfTypes()))
+    print(('  ' + path.toStringOfIds()))
 
 # Make all edges and nodes transparent
 transparentGrey = tlp.Color(50, 50, 50, 50)

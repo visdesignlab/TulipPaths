@@ -1,6 +1,6 @@
-import utils
-from path import *
-from pathFinder import *
+from . import utils
+from .path import *
+from .pathFinder import *
 import copy
 
 

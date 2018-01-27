@@ -55,7 +55,7 @@ def getApproximateAnnotationCompleteness(graph):
         touched[node] = 0
 
     # While there are nodes that we haven't computed completeness values for...
-    while 0 in touched.values():
+    while 0 in list(touched.values()):
 
         # Find first available node that we haven't touched.
         for node in graph.getNodes():
@@ -97,7 +97,7 @@ def getDictionaryOfEdgeTypes(graph):
 
         edgeType = getEdgeType(edge, graph)
 
-        if dictionary.has_key(edgeType):
+        if edgeType in dictionary:
             dictionary[edgeType].append(edge)
         else:
             dictionary[edgeType] = [edge]
@@ -110,7 +110,7 @@ def getDictionaryOfNodeTypes(graph):
 
     for node in graph.getNodes():
         nodeType = getNodeType(node, graph)
-        if dictionary.has_key(nodeType):
+        if nodeType in dictionary:
             dictionary[nodeType].append(node)
         else:
             dictionary[nodeType] = [node]
