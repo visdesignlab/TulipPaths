@@ -1,5 +1,10 @@
+[![DOI](https://zenodo.org/badge/43915990.svg)](https://zenodo.org/badge/latestdoi/43915990)
+
 # TulipPaths
+
 This is a set of Tulip plugins and python package for analyzing multi-hop relationships in [neuron connectivity graphs](http://connectomes.utah.edu/export/files.html#export-directly-from-a-url).
+
+Contributors include Ethan Kerzner, James Anderson, and Nathaniel Nelson.
 
 ## Plugins
 
